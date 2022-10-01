@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
-import instagram from "../img/social/instagram.svg";
+import instagram from "../img/logo.svg";
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -41,7 +41,7 @@ const Navbar = class extends React.Component {
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              <img src={instagram} alt="Kaldi" style={{ width: "88px" }} />
+              <i style={{ border: "1pxsolid black" }} class="fa-light fa-head-side-medical"></i>
             </Link>
             {/* Hamburger menu */}
             <div
@@ -72,7 +72,7 @@ const Navbar = class extends React.Component {
             <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
-                href="https://github.com/netlify-templates/gatsby-starter-netlify-cms"
+                href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
               >
