@@ -5,6 +5,12 @@ date: 2022-10-01T12:01:08.534Z
 description: asdalsjdalska
 featuredpost: true
 featuredimage: /img/flavor_wheel.jpg
+tags:
+  - jamaica
+  - green beans
+  - flavor
+  - tasting
+---
 ---
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim sed faucibus turpis in eu. Amet purus gravida quis blandit turpis cursus in hac habitasse. Ullamcorper a lacus vestibulum sed arcu non. Faucibus nisl tincidunt eget nullam non. Posuere lorem ipsum dolor sit amet consectetur adipiscing elit. Viverra justo nec ultrices dui sapien eget mi. Faucibus et molestie ac feugiat. Hendrerit gravida rutrum quisque non tellus. Ullamcorper dignissim cras tincidunt lobortis feugiat. Risus nullam eget felis eget nunc lobortis mattis. Arcu ac tortor dignissim convallis. Dignissim enim sit amet venenatis urna cursus eget nunc scelerisque. Sit amet aliquam id diam maecenas ultricies mi. Blandit libero volutpat sed cras ornare arcu. Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. Aenean sed adipiscing diam donec.
 
