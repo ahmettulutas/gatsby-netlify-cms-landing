@@ -1,12 +1,12 @@
 @import "~bulma/sass/utilities/initial-variables"
 
 // Config vars
-// Kaldi logo brand color: #FD461E
-$kaldi-red: #D64000
-$kaldi-red-invert: #fff
+// logo brand color: #FD461E
+$red: #D64000
+$red-invert: #fff
 
-$primary: $kaldi-red
-$primary-invert: $kaldi-red-invert
+$primary: $red
+$primary-invert: $red-invert
 $body-color: #333
 $black: #2b2523
 
@@ -82,15 +82,15 @@ $black: #2b2523
   padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
-  background-color: transparent
+  background-color: #FDEEDC
 
 //Menu overrides
-$menu-item-color: $white-ter
+$menu-item-color: black
 $menu-item-hover-color: $black !important
 $menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
+$menu-item-active-color: $red-invert
+$menu-item-active-background-color:	$red-invert
+$menu-list-border-left: 1px solid $red-invert
 $menu-label-color: $white-ter
 
 
@@ -118,9 +118,9 @@ $menu-label-color: $white-ter
 .blog-list-item header
   display: flex
   margin-bottom: 1em
+  justify-content:space-between
 .blog-list-item .featured-thumbnail
-  flex-basis: 35%
-  margin: 0 1.5em 0 0
+
 
 
 @import "~bulma"
