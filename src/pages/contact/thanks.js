@@ -1,16 +1,23 @@
 import React from "react";
 import Layout from "../../components/Layout";
-
+import "./thankyou.css";
+import { Link } from "gatsby";
 // eslint-disable-next-line
 export default () => (
   <Layout>
-    <section className="section">
-      <div className="container">
-        <div className="content">
-          <h1>Thank you!</h1>
-          <p>This is a custom thank you page for form submissions</p>
+    <div classNameName="body"></div>
+      <div classNameName="thankyoucontent">
+        <div className="wrapper-1">
+          <div className="wrapper-2">
+            <img src="https://i.ibb.co/Lkn7rkG/thank-you-envelope.png" alt="thank-you-envelope" border="0" />
+            <h1>Mesaj İletildi.</h1>
+            <p>Bizimle iletişime geçmeniz için</p> 
+            <p>mesajınız alındığında hemen yanıt vereceğiz.</p>
+          <button className="go-home">
+            <a href="/">Anasayfa</a>
+          </button>
         </div>
       </div>
-    </section>
+    </div>
   </Layout>
 );

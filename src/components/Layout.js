@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:type" content="business.business" />
         <meta property="og:title" content={title} />
         <meta property="og:url" content="/" />
-        <meta
+        <meta name="google-site-verification" content="JhBSroenfkCwpDvFVjMyXQpazhCYHBPYvrnr0mUceQw" />        <meta
           property="og:image"
           content={`${withPrefix("/")}img/og-image.jpg`}
         />
