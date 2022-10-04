@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: "Psikolog Meltem Ulutaş Blog",
-    description:
-      "Psikolog Meltem Ulutaş Blog",
-        siteUrl: "https://psikologmeltemulutas.netlify.app/",
+    description: "Psikolog Meltem Ulutaş'a ait Blog ve İletişim Sayfası",
+    siteUrl: "https://psikologmeltemulutas.netlify.app/",
 
   },
   plugins: [
@@ -39,6 +38,28 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
+    {
+      resolve: 'gatsby-plugin-sitemap',
+      options: {
+        exclude: ['/admin'],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              edges {
+                node {
+                  path
+                }
+              }
+            }
+          }
+        `,
+      },
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
