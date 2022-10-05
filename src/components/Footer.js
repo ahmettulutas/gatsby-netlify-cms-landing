@@ -8,17 +8,12 @@ const Footer = class extends React.Component {
       <footer className="footer">
           <div className="container">
             <div style={{ maxWidth: "100vw" }} className="columns">
-              <div className="column is-4">
+              <div className="column is-8">
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
                       <Link to="/" className="navbar-item">
-                        Home
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="navbar-item" to="/about">
-                        About
+                        Anasayfa
                       </Link>
                     </li>
                     <li>
@@ -28,24 +23,18 @@ const Footer = class extends React.Component {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Admin
+                        Yönetim Paneli
                       </a>
-                    </li>
-                  </ul>
-                </section>
-              </div>
-              <div className="column is-4">
-                <section>
-                  <ul className="menu-list">
                     <li>
                       <Link className="navbar-item" to="/contact">
-                        Contact
+                        İletişim
                       </Link>
+                    </li>
                     </li>
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
+              <div className="column is-8 social">
                 <a title="instagram" href="https://instagram.com">
                   <img
                     src={instagram}
