@@ -1,9 +1,18 @@
 
-const url = 'https://psikologmeltemulutas.netlify.app/';
+
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://www.example.com',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV
+} = process.env;
+const isNetlifyProduction = NETLIFY_ENV === 'production';
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+
 module.exports = {
   siteMetadata: {
     title: "Psikolog Meltem Ulutaş Blog",
-    description: "Psikolog Meltem Ulutaş'a ait Blog ve İletişim Sayfası",
+    description: "Uzman Psikolog Meltem Ulutaş | Blog ve İletişim Sayfası | Psikolojik Danışmanlık | Psikolojik Terapi",
     siteUrl: "https://psikologmeltemulutas.netlify.app/",
 
   },
@@ -41,6 +50,27 @@ module.exports = {
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-advanced-sitemap`,
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        resolveEnv: () => NETLIFY_ENV,
+        env: {
+          production: {
+            policy: [{userAgent: '*'}]
+          },
+          'branch-deploy': {
+            policy: [{userAgent: '*', disallow: ['/']}],
+            sitemap: null,
+            host: null
+          },
+          'deploy-preview': {
+            policy: [{userAgent: '*', disallow: ['/']}],
+            sitemap: null,
+            host: null
+          }
+        }
+      }
+    },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
