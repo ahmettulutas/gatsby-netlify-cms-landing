@@ -1,3 +1,5 @@
+
+const url = 'https://psikologmeltemulutas.netlify.app/';
 module.exports = {
   siteMetadata: {
     title: "Psikolog Meltem Ulutaş Blog",
@@ -38,28 +40,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-image`,
-    {
-      resolve: 'gatsby-plugin-sitemap',
-      options: {
-        exclude: ['/admin'],
-        query: `
-          {
-            site {
-              siteMetadata {
-                siteUrl
-              }
-            }
-            allSitePage {
-              edges {
-                node {
-                  path
-                }
-              }
-            }
-          }
-        `,
-      },
-    },
+    `gatsby-plugin-advanced-sitemap`,
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
