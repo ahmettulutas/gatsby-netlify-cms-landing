@@ -41,7 +41,7 @@ const TemplateWrapper = ({ children }) => {
         <meta name="theme-color" content="#fff" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={title} />
-        <meta property="og:url" content="https://psikologmeltemulutas.netlify.app/" />
+        <meta property="og:url" content="https://meltemulutas.com" />
         <meta property="og:site_name" content="Uzman Psikolog Meltem Ulutaş"></meta>
         <meta name="google-site-verification" content="JhBSroenfkCwpDvFVjMyXQpazhCYHBPYvrnr0mUceQw" />
         <meta property="og:image" content={`${withPrefix("/")}img/og-image.jpg`} />
