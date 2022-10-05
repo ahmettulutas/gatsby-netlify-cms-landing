@@ -5,7 +5,7 @@ date: 2022-10-05T09:30:10.936Z
 description: "Psikolog Meltem Ulutaş, bu bloğun sahibidir ve kendisi psikolojik
   danışmanlık ve rehberlik alanında uzmandır. "
 featuredpost: true
-featuredimage: /img/noun-psychology-4580419.svg
+featuredimage: /img/chemex.jpg
 tags:
   - psikoloji
 ---
