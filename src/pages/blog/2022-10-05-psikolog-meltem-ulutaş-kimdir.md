@@ -1,0 +1,15 @@
+---
+templateKey: blog-post
+title: Psikolog Meltem Ulutaş Kimdir?
+date: 2022-10-05T09:30:10.936Z
+description: "Psikolog Meltem Ulutaş, bu bloğun sahibidir ve kendisi psikolojik
+  danışmanlık ve rehberlik alanında uzmandır. "
+featuredpost: true
+featuredimage: /img/noun-psychology-4580419.svg
+tags:
+  - psikoloji
+---
+Psikoterapi, bir kişinin bir ruh sağlığı uzmanından aldığı bir yardım şeklidir. Ruh sağlığı uzmanları, depresyon, anksiyete ve diğer zihinsel bozuklukları olan kişilere yardımcı olur. Ayrıca alkolik, uyuşturucu bağımlısı veya kronik olarak kendine zarar veren kişilere de yardımcı olurlar. Çoğu psikolog, psikoloji alanında ya tamamen ya da kısmen eğitimlidir. Ek olarak, birçoğunun doktora derecesi vardır. veya M.D. psikolojide en yüksek derecesi olarak. Bu genellikle psikiyatristler için geçerlidir, ancak psikologlar için de geçerlidir.
+Bir psikoloğa gittiğinizde, orada birkaç saat geçirmeyi beklemelisiniz. Psikoloğun ofisinde geçireceğiniz süre, sorununuzun ne kadar ciddi olduğuna bağlı olacaktır. Bazı insanlar bir psikologla sadece bir seanstan sonra sorunlarını asla aşamazlar. Bunun nedeni, bazı konuların tek bir oturumun üstesinden gelemeyecek kadar karmaşık olmasıdır. Bu, durumunuzu açıklıyorsa, ofisinden ayrılmadan önce psikoloğunuzdan memnun olduğunuzdan emin olun. Yaşadıklarınızdan memnun değilseniz, onları ölümüne eleştirmeden önce yeni birini aramayı düşünün.
+Ardından, araştırmanızı yapın ve bütçenize uygun iyi bir psikolog bulun. İnsanların her yıl psikoterapi seanslarına binlerce dolar harcaması alışılmadık bir durum değil. Bunun nedeni, randevu ile ödeme yapan psikiyatristlerin aksine, çoğu psikologun saat başına ödeme yapmasıdır. Bir terapist ararken, eyaletinizin psikolojik muayene kurulu (PTA) tarafından tamamen lisanslı olduklarından emin olun. Güncel bir PTA lisansına sahip olduklarından ve lisanslarının da güncel olduğundan emin olun. Ayrıca, kiralamadan önce lisanslarına bakmayı ve tam lisanslı olduklarını doğrulamayı isteyebilirsiniz. Bazı eyaletlerde, belirli türdeki lisanslar yalnızca belirli türdeki terapistlere verilir - bu nedenle, psikoloğunuzun lisansının aradığınız şeyle eşleştiğinden emin olun.
+Son olarak, bir terapistle çalışırken güvende olduğunuzdan emin olun - özellikle de zihinsel sağlığınız üzerinde gücü olan biriyle. Terapistlerin hastaları üzerinde sahip oldukları gücü kötüye kullandıkları durumlar vardır; buna psikoloji literatüründe gücün kötüye kullanılması denir. Birinin hastası üzerinde sahip olduğu gücü kötüye kullanmasına ilişkin bazı örnekler, bir hastaya karşı yanlış suçlamalarda bulunmak veya ona dini inançlarına veya ahlaklarına aykırı şeyler yapmasını söylemektir. Onun hizmetlerine para harcıyorsanız, terapistinizin tamamen lisanslı ve sigortalı olduğundan emin olun; ayrıca sizin çıkarlarınızı en iyi şekilde düşündüğünden ve sizi hiçbir şekilde sömürmeye çalışmadığından emin olun.
