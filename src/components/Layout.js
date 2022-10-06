@@ -43,7 +43,6 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:title" content={title} />
         <meta property="og:url" content="https://meltemulutas.com" />
         <meta property="og:site_name" content="Uzman Psikolog Meltem Ulutaş"></meta>
-        <meta name="google-site-verification" content="JhBSroenfkCwpDvFVjMyXQpazhCYHBPYvrnr0mUceQw" />
         <meta property="og:image" content={`${withPrefix("/")}img/og-image.jpg`} />
         <meta property="og:description" content={description}></meta>
         <meta charset="UTF-8"></meta>
