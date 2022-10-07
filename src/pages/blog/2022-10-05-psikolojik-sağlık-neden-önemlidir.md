@@ -1,6 +1,6 @@
 ---
 templateKey: blog-post
-title: Psikolojik Sağlık Neden Önemlidir?
+title: Psikolojik Saglık Neden Onemlidir?
 date: 2022-10-05T09:36:34.581Z
 description: Zihninize düzenli olarak temizlemeniz gereken bir ev gibi davranmak
   elzemdir. Ayrıca ruh sağlığınızı sağlıklı tutmak için dışarıda vakit
