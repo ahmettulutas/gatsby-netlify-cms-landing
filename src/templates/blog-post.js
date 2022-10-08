@@ -16,7 +16,7 @@ export const BlogPostTemplate = ({
   helmet,
 }) => {
   const PostContent = contentComponent || Content;
-  console.log( tags );
+
   return (
     <section className="section">
       {helmet || ""}
@@ -34,7 +34,7 @@ export const BlogPostTemplate = ({
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
-                      <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
+                      <a style={ { color: "#D64000" } } href={ `/tags/${ kebabCase( tag ) }/` }>{ tag }</a>
                     </li>
                   ))}
                 </ul>

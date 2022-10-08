@@ -31,7 +31,7 @@ export const IndexPageTemplate = ({
                 <div className="content">
                   <div className="columns is-multiline">
                     <div className="column is-6">
-                      <img src="./img/meltemulutasprofile.jpg" />
+                      <img alt="psikolog meltem ulutaş" src="./img/meltemulutasprofile.jpg" />
                     </div>
                     <div className="column is-6">
                     <div className="tile">
@@ -40,14 +40,6 @@ export const IndexPageTemplate = ({
                     <div className="tile">
                       <p className="subtitle">{mainpitch.description}</p>
                     </div>
-                    </div>
-                  </div>
-                  <div className="columns">
-                    <div className="column is-12">
-                      <h3 className="has-text-weight-semibold is-size-2">
-                        {heading}
-                      </h3>
-                      <p>{description}</p>
                     </div>
                   </div>
                   <Features gridItems={intro.blurbs} />

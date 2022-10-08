@@ -64,7 +64,6 @@ export default function FullWidthImage(props) {
           >
             {title && (
               <h3
-               
                 className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
                 style={{
                   color: "#ffff",
@@ -78,7 +77,6 @@ export default function FullWidthImage(props) {
               <h1
                 className="has-text-weight-bold is-size-3-mobile is-size-1-tablet"
                 style={{
-                  color: "#D64000",
                   color: "white", 
                   lineHeight: "1",
                   padding: "0.25rem",
