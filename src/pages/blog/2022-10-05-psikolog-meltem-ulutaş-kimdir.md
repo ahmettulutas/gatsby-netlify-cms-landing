@@ -1,10 +1,6 @@
 ---
 templateKey: blog-post
-<<<<<<< HEAD
 title: Psikolog Meltem Ulutas Kimdir?
-=======
-title: Psikolog Meltem Ulutaş Kimdir Psikolog Meltem Ulutaş Kimdir Psikolog Meltem Ulutaş Kimdir?
->>>>>>> 154093e (followup: working on ui)
 date: 2022-10-05T09:30:10.936Z
 description: "Psikolog Meltem Ulutaş, bu bloğun sahibidir ve kendisi psikolojik
   danışmanlık ve rehberlik alanında uzmandır. "
