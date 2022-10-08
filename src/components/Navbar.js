@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import instagram from "../img/social/instagram.svg";
+/* import "./navbar.less"; */
 
 const Navbar = class extends React.Component {
   constructor(props) {
@@ -37,11 +38,12 @@ const Navbar = class extends React.Component {
         className="navbar is-transparent"
         role="navigation"
         aria-label="main-navigation"
+        style={{position:"fixed", width:"100vw", top:0, left:0, boxShadow: "0 5px 20px -10px #000"}}
       >
         <div className="container">
           <div className="navbar-brand">
             <Link to="/" className="navbar-item" title="Logo">
-              LOGO
+              <img alt="meltem ulutas logo" className="navbar-image" src="/img/Meltem.svg"  />
             </Link>
             {/* Hamburger menu */}
             <div
@@ -61,23 +63,21 @@ const Navbar = class extends React.Component {
             id="navMenu"
             className={`navbar-menu ${this.state.navBarActiveClass}`}
           >
-            <div className="navbar-start has-text-centered">
+            <div className="navbar-end has-text-right">
               <Link className="navbar-item" to="/blog">
                 Blog
               </Link>
               <Link className="navbar-item" to="/contact">
                 Randevu - İletişim
               </Link>
-            </div>
-            <div className="navbar-end has-text-centered">
               <a
                 className="navbar-item"
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+                >
                 <span className="icon">
-                  <img src={instagram} alt="instagram link" />
+                  <img style={ {hover:{fill:"blue"}} }src={instagram} alt="instagram link" />
                 </span>
               </a>
             </div>

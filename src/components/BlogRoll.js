@@ -2,16 +2,17 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql, StaticQuery } from 'gatsby'
 import PreviewCompatibleImage from './PreviewCompatibleImage'
+// import "./blogRoll.less";
 class BlogRollTemplate extends React.Component {
   render() {
     const { data } = this.props
     const { edges: posts } = data.allMarkdownRemark
-    console.log(data);
+
     return (
       <div className="columns is-multiline">
         {posts &&
           posts.map(({ node: post }) => (
-            <div className="is-parent column is-6" key={post.id}>
+            <div className="is-parent column is-12" key={post.id}>
               <article
                 className={`blog-list-item tile is-child box notification ${
                   post.frontmatter.featuredpost ? 'is-featured' : ''
@@ -32,27 +33,26 @@ class BlogRollTemplate extends React.Component {
                               .gatsbyImageData.height,
                         }}
                       />
+                      {/* <img src="/static/16a2e329204edd53e7100dfed16f9168/c14ef/embrace.jpg" /> */}
                     </div>
-                  ) : null}
-                  <p className="post-meta">
-                    <Link
-                      className="title has-text-primary is-size-4"
-                      to={post.fields.slug}
-                    >
+                  ) : null }
+                  <div >
+                    <p className="post-meta" style={{marginLeft:"1rem", display:"flex", flexDirection:"column"}}>
+                    <Link className="title has-text-primary is-size-4" to={post.fields.slug}>
                       {post.frontmatter.title}
                     </Link>
-                    <span> &bull; </span>
                     <span className="subtitle is-size-5 is-block">
                       {post.frontmatter.date}
                     </span>
-                  </p>
+                    </p>
+                  </div>
                 </header>
                 <p>
                   {post.excerpt}
                   <br />
                   <br />
                   <Link className="button" to={post.fields.slug}>
-                    Keep Reading →
+                    Okumaya Devam Et →
                   </Link>
                 </p>
               </article>
@@ -96,7 +96,8 @@ export default function BlogRoll() {
                   featuredimage {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 120
+                        width: 220
+                        height: 120
                         quality: 100
                         layout: CONSTRAINED
                       )

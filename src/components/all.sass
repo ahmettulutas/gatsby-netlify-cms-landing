@@ -9,6 +9,10 @@ $primary: $red
 $primary-invert: $red-invert
 $body-color: #333
 $black: #2b2523
+.layout 
+  display:flex
+  min-height:100vh
+  flex-direction:column
 
 .navbar .navbar-menu
   box-shadow: none !important
@@ -38,6 +42,7 @@ $black: #2b2523
   margin: 2em -50vw
   background-size: cover
   background-position: bottom
+  background-size: cover
   display: flex
   justify-content: center
   align-items: center
@@ -82,7 +87,7 @@ $black: #2b2523
   padding: 0 1rem
 footer.footer
   padding: 3rem 0rem 0rem
-  background-color: #FDEEDC
+  background-color: #f7f7f7
 
 //Menu overrides
 $menu-item-color: black
@@ -114,7 +119,7 @@ $menu-label-color: $white-ter
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: #d6400033
+  box-shadow: 0 3px 15px rgb(0 0 0 / 20%)
 .blog-list-item header
   display: flex
   margin-bottom: 1em
@@ -127,6 +132,7 @@ $menu-label-color: $white-ter
 +tablet-only
   .blog-list-item .featured-thumbnail
     flex-basis: 50%
+     margin: 1rem
 
 +mobile
   .blog-list-item header
@@ -134,4 +140,4 @@ $menu-label-color: $white-ter
   .blog-list-item .featured-thumbnail
     text-align: center
     max-width: 70%
-    margin: 0 0 1em
+    margin: 1rem

@@ -7,7 +7,7 @@ description: Zihninize düzenli olarak temizlemeniz gereken bir ev gibi davranma
   geçirmelisiniz. Fiziksel sağlığınız kadar ruh sağlığınız da önemlidir. Bu
   nedenle, her ikisine de dikkat etmek sağlığınız için çok önemlidir.
 featuredpost: true
-featuredimage: /img/chemex.jpg
+featuredimage: /img/embrace.jpg
 tags:
   - psikolojiksağlık
 ---

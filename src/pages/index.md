@@ -1,13 +1,13 @@
 ---
 templateKey: index-page
-title: Danışman Meltem Ulutaş 
+title: Uzman Psikolog 
 image: /img/home-jumbotron.jpg
 heading: Psikolog Meltem Ulutaş
-subheading: Psikolojik Danışmanlık ve Uzmanlık
+subheading: Meltem Ulutaş 
 mainpitch:
-  title: Neden Meltem Ulutaş?
+  title: Hakkımda
   description: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Lisans eğitimini Fatih Sultan Mehmet Vakıf Üniversitesi, Fen – Edebiyat Fakültesi, Psikoloji bölümünde tamamlanmıştır. Lisans eğitiminin ardından Almanya’ya gitmiş ve burada Bilişsel Davranışçı Terapi ekolünde eğitimler almış ve süpervizör eşliğinde klinik gözlemlerini gerçekleştirmiştir. Yüksek lisans eğitimine İstinye Üniversitesi, Sinirbilim Programında devam etmektedir. Yüksek lisans tezinde “Nöroinflamasyonun Psikiyatrik ve Nörodejeneratif Hastalıklardaki Rolü” üzerine deneysel çalışmalarını sürdürmektedir. Bilişsel Davranışçı Terapi ekolü ile seanslarını klinikte ve online platformda sürdürmektedir.
 description: >-
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 intro:

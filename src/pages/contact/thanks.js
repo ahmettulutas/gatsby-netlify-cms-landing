@@ -1,7 +1,6 @@
 import React from "react";
 import Layout from "../../components/Layout";
 import "./thankyou.css";
-import { Link } from "gatsby";
 // eslint-disable-next-line
 export default () => (
   <Layout>

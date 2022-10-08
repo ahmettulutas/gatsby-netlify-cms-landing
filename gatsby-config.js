@@ -72,6 +72,14 @@ module.exports = {
       }
     },
     "gatsby-plugin-sharp",
+    {
+    resolve: `gatsby-plugin-less`,
+    options: {
+      cssLoaderOptions: {
+        camelCase: false,
+      },
+    },
+    },
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-transformer-remark",

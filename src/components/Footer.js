@@ -15,8 +15,13 @@ const Footer = class extends React.Component {
                       <Link to="/" className="navbar-item">
                         Anasayfa
                       </Link>
-                    </li>
-                    <li>
+                  </li>
+                  <li>
+                      <Link className="navbar-item" to="/contact">
+                        İletişim
+                      </Link>
+                  </li>
+                  <li>
                       <a
                         className="navbar-item"
                         href="/admin/"
@@ -25,12 +30,8 @@ const Footer = class extends React.Component {
                       >
                         Yönetim Paneli
                       </a>
-                    <li>
-                      <Link className="navbar-item" to="/contact">
-                        İletişim
-                      </Link>
-                    </li>
-                    </li>
+
+                  </li>
                   </ul>
                 </section>
               </div>
