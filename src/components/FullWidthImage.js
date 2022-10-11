@@ -58,7 +58,7 @@ export default function FullWidthImage(props) {
             style={{
               // By using the same grid area for both, they are stacked on top of each other
               position: "absolute",
-              top: "18%",
+              top: "23%",
               left: "2%"
             }}
           >

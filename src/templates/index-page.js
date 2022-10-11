@@ -7,15 +7,14 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
   title,
-  heading,
   subheading,
   mainpitch,
-  description,
   intro,
 }) => {
   const heroImage = getImage(image) || image;
@@ -29,9 +28,10 @@ export const IndexPageTemplate = ({
             <div className="columns">
               <div className="column is-10 is-offset-1">
                 <div className="content">
+                  <Features gridItems={intro.blurbs} />
                   <div className="columns is-multiline">
-                    <div className="column is-6">
-                      <img alt="psikolog meltem ulutaş" src="./img/meltemulutasprofile.jpg" />
+                    <div className="column is-5">
+                      <PreviewCompatibleImage imageInfo={{image: "./img/meltemulutasprofile.jpg"}}/>
                     </div>
                     <div className="column is-6">
                     <div className="tile">
@@ -42,7 +42,6 @@ export const IndexPageTemplate = ({
                     </div>
                     </div>
                   </div>
-                  <Features gridItems={intro.blurbs} />
                   <div className="column is-12">
                     <h3 className="has-text-weight-semibold is-size-2 has-text-centered">
                       En Son Yazılarım
@@ -50,7 +49,7 @@ export const IndexPageTemplate = ({
                     <BlogRoll />
                     <div className="column is-12 has-text-centered">
                       <Link className="btn" to="/blog">
-                        Daha Fazla Oku
+                        Daha Fazla
                       </Link>
                     </div>
                   </div>
@@ -118,6 +117,7 @@ export const pageQuery = graphql`
         subheading
         mainpitch {
           title
+          subtitle
           description
         }
         description

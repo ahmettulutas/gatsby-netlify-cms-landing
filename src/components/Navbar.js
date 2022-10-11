@@ -35,10 +35,10 @@ const Navbar = class extends React.Component {
   render() {
     return (
       <nav
-        className="navbar is-transparent"
+      style={{height:"100px"}}
+        className="navbar is-fixed-top is-transparent"
         role="navigation"
         aria-label="main-navigation"
-        style={{position:"fixed", width:"100vw", top:0, left:0, boxShadow: "0 5px 20px -10px #000"}}
       >
         <div className="container">
           <div className="navbar-brand">

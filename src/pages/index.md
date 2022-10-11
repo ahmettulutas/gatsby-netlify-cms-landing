@@ -1,24 +1,20 @@
 ---
 templateKey: index-page
-title: Uzman Psikolog 
-image: /img/home-jumbotron.jpg
+title: Uzman Psikolog Meltem Ulutaş
+image: /img/jumbotron3.jpg
+
 heading: Psikolog Meltem Ulutaş
 subheading: Meltem Ulutaş 
 mainpitch:
-  title: Hakkımda
+  title: Hakkında
+  subtitle: Psikolog Meltem Ulutaş
   description: >
     Lisans eğitimini Fatih Sultan Mehmet Vakıf Üniversitesi, Fen – Edebiyat Fakültesi, Psikoloji bölümünde tamamlanmıştır. Lisans eğitiminin ardından Almanya’ya gitmiş ve burada Bilişsel Davranışçı Terapi ekolünde eğitimler almış ve süpervizör eşliğinde klinik gözlemlerini gerçekleştirmiştir. Yüksek lisans eğitimine İstinye Üniversitesi, Sinirbilim Programında devam etmektedir. Yüksek lisans tezinde “Nöroinflamasyonun Psikiyatrik ve Nörodejeneratif Hastalıklardaki Rolü” üzerine deneysel çalışmalarını sürdürmektedir. Bilişsel Davranışçı Terapi ekolü ile seanslarını klinikte ve online platformda sürdürmektedir.
-description: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 intro:
   blurbs:
     - image: /img/coffee.png
       text: >
-        We sell green and roasted coffee beans that are sourced directly from
-        independent farmers and farm cooperatives. We’re proud to offer a
-        variety of coffee beans grown with great care for the environment and
-        local communities. Check our post or contact us directly for current
-        availability.
+        Cinsel terapi, soruna odaklanarak hem hastanın hem de doktorun ihtiyaçlarına hitap ederek cinsel sorunları olan kişilere yardımcı olur. Bu tedavi yöntemi kişilerin cinselliklerini anlamalarına ve sağlıklı cinsel ilişkiler geliştirmelerine yardımcı olur. Genellikle cinsel tatmini sağlamakta veya sürdürmekte güçlük çeken erkekler ve kadınlar için reçete edilir. Hastalar terapistlere erken boşalmadan (bir yetişkin eşinin önünde doruğa ulaşamadığında) kendi bedenlerine karşı şiddetli bir isteksizliğe kadar değişen sorunlarla gelir. Yaygın olarak tedavi edilen bazı problemler erektil disfonksiyon, libido eksikliği (cinsel istek veya enerji), orgazm eksikliği ve kendi cinsel organlarına karşı isteksizliktir.
     - image: /img/coffee-gear.png
       text: >
         We offer a small, but carefully curated selection of brewing gear and

@@ -9,9 +9,9 @@ import { withPrefix } from "gatsby";
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div className="layout">
+    <div>
       <Helmet>
-        <html lang="tr" />
+        <html lang="tr" class="has-navbar-fixed-top" />
         <title>{title}</title>
         <meta name="description" content={description} />
 
@@ -34,6 +34,7 @@ const TemplateWrapper = ({ children }) => {
         />
         <link href="https://fonts.googleapis.com/css?family=Allura&display=swap" rel="stylesheet"></link>
         <link href="https://fonts.googleapis.com/css?family=Nunito&display=swap" rel="stylesheet"></link>
+        <script src="https://kit.fontawesome.com/02130b3d51.js" crossorigin="anonymous"></script>
         <link
           rel="mask-icon"
           href={`${withPrefix("/")}img/safari-pinned-tab.svg`}
@@ -48,11 +49,9 @@ const TemplateWrapper = ({ children }) => {
         <meta property="og:description" content={description}></meta>
         <meta charset="UTF-8"></meta>
       </Helmet>
-      <div className="layout">
-        <Navbar />
-        <div style={{marginTop:"3.25rem"}}>{children}</div>
-        <Footer />
-      </div>
+      <Navbar />
+      <div style={ { minHeight: "100vh" }} className="layout">{ children }</div>
+      <Footer />
     </div>
   );
 };
