@@ -9,6 +9,7 @@ import BlogRoll from "../components/BlogRoll";
 import FullWidthImage from "../components/FullWidthImage";
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
 
+import "../assets/main.less"
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
@@ -20,47 +21,51 @@ export const IndexPageTemplate = ({
   const heroImage = getImage(image) || image;
 
   return (
-    <div>
-      <FullWidthImage img={heroImage} title={title} subheading={subheading} />
-      <section className="section section--gradient">
-        <div className="container">
-          <div className="section">
-            <div className="columns">
-              <div className="column is-10 is-offset-1">
-                <div className="content">
-                  <Features gridItems={intro.blurbs} />
-                  <div className="columns is-multiline">
-                    <div className="column is-5">
-                      <PreviewCompatibleImage imageInfo={{image: "./img/meltemulutasprofile.jpg"}}/>
-                    </div>
-                    <div className="column is-6">
-                    <div className="tile">
-                      <h1>{ mainpitch.title }</h1>
-                    </div>
-                    <div className="tile">
-                      <p className="subtitle">{mainpitch.description}</p>
-                    </div>
-                    </div>
-                  </div>
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2 has-text-centered">
-                      En Son Yazılarım
-                    </h3>
-                    <BlogRoll />
-                    <div className="column is-12 has-text-centered">
-                      <Link className="btn" to="/blog">
-                        Daha Fazla
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-  );
+		<div>
+			<div className='jumbotron'>
+				<FullWidthImage img={heroImage} title={title} subheading={subheading} />
+    	</div>
+			<section className='section section--gradient'>
+				<div className='container'>
+					<div className='section'>
+						<div className='columns'>
+							<div className='column is-10 is-offset-1'>
+								<div className='content'>
+									<Features gridItems={intro.blurbs} />
+									<div className='columns is-multiline'>
+										<div className='column is-5'>
+											<PreviewCompatibleImage
+												imageInfo={{ image: './img/meltemulutasprofile.jpg' }}
+											/>
+										</div>
+										<div className='column is-6'>
+											<div className='tile'>
+												<h1>{mainpitch.title}</h1>
+											</div>
+											<div className='tile'>
+												<p className='subtitle'>{mainpitch.description}</p>
+											</div>
+										</div>
+									</div>
+									<div className='column is-12'>
+										<h3 className='has-text-weight-semibold is-size-2 has-text-centered'>
+											En Son Yazılarım
+										</h3>
+										<BlogRoll />
+										<div className='column is-12 has-text-centered'>
+											<Link className='btn' to='/blog'>
+												Daha Fazla
+											</Link>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+	);
 };
 
 IndexPageTemplate.propTypes = {

@@ -13,13 +13,7 @@ export default class BlogIndexPage extends React.Component {
             backgroundImage: `url('/img/blog-writing.jpg')`,
           }}
         >
-          <h1
-            className="has-text-weight-bold is-size-1"
-            style={{
-              color: "white",
-              padding: "1rem",
-            }}
-          >
+          <h1 className="has-text-weight-bold is-size-1">
             Psikolojiden Haberler
           </h1>
         </div>
