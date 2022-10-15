@@ -1,5 +1,5 @@
 import React from 'react';
-
+import PropTypes, { string } from 'prop-types';
 const Hero = ({ title, background }) => {
 	console.log(background);
 	return (
@@ -18,5 +18,10 @@ const Hero = ({ title, background }) => {
 			</svg>
 		</div>
 	);
+};
+
+Hero.propTypes = {
+	title: PropTypes.string.isRequired,
+	background: PropTypes.node.isRequired,
 };
 export default Hero;
