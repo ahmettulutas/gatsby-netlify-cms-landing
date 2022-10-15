@@ -11,7 +11,7 @@ const TemplateWrapper = ({ children }) => {
   return (
 		<div>
 			<Helmet>
-				<html lang='tr' class="has-navbar-fixed-top" />
+				<html lang='tr' /* class="has-navbar-fixed-top" */ />
 				<title>{title}</title>
 				<meta name='description' content={description} />
 
@@ -43,7 +43,7 @@ const TemplateWrapper = ({ children }) => {
 					crossorigin='anonymous'></script>
 				<link
 					rel='mask-icon'
-					href={`${withPrefix('/')}img/safari-pinned-tab.svg`}
+					href={`${withPrefix('/')}img/psychology-logo.svg`}
 					color='#ff4400'
 				/>
 				<meta name='theme-color' content='#fff' />
@@ -60,7 +60,12 @@ const TemplateWrapper = ({ children }) => {
 				<meta property='og:description' content={description}></meta>
 				<meta charset='UTF-8'></meta>
 			</Helmet>
-			<div style={{ minHeight: '100vh'}}>
+			<div
+				style={{
+					display: 'grid',
+					gridTemplateRows: 'auto 1fr auto',
+					minHeight: '100vh',
+				}}>
 				<Navbar />
 				<div>{children}</div>
 				<Footer />

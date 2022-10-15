@@ -1,30 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Link, graphql } from "gatsby";
-import { getImage } from "gatsby-plugin-image";
+// import { getImage } from "gatsby-plugin-image";
 
 import Layout from "../components/Layout";
 import Features from "../components/Features";
-import BlogRoll from "../components/BlogRoll";
-import FullWidthImage from "../components/FullWidthImage";
+import BlogRoll from '../components/BlogRoll';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import Jumbotron5 from '../../static/img/jumbotron5.jpg';
+import '../assets/styles/main.less';
+import Hero from '../components/Hero';
 
-import "../assets/main.less"
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
-  image,
-  title,
-  subheading,
-  mainpitch,
-  intro,
+	image,
+	title,
+	subheading,
+	mainpitch,
+	intro,
 }) => {
-  const heroImage = getImage(image) || image;
+	/* 	const heroImage = getImage(image) || image; */
 
-  return (
+	return (
 		<div>
-			<div className='jumbotron'>
-				<FullWidthImage img={heroImage} title={title} subheading={subheading} />
-    	</div>
+			{/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
+			<Hero title={title} background={Jumbotron5} />
 			<section className='section section--gradient'>
 				<div className='container'>
 					<div className='section'>

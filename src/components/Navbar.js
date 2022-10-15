@@ -21,8 +21,8 @@ const Navbar = () => {
 	const toggleNavOnScroll = () => {
 		const { body, documentElement } = document;
 		body.scrollTop || documentElement.scrollTop > 100
-			? (navRef.current.style.height = '50px')
-			: (navRef.current.style.height = '100px');
+			? navRef.current.classList.remove('active')
+			: navRef.current.classList.add('active');
 	};
 
 	useEffect(() => {
@@ -30,11 +30,10 @@ const Navbar = () => {
 		return () => {
 			window.removeEventListener('scroll', toggleNavOnScroll);
 		};
-	}, [navRef]);
+	}, []);
 	return (
 		<nav
 			ref={navRef}
-			style={{ height: '100px' }}
 			className='navbar is-fixed-top'
 			role='navigation'
 			aria-label='main-navigation'>
@@ -65,13 +64,13 @@ const Navbar = () => {
 					className={`navbar-menu ${navState.navBarActiveClass}`}>
 					<div className='navbar-end has-text-right'>
 						<Link className='navbar-item' to='/'>
-							Anasayfa
+							ANASAYFA
 						</Link>
 						<Link className='navbar-item' to='/blog'>
-							Blog
+							YAZILARIM
 						</Link>
 						<Link className='navbar-item' to='/contact'>
-							Randevu - İletişim
+							RANDEVU
 						</Link>
 						<a
 							className='navbar-item'
@@ -79,10 +78,7 @@ const Navbar = () => {
 							target='_blank'
 							rel='noopener noreferrer'>
 							<span className='icon'>
-								<img
-									src={instagram}
-									alt='instagram link'
-								/>
+								<img src={instagram} alt='instagram link' />
 							</span>
 						</a>
 					</div>

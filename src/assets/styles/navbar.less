@@ -1,0 +1,62 @@
+.navbar {
+  transition: 0.3s ease-in;
+  box-shadow: 0 5px 20px -10px #000;
+  .navbar-item {
+    position: relative;
+    font-weight:bold;
+    margin-right: 2rem;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    &:not(.navbar-logo)::before  {
+      content: "";
+      position:absolute;
+      width: 0;
+      transition: 0.3s ease-in;
+      height: 3px;
+      bottom: 0;
+      left: 0;
+      background-color: @primary
+    }
+    &:hover {
+    color: @primary;
+    fill: @primary;
+    stroke: @primary;
+    background-color: inherit !important;
+      &::before {
+        width:100%;
+      }
+      svg {
+        fill: @primary;
+        stroke:@primary;
+        color:@primary;
+      }
+    }
+    img {
+      height:100%;
+    }
+  }
+  &.active {
+    background: transparent;
+    box-shadow: none;
+    .navbar-item {
+      color:@primary-invert;
+      &:not(.navbar-logo)::before  {
+        background-color: @primary-invert;
+      }
+      &:hover {
+        color: @primary-invert;
+        fill: @primary-invert;
+        stroke: @primary-invert;
+      }
+    } 
+  }
+
+  .navbar-menu {
+    box-shadow: none !important;
+    .navbar-end {
+      align-items: center !important;
+    }
+  }
+  &.image {
+    height: 25px
+  }
+}
