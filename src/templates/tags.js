@@ -16,7 +16,7 @@ class TagRoute extends React.Component {
     const tag = this.props.pageContext.tag;
     const title = this.props.data.site.siteMetadata.title;
     const totalCount = this.props.data.allMarkdownRemark.totalCount;
-    const tagHeader = `${tag} etiketine sahip ${totalCount} blog yazısı bulundu.”`;
+    const tagHeader = `${tag} etiketine sahip ${totalCount} blog yazısı bulundu.`;
 		return (
 			<Layout>
 				<section className='section'>

@@ -6,11 +6,11 @@ import { Link, graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from '../components/BlogRoll';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage'
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import Jumbotron5 from '../../static/img/jumbotron5.jpg';
 import '../assets/styles/main.less';
 import Hero from '../components/Hero';
-
+import Contact from '../components/Contact';
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
 	image,
@@ -31,6 +31,7 @@ export const IndexPageTemplate = ({
 						<div className='columns'>
 							<div className='column is-10 is-offset-1'>
 								<div className='content'>
+									<Contact />
 									<Features gridItems={intro.blurbs} />
 									<div className='columns is-multiline'>
 										<div className='column is-5'>
