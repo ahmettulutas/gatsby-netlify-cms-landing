@@ -11,7 +11,7 @@ const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
 
 module.exports = {
 	siteMetadata: {
-		title: 'Psikolog Meltem Ulutaş Blog',
+		title: 'Psikolog Meltem Ulutaş',
 		description:
 			'Uzman Psikolog Meltem Ulutaş | Blog ve İletişim Sayfası | Psikolojik Danışmanlık | Psikolojik Terapi',
 		siteUrl: 'https://www.meltemulutas.com/',

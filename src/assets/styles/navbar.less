@@ -17,10 +17,10 @@
       background-color: @primary
     }
     &:hover {
-    color: @primary;
-    fill: @primary;
-    stroke: @primary;
-    background-color: inherit !important;
+      color: @primary;
+      fill: @primary;
+      stroke: @primary;
+      background-color: inherit !important;
       &::before {
         width:100%;
       }
@@ -34,11 +34,15 @@
       height:100%;
     }
   }
-  &.active {
+  &.transparent {
     background: transparent;
     box-shadow: none;
-    .navbar-item {
+    .navbar-menu {
+      background: transparent !important;
+    }
+    .navbar-item, span {
       color:@primary-invert;
+      text-shadow: 1px 1px 1px #26272a;
       &:not(.navbar-logo)::before  {
         background-color: @primary-invert;
       }

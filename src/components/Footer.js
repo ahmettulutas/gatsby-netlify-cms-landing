@@ -31,14 +31,21 @@ const Footer = () => (
 						</ul>
 					</section>
 				</div>
-				<div className='column is-1 social'>
-					<a title='instagram' href='https://instagram.com'>
-						<img
-							src={instagram}
-							alt='Instagram'
-							style={{ width: '1rem', height: '1rem' }}
-						/>
-					</a>
+				<div className='column'>
+					<ul className='menu-list'>
+						<li>
+							<a
+								title='instagram'
+								className='navbar-item'
+								href='https://instagram.com'>
+								<img
+									src={instagram}
+									alt='Instagram'
+									style={{ width: '1rem', height: '1rem' }}
+								/>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>

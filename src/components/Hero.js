@@ -1,7 +1,7 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
+
 const Hero = ({ title, background }) => {
-	console.log(background);
 	return (
 		<div
 			className='jumbotron-title'

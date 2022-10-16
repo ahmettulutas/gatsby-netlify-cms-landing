@@ -7,10 +7,11 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from '../components/BlogRoll';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import Jumbotron5 from '../../static/img/jumbotron5.jpg';
+import jumbotron from '../../static/img/jumbotron10.jpg';
 import '../assets/styles/main.less';
 import Hero from '../components/Hero';
-import Contact from '../components/Contact';
+import ContactInfo from '../components/ContactInfo';
+
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
 	image,
@@ -24,30 +25,32 @@ export const IndexPageTemplate = ({
 	return (
 		<div>
 			{/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
-			<Hero title={title} background={Jumbotron5} />
-			<section className='section section--gradient'>
+			<Hero title={title} background={jumbotron} />
+			<section className='section p-0'>
 				<div className='container'>
 					<div className='section'>
 						<div className='columns'>
 							<div className='column is-10 is-offset-1'>
 								<div className='content'>
-									<Contact />
+									<ContactInfo />
+									<section className='about'>
+										<div className='columns is-multiline'>
+											<div className='column is-5'>
+												<PreviewCompatibleImage
+													imageInfo={{ image: './img/meltemulutasprofile.jpg' }}
+												/>
+											</div>
+											<div className='column is-6'>
+												<div className='tile'>
+													<h1>{mainpitch.title}</h1>
+												</div>
+												<div className='tile'>
+													<p className='subtitle'>{mainpitch.description}</p>
+												</div>
+											</div>
+										</div>
+									</section>
 									<Features gridItems={intro.blurbs} />
-									<div className='columns is-multiline'>
-										<div className='column is-5'>
-											<PreviewCompatibleImage
-												imageInfo={{ image: './img/meltemulutasprofile.jpg' }}
-											/>
-										</div>
-										<div className='column is-6'>
-											<div className='tile'>
-												<h1>{mainpitch.title}</h1>
-											</div>
-											<div className='tile'>
-												<p className='subtitle'>{mainpitch.description}</p>
-											</div>
-										</div>
-									</div>
 									<div className='column is-12'>
 										<h3 className='has-text-weight-semibold is-size-2 has-text-centered'>
 											En Son Yazılarım

@@ -21,8 +21,8 @@ const Navbar = () => {
 	const toggleNavOnScroll = () => {
 		const { body, documentElement } = document;
 		body.scrollTop || documentElement.scrollTop > 100
-			? navRef.current.classList.remove('active')
-			: navRef.current.classList.add('active');
+			? navRef.current.classList.remove('transparent')
+			: navRef.current.classList.add('transparent');
 	};
 
 	useEffect(() => {
@@ -34,7 +34,7 @@ const Navbar = () => {
 	return (
 		<nav
 			ref={navRef}
-			className='navbar is-fixed-top'
+			className='navbar is-fixed-top transparent'
 			role='navigation'
 			aria-label='main-navigation'>
 			<div className='container'>
@@ -67,20 +67,11 @@ const Navbar = () => {
 							ANASAYFA
 						</Link>
 						<Link className='navbar-item' to='/blog'>
-							YAZILARIM
+							BLOG
 						</Link>
 						<Link className='navbar-item' to='/contact'>
 							RANDEVU
 						</Link>
-						<a
-							className='navbar-item'
-							href='https://www.instagram.com/psikologmeltemulutas/'
-							target='_blank'
-							rel='noopener noreferrer'>
-							<span className='icon'>
-								<img src={instagram} alt='instagram link' />
-							</span>
-						</a>
 					</div>
 				</div>
 			</div>
