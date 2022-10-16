@@ -55,7 +55,7 @@ const TemplateWrapper = ({ children }) => {
 					content='Uzman Psikolog Meltem Ulutaş'></meta>
 				<meta
 					property='og:image'
-					content={`${withPrefix('/')}img/og-image.jpg`}
+					content={`${withPrefix('/')}img/meltemulutasprofile.jpg`}
 				/>
 				<meta property='og:description' content={description}></meta>
 				<meta charset='UTF-8'></meta>
