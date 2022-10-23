@@ -5,7 +5,7 @@ import phone from '../img/social/phone.svg';
 
 const ContactInfo = () => {
 	return (
-		<article className='contact-main column is-12-mobile is-4-desktop is-flex is-justify-content-center'>
+		<article className='contact-main column is-12-mobile is-12-desktop'>
 			<section className='columns contact-card'>
 				<div className='column is-12-mobile'>
 					<span className='icon is-large'>
