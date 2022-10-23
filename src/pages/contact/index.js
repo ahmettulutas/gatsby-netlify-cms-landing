@@ -38,8 +38,8 @@ export default class Index extends React.Component {
 	render() {
 		return (
 			<Layout>
-				<Hero title={'İletişim'} background={contact} />
-				<section className='section'>
+				<Hero title={'İletişim'} background={contact} hasDarkBg />
+{/* 				<section className='section'>
 					<div className='container'>
 						<div className='content'>
 							<h1>İletişim</h1>
@@ -51,7 +51,7 @@ export default class Index extends React.Component {
 								data-netlify='true'
 								data-netlify-honeypot='bot-field'
 								onSubmit={this.handleSubmit}>
-								{/* The `form-name` hidden field is required to support form submissions without JavaScript */}
+								{/* The `form-name` hidden field is required to support form submissions without JavaScript 
 								<input type='hidden' name='form-name' value='contact' />
 								<div hidden>
 									<label>
@@ -111,7 +111,48 @@ export default class Index extends React.Component {
 							</form>
 						</div>
 					</div>
-				</section>
+				</section> */}
+				<section class="hero is-fullheight">
+		<div class="hero-body">
+			<div class="container p-auto">
+				<div class="columns is-8 is-variable ">
+					<div class="column is-two-thirds has-text-left">
+						<h1 class="title is-1">Contact Us</h1>
+						<p class="is-size-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla eligendi soluta
+							voluptate facere molestiae consequatur.</p>
+						<div class="social-media">
+							<a href="https://facebook.com" target="_blank" class="button is-light is-large"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+							<a href="https://instagram.com" target="_blank" class="button is-light is-large"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a href="https://twitter.com" target="_blank" class="button is-light is-large"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="column is-one-third has-text-left">
+						<div class="field">
+							<label class="label">Name</label>
+							<div class="control">
+								<input class="input is-medium" type="text" />
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Email</label>
+							<div class="control">
+								<input class="input is-medium" type="text" />
+							</div>
+						</div>
+						<div class="field">
+							<label class="label">Message</label>
+							<div class="control">
+								<textarea class="textarea is-medium"></textarea>
+							</div>
+						</div>
+						<div class="control">
+							<button type="submit" class="button is-link is-fullwidth has-text-weight-medium is-medium">Send Message</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 			</Layout>
 		);
 	}

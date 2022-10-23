@@ -2,15 +2,20 @@
 @import "./blogRoll.less";
 @import "./components.less";
 
+@font-face {
+  font-family: "AngellaWhite";
+  font-style: normal;
+  font-weight: 400;
+  src: local("angella-white"), url("../fonts/angella-white.otf") format("woff");
+}
+
+;
 @primary: #D64000;
 @primary-invert: #fff;
-@white-ter: ffff;
 @body-color: #333;
 @black: #2b2523;
 @light-gray: #f7f7f7;
 @dark-gray: #dbdada;
-
-
 
 
 
@@ -66,7 +71,7 @@
 .social a {
   padding: .5em .5em .3em .5em;
   border-radius: 1em;
-  background-color: @white-ter;
+  background-color: @primary-invert;
   margin: .5em;
   width: 1em;
   height: 1em;

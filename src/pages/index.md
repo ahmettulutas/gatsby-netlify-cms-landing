@@ -1,10 +1,10 @@
 ---
 templateKey: index-page
-title: Uzman Psikolog Meltem Ulutaş
-image: /img/jumbotron2.jpg
+title: Meltem Ulutaş
+image: /img/jumbotron12.png
 
 heading: Psikolog Meltem Ulutaş
-subheading: Meltem Ulutaş 
+subheading: UZMAN PSİKOLOG
 mainpitch:
   title: Hakkında
   subtitle: Psikolog Meltem Ulutaş

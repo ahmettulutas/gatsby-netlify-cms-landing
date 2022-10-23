@@ -7,7 +7,6 @@ import Layout from "../components/Layout";
 import Features from "../components/Features";
 import BlogRoll from '../components/BlogRoll';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import jumbotron from '../../static/img/jumbotron10.jpg';
 import '../assets/styles/main.less';
 import Hero from '../components/Hero';
 import ContactInfo from '../components/ContactInfo';
@@ -17,25 +16,28 @@ export const IndexPageTemplate = ({
 	image,
 	title,
 	subheading,
+	heading,
 	mainpitch,
 	intro,
 }) => {
 	/* 	const heroImage = getImage(image) || image; */
-
 	return (
 		<div>
 			{/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
-			<Hero title={title} background={jumbotron} />
-			<section className='section p-0'>
+			<Hero
+				title={title}
+				background={image.childImageSharp.gatsbyImageData.images.fallback.src}
+				subheading={subheading}
+			/>
+			<section className='section'>
 				<div className='container'>
 					<div className='section'>
 						<div className='columns'>
-							<div className='column is-10 is-offset-1'>
+							<div className='column'>
 								<div className='content'>
 									<ContactInfo />
-									<section className='about'>
-										<div className='columns is-multiline'>
-											<div className='column is-5'>
+									<section className='about columns is-multiline'>
+											<div className='column has-text-centered'>
 												<PreviewCompatibleImage
 													imageInfo={{ image: './img/meltemulutasprofile.jpg' }}
 												/>
@@ -48,7 +50,6 @@ export const IndexPageTemplate = ({
 													<p className='subtitle'>{mainpitch.description}</p>
 												</div>
 											</div>
-										</div>
 									</section>
 									<Features gridItems={intro.blurbs} />
 									<div className='column is-12'>

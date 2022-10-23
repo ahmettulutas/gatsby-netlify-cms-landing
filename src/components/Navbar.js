@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
-import instagram from '../img/social/instagram.svg';
 
 const Navbar = () => {
 	const [navState, setNavState] = useState({
