@@ -49,6 +49,7 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-image`,
+		'gatsby-plugin-postcss',
 		`gatsby-plugin-advanced-sitemap`,
 		{
 			resolve: 'gatsby-plugin-robots-txt',

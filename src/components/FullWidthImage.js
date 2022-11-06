@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function FullWidthImage(props) {
-  const {
+	const {
 		height = 700,
 		img,
 		title,
@@ -92,8 +92,8 @@ export default function FullWidthImage(props) {
 }
 
 FullWidthImage.propTypes = {
-  img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  title: PropTypes.string,
-  height: PropTypes.number,
-  subheading: PropTypes.string,
+	img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
+	title: PropTypes.string,
+	height: PropTypes.number,
+	subheading: PropTypes.string,
 };
