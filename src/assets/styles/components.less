@@ -43,12 +43,14 @@
 
 
 &.contact-card {
-  margin-top:3rem;
+  margin:5rem auto;
   background: @light-gray;
   /* box-shadow:0 5px 20px -10px #000; */
   padding: 1rem;
   text-align: center;
-  margin-bottom: 5rem;
+  gap:1rem;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
   div,
   a {
     cursor: pointer;
@@ -60,7 +62,6 @@
     text-decoration: none;
     font-size: 1rem;
     max-width: 100%;
-    margin:1rem;
     p {
     word-wrap: break-word;
       width: 100%;
@@ -84,5 +85,10 @@
   }
   img {
     margin: 0 auto;
+  }
+}
+@media (max-width: 765px) {
+  .contact-card {
+    grid-template-columns: 1fr;
   }
 }

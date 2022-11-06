@@ -5,15 +5,15 @@ import phone from '../img/social/phone.svg';
 
 const ContactInfo = () => {
 	return (
-		<section className='columns contact-card is-3-desktop is-1-mobile'>
-			<div className='column is-12-mobile'>
+		<section className='columns is-8 contact-card '>
+			<a className='column'>
 				<span className='icon is-large'>
 					<img src={phone} alt='instagram link' />
 				</span>
 				<p className='is-size-5-media'>+90 530 095 40 85</p>
-			</div>
+			</a>
 			<a
-				className='column is-12-mobile'
+				className='column'
 				href='https://www.instagram.com/psikologmeltemulutas/'
 				target='_blank'
 				rel='noopener noreferrer'>
@@ -22,9 +22,7 @@ const ContactInfo = () => {
 				</span>
 				<p className='is-size-5-media'>instagram.com/psikologmeltemulutas</p>
 			</a>
-			<a
-				className='column is-12-mobile'
-				href='mailto:psikolog.meltem.ulutas@gmail.com'>
+			<a className='column' href='mailto:psikolog.meltem.ulutas@gmail.com'>
 				<span className='icon is-large'>
 					<img src={mail} alt='instagram link' />
 				</span>

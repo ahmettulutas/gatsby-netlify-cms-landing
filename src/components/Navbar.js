@@ -53,9 +53,9 @@ const Navbar = () => {
 						tabIndex={0}
 						onKeyPress={() => toggleHamburger()}
 						onClick={() => toggleHamburger()}>
-						<span />
-						<span />
-						<span />
+						<span style={{ height: '1px' }} />
+						<span style={{ height: '1px' }} />
+						<span style={{ height: '1px' }} />
 					</div>
 				</div>
 				<div
