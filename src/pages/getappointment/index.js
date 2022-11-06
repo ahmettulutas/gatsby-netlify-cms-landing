@@ -48,22 +48,22 @@ export default class Index extends React.Component {
 								<div className='social-media'>
 									<a
 										href='https://facebook.com'
-										rel='noreferrer'
 										target='_blank'
+										rel='noreferrer'
 										className='button is-light is-large'>
 										<i className='fa fa-phone-square' aria-hidden='true'></i>
 									</a>
 									<a
 										href='https://instagram.com'
-										rel='noreferrer'
 										target='_blank'
+										rel='noreferrer'
 										className='button is-light is-large'>
 										<i className='fa fa-instagram' aria-hidden='true'></i>
 									</a>
 									<a
 										href='https://twitter.com'
-										rel='noreferrer'
 										target='_blank'
+										rel='noreferrer'
 										className='button is-light is-large'>
 										<i className='fa fa-whatsapp' aria-hidden='true'></i>
 									</a>
@@ -76,6 +76,7 @@ export default class Index extends React.Component {
 									action='/contact/thanks/'
 									data-netlify='true'
 									data-netlify-honeypot='bot-field'
+									data-netlify-recaptcha='true'
 									onSubmit={this.handleSubmit}>
 									{/* The `form-name` hidden field is required to support form submissions without JavaScript */}
 									<input type='hidden' name='form-name' value='contact' />
@@ -128,7 +129,7 @@ export default class Index extends React.Component {
 												id={'message'}></textarea>
 										</div>
 									</div>
-
+									<div data-netlify-recaptcha='true'></div>
 									<div className='control'>
 										<button
 											type='submit'

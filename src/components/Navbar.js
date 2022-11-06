@@ -71,6 +71,9 @@ const Navbar = () => {
 						<Link className='navbar-item' to='/contact'>
 							RANDEVU
 						</Link>
+						<Link className='navbar-item' to='/getappointment'>
+							iLETİŞİM
+						</Link>
 					</div>
 				</div>
 			</div>

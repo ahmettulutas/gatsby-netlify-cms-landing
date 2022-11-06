@@ -1,14 +1,15 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import "./all.sass";
-import useSiteMetadata from "./SiteMetadata";
-import { withPrefix } from "gatsby";
+import Navbar from '../components/Navbar';
+import './all.sass';
+import useSiteMetadata from './SiteMetadata';
+import { withPrefix } from 'gatsby';
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 const TemplateWrapper = ({ children }) => {
-  const { title, description } = useSiteMetadata();
-  return (
+	const { title, description } = useSiteMetadata();
+	return (
 		<div>
 			<Helmet>
 				<html lang='tr' /* class="has-navbar-fixed-top" */ />
@@ -68,6 +69,13 @@ const TemplateWrapper = ({ children }) => {
 				}}>
 				<Navbar />
 				<div>{children}</div>
+				<FloatingWhatsApp
+					phoneNumber='05300954085'
+					accountName='Meltem Ulutaş'
+					chatMessage='Merhaba, nasıl yardımcı olabilirim?'
+					placeHolder='Mesajınız'
+					statusMessage='Şu anda aktif'
+				/>
 				<Footer />
 			</div>
 		</div>
