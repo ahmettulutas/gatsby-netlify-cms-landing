@@ -8,12 +8,14 @@ const Navbar2 = () => {
 			? navRef.current.classList.remove('transparent')
 			: navRef.current.classList.add('transparent');
 	};
-
+	useEffect(() => {
+		window.addEventListener('scroll', toggleNavOnScroll);
+		return () => {
+			window.removeEventListener('scroll', toggleNavOnScroll);
+		};
+	}, []);
 	return (
-		<nav
-			ref={navRef}
-			id='header'
-			className='fixed w-full z-30 top-0 text-white'>
+		<nav id='header' className='navbar fixed w-full z-30 top-0 text-white'>
 			<div className='w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2'>
 				<div className='pl-4 flex items-center'>
 					<Link to='/' className='navbar-item navbar-logo' title='Logo'>
@@ -24,10 +26,10 @@ const Navbar2 = () => {
 						/>
 					</Link>
 				</div>
-				<div className='block lg:hidden pr-4'>
+				<div className='block lg:hidden pr-4 my-0'>
 					<button
 						id='nav-toggle'
-						className='flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out'>
+						className='flex items-center p-1 my-auto text-white hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out'>
 						<svg
 							className='fill-current h-6 w-6'
 							viewBox='0 0 20 20'
@@ -64,7 +66,6 @@ const Navbar2 = () => {
 					</ul>
 				</div>
 			</div>
-			<hr className='border-b border-gray-100 opacity-25 my-0 py-0' />
 		</nav>
 	);
 };
