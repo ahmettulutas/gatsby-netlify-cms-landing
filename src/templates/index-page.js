@@ -10,6 +10,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import '../assets/styles/main.less';
 import Hero from '../components/Hero';
 import ContactInfo from '../components/ContactInfo';
+import { getImage } from 'gatsby-plugin-image';
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -20,11 +21,16 @@ export const IndexPageTemplate = ({
 	mainpitch,
 	intro,
 }) => {
+	const heroImage = getImage(image) || image;
+	console.log(heroImage);
 	return (
 		<div>
 			<Hero
 				title={title}
-				background={image.childImageSharp.gatsbyImageData.images.fallback.src}
+				background={
+					image.childImageSharp.gatsbyImageData.images.fallback.src ||
+					heroImage.image
+				}
 				subheading={subheading}
 			/>
 
