@@ -1,99 +1,108 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from 'react';
+import PropTypes from 'prop-types';
+import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function FullWidthImage(props) {
   const {
-		height = 700,
-		img,
-		title,
-		subheading,
-		imgPosition = 'top center',
-	} = props;
-
-	return (
-		<React.Fragment>
-			<figure
-				className='margin-top-0'
-				style={{
-					position: 'relative',
-				}}>
-				{img?.url ? (
-					<img
-						src={img}
-						objectFit={'cover'}
-						objectPosition={imgPosition}
-						style={{
-							gridArea: '1/1',
-							// You can set a maximum height for the image, if you wish.
-							height: height,
-							width: '100%',
-						}}
-						// You can optionally force an aspect ratio for the generated image
-						aspectratio={3 / 1}
-						// This is a presentational image, so the alt should be an empty string
-						alt=''
-						formats={['auto', 'webp', 'avif']}
-					/>
-				) : (
-					<GatsbyImage
-						image={img}
-						objectFit={'cover'}
-						style={{
-							gridArea: '1/1',
-							// You can set a maximum height for the image, if you wish.
-							maxHeight: height,
-						}}
-						layout='fullWidth'
-						// You can optionally force an aspect ratio for the generated image
-						aspectratio={1 / 1}
-						// This is a presentational image, so the alt should be an empty string
-						alt=''
-						formats={['auto', 'webp', 'avif']}
-					/>
-				)}
-				{(title || subheading) && (
-					<div
-						style={{
-							// By using the same grid area for both, they are stacked on top of each other
-							position: 'absolute',
-							top: '23%',
-							left: '2%',
-						}}>
-						{title && (
-							<h3
-								className='has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen'
-								style={{
-									color: '#ffff',
-									lineHeight: '1',
-								}}>
-								{title}
-							</h3>
-						)}
-						{subheading && (
-							<h1
-								className='has-text-weight-bold is-size-3-mobile is-size-1-tablet'
-								style={{
-									color: 'white',
-									lineHeight: '1',
-									padding: '0.25rem',
-									marginTop: '0.5rem',
-									fontFamily: 'Allura, Sans-serif',
-									fontSize: '4rem !important',
-								}}>
-								{subheading}
-							</h1>
-						)}
-					</div>
-				)}
-			</figure>
-		</React.Fragment>
-	);
+    height = 800,
+    img,
+    title,
+    subheading,
+    imgPosition = 'top center',
+    hasDarkBg
+  } = props;
+  console.log(img);
+  return (
+    <section style={{ position: 'relative' }}>
+      <figure
+        className='margin-top-0'
+        style={{
+          position: 'relative'
+        }}>
+        {
+          img?.url
+            ? (
+              <img
+                src={img}
+                style={{
+                  gridArea: '1/1',
+                  height,
+                  width: '100%',
+                  aspectRatio: '3 /1',
+                  objectFit: 'cover',
+                  objectPosition: `${imgPosition}`
+                }}
+                alt=''
+              />
+            ) :
+            (
+              <GatsbyImage
+                image={img}
+                objectFit={'cover'}
+                style={{
+                  gridArea: '1/1',
+                  maxHeight: height
+                }}
+                layout='fullWidth'
+                aspectratio={1 / 1}
+                alt=''
+                formats={['auto', 'webp', 'avif']}
+              />
+            )}
+        {(title || subheading) && (
+          <div
+            className="hero-title-section"
+            style={{
+              position: 'absolute',
+              top: '23%',
+              left: '2%'
+            }}>
+            {subheading && <h2 className='is-size-5-mobile'>{subheading}</h2>}
+            <h1 className={`is-size-1-mobile ${hasDarkBg ? 'invert' : ''}`}>
+              {title}
+            </h1>
+          </div>
+        )}
+      </figure>
+      <div className='svg-container'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          viewBox='0 0 4080 400'
+          preserveAspectRatio='none'>
+          <path
+            className='elementor-shape-fill ha-shape-divider'
+            opacity='0.2'
+            enableBackground='new    '
+            d='M4080,79.3V0L1179.4,0v79.3c0,0,694.9,437.4,1471.3,275.6
+          S3575.7-152.5,4080,79.3z'></path>
+          <path
+            className='elementor-shape-fill ha-shape-divider'
+            opacity='0.2'
+            enableBackground='new    '
+            d='M2249,79.3V0L0,0l0,79.3c0,0,43.3,437.4,819.8,275.6S1744.7-152.5,2249,79.3z'></path>
+          <path
+            className='elementor-shape-fill ha-shape-divider'
+            opacity='0.2'
+            enableBackground='new    '
+            d='M2631.6,49.8c0,0-596.3,547.3-1468.8,230.2S0,95.6,0,95.6L0,0l2631.6,0V49.8z'></path>
+          <path
+            className='elementor-shape-fill ha-shape-divider'
+            opacity='0.2'
+            enableBackground='new    '
+            d='M4080,95.6c0,0-428.4,501.5-1208.9,184.4S1831,95.6,1831,95.6V0l2249,0V95.6z'></path>
+          <path
+            className='elementor-shape-fill ha-shape-divider'
+            d='M4080,0v192.6c-392.4,177-703.2,95.6-1075-34.1c-214.6-74.8-508-126-839.1,6.1c-149.2,59.5-447.2,203.4-1026.2,10.8
+          C313.2-99.5,0,95.6,0,95.6L0,0l2249,0L4080,0z'></path>
+        </svg>
+      </div>
+    </section>
+  );
 }
 
 FullWidthImage.propTypes = {
   img: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   height: PropTypes.number,
-  subheading: PropTypes.string,
+  subheading: PropTypes.string
 };

@@ -1,101 +1,151 @@
 /* HERO */
 
 .hero-main {
-  /* background: linear-gradient(90deg, rgba(244,162,97,1) 12%, rgba(214,64,0,1) 79%); */
-  width: 100vw;
-  background-size: cover;
-  -webkit-background-size: cover;
-  background-position: center;
-  position: relative;
-  min-height: 1000px;
-  display:grid;
-  place-items: center;
-  .svg-container {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    width: 100%;
-    line-height: 0;
-    bottom: -1px;
-    svg {
-      width: calc(260% + 1.3px);
-      transform: rotate(180deg);
-      height: 250px;
-      fill: white;
-      z-index: -1;
-}
-  }
+	/* background: linear-gradient(90deg, rgba(244,162,97,1) 12%, rgba(214,64,0,1) 79%); */
+	width: 100vw;
+	background-size: cover;
+	-webkit-background-size: cover;
+	background-position: center;
+	position: relative;
+	min-height: 700px;
+	display: grid;
+	place-items: center;
 
-  .hero-title-section {
-    text-align: center;
-    letter-spacing: 0.3cm;
-    color: @primary-invert;
-    h2 {
-      font-size:1.5rem;
-    }
-    h1 {
-      font-size: 6rem;
-      color: @black;
-      margin-top: 10px;
-      text-shadow: 2px 2px 2px #26272a;
-      font-family: 'AngellaWhite';
-      letter-spacing: 0.3cm;
-      &.invert {
-         color:@primary-invert;
-      }
-    }
-  }
+	.svg-container {
+		overflow: hidden;
+		position: absolute;
+		left: 0;
+		width: 100%;
+		line-height: 0;
+		bottom: -1px;
+
+		svg {
+			width: calc(260% + 1.3px);
+			transform: rotate(180deg);
+			height: 250px;
+			fill: white;
+			z-index: -1;
+		}
+	}
+
+	.hero-title-section {
+		text-align: center;
+		letter-spacing: 0.3cm;
+		color: @primary-invert;
+
+		h2 {
+			font-size: 1.5rem;
+		}
+
+		h1 {
+			font-size: 6rem;
+			color: @black;
+			margin-top: 10px;
+			text-shadow: 2px 2px 2px #26272a;
+			font-family: 'AngellaWhite';
+			letter-spacing: 0.3cm;
+
+			&.invert {
+				color: @primary-invert;
+			}
+		}
+	}
 }
 
 /* CONTACT */
 
+.contact-card {
+	margin: 3rem auto;
+	background: @light-gray;
+	/* box-shadow:0 5px 20px -10px #000; */
+	padding: 1rem;
+	text-align: center;
+	gap: 1rem;
+	display: flex;
+	flex-wrap: wrap;
 
+	div,
+	a {
+		padding: 1rem;
+		flex: 1 1 250px;
+		cursor: pointer;
+		background: @primary-invert;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: @primary;
+		text-decoration: none;
+		font-size: 1rem;
+		max-width: 100%;
 
-  .contact-card {
-    margin:3rem auto;
-    background: @light-gray;
-    /* box-shadow:0 5px 20px -10px #000; */
-    padding: 1rem;
-    text-align: center;
-    gap:1rem;
-    display:flex;
-    flex-wrap: wrap;
-    div,
-    a {
-      padding:1rem;
-      flex: 1 1 250px;
-      cursor: pointer;
-      background: @primary-invert;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: @primary;
-      text-decoration: none;
-      font-size: 1rem;
-      max-width: 100%;
-      p {
-        word-wrap: break-word;
-        width: 100%;
-        padding-top:0.5rem;
-      }
-      &:hover {
-        color: black;
-      } 
-    }
-  }
-  
+		p {
+			word-wrap: break-word;
+			width: 100%;
+			padding-top: 0.5rem;
+		}
+
+		&:hover {
+			color: black;
+		}
+	}
+}
 
 /* BLOG CARD  */
 
 /* ABOUT */
 .about {
-  p {
-    line-height: 40px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /*  font-family: Arial, Helvetica, sans-serif; */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  }
-  img {
-    margin: 0 auto;
-  }
+	p {
+		line-height: 40px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		/*  font-family: Arial, Helvetica, sans-serif; */
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+			'Lucida Sans', Arial, sans-serif;
+	}
+
+	img {
+		margin: 0 auto;
+	}
+}
+.hero-title-section {
+	text-align: center;
+	letter-spacing: 0.3cm;
+	color: @primary-invert;
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h1 {
+		font-size: 6rem;
+		color: @black;
+		margin-top: 10px;
+		text-shadow: 2px 2px 2px #26272a;
+		font-family: 'AngellaWhite';
+		letter-spacing: 0.3cm;
+
+		&.invert {
+			color: @primary-invert;
+		}
+	}
+}
+.svg-container {
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	line-height: 0;
+	bottom: -1px;
+
+	svg {
+		width: calc(260% + 1.3px);
+		transform: rotate(180deg);
+		height: 200px;
+		fill: white;
+		z-index: -1;
+	}
+	@media (max-width: 575px) {
+		svg {
+			height: 100px;
+		}
+	}
 }
