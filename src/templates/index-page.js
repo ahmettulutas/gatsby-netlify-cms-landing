@@ -26,7 +26,7 @@ export const IndexPageTemplate = ({
       <Hero
         title={title}
         background={
-          heroImage.images.fallback.src
+          heroImage.url ? heroImage : image.childImageSharp.gatsbyImageData.images.fallback.src || heroImage.image
         }
         subheading={subheading}
       />
