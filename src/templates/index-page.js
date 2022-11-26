@@ -9,6 +9,7 @@ import '../assets/styles/main.less';
 import Hero from '../components/Hero';
 import ContactInfo from '../components/ContactInfo';
 import { getImage } from 'gatsby-plugin-image';
+/* import FullWidthImage from '../components/FullWidthImage'; */
 
 // eslint-disable-next-line
 export const IndexPageTemplate = ({
@@ -19,13 +20,13 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const heroImage = getImage(image) || image;
+  console.log(heroImage);
   return (
     <div>
       <Hero
         title={title}
         background={
-          image.childImageSharp.gatsbyImageData.images.fallback.src ||
-					heroImage.image
+          heroImage.images.fallback.src
         }
         subheading={subheading}
       />
