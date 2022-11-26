@@ -36,22 +36,17 @@ export const IndexPageTemplate = ({
         <section className='about columns is-multiline p-10'>
           <div className='column has-text-centered'>
             <PreviewCompatibleImage
-              imageInfo={{ image: './img/meltemulutasprofile.jpg' }}
+              imageInfo={{ image: mainpitch.image }}
             />
           </div>
           <div className='column is-6 p-10 text'>
-            <div className='tile'>
-              <h2 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen'>
-                {mainpitch.title}
-              </h2>
-            </div>
             <div className='tile'>
               <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen'>
                 {mainpitch.subtitle}
               </h3>
             </div>
             <div className='tile'>
-              <p className='subtitle text--uppercase'>
+              <p className='subtitle text--uppercase has-text-centered-touch'>
                 {mainpitch.description}
               </p>
             </div>
@@ -130,6 +125,11 @@ export const pageQuery = graphql`
 					title
 					subtitle
 					description
+        	image {
+            childImageSharp {
+              gatsbyImageData(quality: 100, layout: FULL_WIDTH)
+            }
+				}
 				}
 				description
 				intro {

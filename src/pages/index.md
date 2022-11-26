@@ -6,6 +6,7 @@ image: /img/jumbotron12.png
 heading: Psikolog Meltem Ulutaş
 subheading: UZMAN PSİKOLOG
 mainpitch:
+  image: /img/meltemulutasprofile.jpg
   title: Psikolog Meltem Ulutaş
   subtitle: Hakkında
   description: >

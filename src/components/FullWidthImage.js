@@ -11,7 +11,7 @@ export default function FullWidthImage(props) {
     imgPosition = 'top center',
     hasDarkBg
   } = props;
-  console.log(img);
+
   return (
     <section style={{ position: 'relative' }}>
       <figure
