@@ -5,28 +5,36 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
+import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-// eslint-disable-next-line
 export const BlogPostTemplate = ({
   content,
   contentComponent,
   description,
   tags,
   title,
-  helmet
+  helmet,
+  featuredImage
+
 }) => {
   const PostContent = contentComponent || Content;
 
   return (
-    <section className='section'>
+    <>
       {helmet || ''}
-      <div className='container content'>
+      <section className='container blog-content'>
+
         <div className='columns'>
           <div className='column is-10 is-offset-1'>
-            <h1 className='title is-size-2 has-text-weight-bold is-bold-light'>
+            <h1 className='title is-size-2 has-text-weight-bold is-bold-light has-text-centered'>
               {title}
             </h1>
-            <p>{description}</p>
+            <div className='blog-image'>
+              <PreviewCompatibleImage
+                imageInfo={{ image: featuredImage }}
+              />
+            </div>
+            <p className='description'>{description}</p>
             <PostContent content={content} />
             {tags && tags.length
               ? (
@@ -48,8 +56,8 @@ export const BlogPostTemplate = ({
               : null}
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 
@@ -63,7 +71,6 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data;
-
   return (
     <Layout>
       <BlogPostTemplate
@@ -77,11 +84,12 @@ const BlogPost = ({ data }) => {
               name='description'
               content={`${post.frontmatter.description}`}
             />
-            {/* <meta property="og:image" content={post.featuredimage} /> TODO*/}
+            <meta property="og:image" content={post.frontmatter.featuredimage} />
           </Helmet>
         }
         tags={post.frontmatter.tags}
         title={post.frontmatter.title}
+        featuredImage={post.frontmatter.featuredimage}
       />
     </Layout>
   );
@@ -108,7 +116,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 120
+              width: 300
               quality: 100
               layout: CONSTRAINED
             )
