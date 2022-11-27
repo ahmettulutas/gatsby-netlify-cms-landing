@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway:400,600,900');
 
-*{
-  box-sizing:border-box;
- /* outline:1px solid ;*/
-}
 .body{
         background: #D7272D;
         height: 100%;

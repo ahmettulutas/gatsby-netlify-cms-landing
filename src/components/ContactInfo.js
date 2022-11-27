@@ -4,7 +4,7 @@ import mail from '../img/social/mail.svg';
 import phone from '../img/social/phone.svg';
 
 const ContactInfo = () => (
-  <section className='contact-card '>
+  <section className='contact-card'>
     <a
       href='https://api.whatsapp.com/send/?phone=05300954085'
       target='_blank'

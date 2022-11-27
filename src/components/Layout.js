@@ -3,14 +3,14 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import './all.sass';
-import useSiteMetadata from './SiteMetadata';
+import useSiteMetadata from '../utils/SiteMetadata';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata();
   return (
-    <div>
+    <>
       <Helmet>
         <html lang='tr' />
         <title>{title}</title>
@@ -60,25 +60,26 @@ const TemplateWrapper = ({ children }) => {
         />
         <meta property='og:description' content={description}></meta>
         <meta charset='UTF-8'></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
       </Helmet>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateRows: 'auto 1fr auto',
-          minHeight: '100vh'
-        }}>
+      <div /* style={{
+        display: 'grid',
+        gridTemplateRows: 'auto 1fr auto',
+        minHeight: '100vh'
+      }} */ className='main-layout'>
         <Navbar />
-        <div>{children}</div>
-        <FloatingWhatsApp
-          phoneNumber='05300954085'
-          accountName='Meltem Ulutaş'
-          chatMessage='Merhaba, nasıl yardımcı olabilirim?'
-          placeHolder='Mesajınız'
-          statusMessage='Şu anda aktif'
-        />
+        <main>{children}</main>
         <Footer />
+
       </div>
-    </div>
+      <FloatingWhatsApp
+        phoneNumber='+905300954085'
+        accountName='Meltem Ulutaş'
+        chatMessage='Merhaba, nasıl yardımcı olabilirim?'
+        placeHolder='Mesajınız'
+        statusMessage='Şu anda aktif'
+      />
+    </>
   );
 };
 

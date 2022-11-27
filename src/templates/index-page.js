@@ -41,7 +41,7 @@ export const IndexPageTemplate = ({
           </div>
           <div className='column is-6 p-10 text'>
             <div className='tile'>
-              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen'>
+              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-touch'>
                 {mainpitch.subtitle}
               </h3>
             </div>
@@ -136,9 +136,10 @@ export const pageQuery = graphql`
 					blurbs {
 						image {
 							childImageSharp {
-								gatsbyImageData(width: 240, quality: 64, layout: CONSTRAINED)
+								gatsbyImageData(width: 90, quality: 64, layout: CONSTRAINED)
 							}
 						}
+            title
 						text
 					}
 					heading

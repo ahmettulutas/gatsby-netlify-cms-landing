@@ -38,7 +38,7 @@ const Navbar = () => {
             <img
               alt='uzman psikolog meltem ulutaş'
               className='navbar-image'
-              src='/img/Meltem.svg'
+              src='/img/logo.svg'
             />
           </Link>
           {/* Hamburger menu */}

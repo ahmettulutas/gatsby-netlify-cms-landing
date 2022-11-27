@@ -5,21 +5,21 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 const FeatureGrid = ({ gridItems }) => (
   <div className='columns is-multiline'>
     {gridItems.map(item => (
-      <div key={item.text} className='column is-6'>
-        <section className='section'>
-          <div className='has-text-centered'>
-            <div
-              style={{
-                width: '150px',
-                height: 'auto',
-                display: 'inline-block'
-              }}>
-              <PreviewCompatibleImage imageInfo={item} />
-            </div>
+      <section key={item.text} className='column is-6'>
+
+        <div className='has-text-centered'>
+          <div
+            style={{
+              width: '90px',
+              height: 'auto',
+              display: 'inline-block'
+            }}>
+            <PreviewCompatibleImage imageInfo={item} />
           </div>
-          <p style={{ textAlign: 'center', margin: '1rem' }}>{item.text}</p>
-        </section>
-      </div>
+        </div>
+        <p style={{ textAlign: 'center', margin: '1rem' }}>{item.text}</p>
+
+      </section>
     ))}
   </div>
 );

@@ -71,12 +71,13 @@ const BlogPost = ({ data }) => {
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
-          <Helmet titleTemplate='%s | Blog'>
+          <Helmet titleTemplate='%s'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
               name='description'
               content={`${post.frontmatter.description}`}
             />
+            {/* <meta property="og:image" content={post.featuredimage} /> TODO*/}
           </Helmet>
         }
         tags={post.frontmatter.tags}
@@ -104,6 +105,15 @@ export const pageQuery = graphql`
 				title
 				description
 				tags
+        featuredimage {
+          childImageSharp {
+            gatsbyImageData(
+              width: 120
+              quality: 100
+              layout: CONSTRAINED
+            )
+          }
+        }
 			}
 		}
 	}

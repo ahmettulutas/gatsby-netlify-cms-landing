@@ -1,8 +1,8 @@
 import React from 'react';
 import Layout from '../../components/Layout';
 import './thankyou.css';
-// eslint-disable-next-line
-export default () => (
+
+const ThankYou = () => (
   <Layout>
     <div className="body"></div>
     <div className="thankyoucontent">
@@ -20,3 +20,4 @@ export default () => (
     </div>
   </Layout>
 );
+export default ThankYou;
