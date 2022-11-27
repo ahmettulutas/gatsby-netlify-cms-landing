@@ -16,7 +16,7 @@
       left: 0;
       background-color: @primary
     }
-    &:hover, :visited {
+    &:hover {
       color: @primary;
       fill: @primary;
       stroke: @primary;
@@ -37,19 +37,15 @@
   &.transparent {
     background: transparent;
     box-shadow: none;
+    transition:0.3s ease-in;
     .navbar-menu {
       background: transparent !important;
     }
     .navbar-item, span {
-      color:@primary-invert;
-      text-shadow: 1px 1px 1px #26272a;
+      color:@primary;
+      /* text-shadow: 1px 1px 1px #fff; */
       &:not(.navbar-logo)::before  {
-        background-color: @primary-invert;
-      }
-      &:hover {
-        color: @primary-invert;
-        fill: @primary-invert;
-        stroke: @primary-invert;
+        background-color: @primary;
       }
     } 
   }

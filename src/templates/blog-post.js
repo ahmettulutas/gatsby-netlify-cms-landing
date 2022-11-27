@@ -5,7 +5,10 @@ import { Helmet } from 'react-helmet';
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+/* import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import FullWidthImage from '../components/FullWidthImage'; */
+import { getImage } from 'gatsby-plugin-image';
+import Hero from '../components/Hero';
 
 export const BlogPostTemplate = ({
   content,
@@ -17,23 +20,30 @@ export const BlogPostTemplate = ({
   featuredImage
 
 }) => {
-  const PostContent = contentComponent || Content;
+  const PostContent = contentComponent || Content,
+    heroImage = getImage(featuredImage) || featuredImage;
 
   return (
     <>
       {helmet || ''}
-      <section className='container blog-content'>
+      <Hero
+        background={
+          heroImage.url ? heroImage.url : featuredImage.childImageSharp.gatsbyImageData.images.fallback.src || heroImage.image
+        }
+
+      />
+      <section className='blog-content'>
 
         <div className='columns'>
           <div className='column is-10 is-offset-1'>
             <h1 className='title is-size-2 has-text-weight-bold is-bold-light has-text-centered'>
               {title}
             </h1>
-            <div className='blog-image'>
+            {/*             <div className='blog-image'>
               <PreviewCompatibleImage
                 imageInfo={{ image: featuredImage }}
               />
-            </div>
+            </div> */}
             <p className='description'>{description}</p>
             <PostContent content={content} />
             {tags && tags.length

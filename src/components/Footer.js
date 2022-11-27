@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
-import instagram from '../img/social/instagram.svg';
+/* import instagram from '../img/social/instagram.svg';
 import mail from '../img/social/mail.svg';
-import phone from '../img/social/phone.svg';
+import phone from '../img/social/phone.svg'; */
 
 const Footer = () => (
   <footer className='footer'>
@@ -33,7 +33,7 @@ const Footer = () => (
             </ul>
           </section>
         </div>
-        <div className='column'>
+        {/* <div className='column'>
           <ul className='menu-list'>
             <li>
               <a
@@ -78,7 +78,7 @@ const Footer = () => (
               </a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   </footer>

@@ -94,6 +94,15 @@
 
 /* ABOUT */
 .about {
+	display:grid;
+	gap:2rem;
+	width:100%;
+	margin:1rem auto;
+	padding:2rem;
+	place-content: center;
+	@media screen and (min-width:765px) {
+  grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
+	}
 	p {
 		line-height: 40px;
 		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -128,6 +137,17 @@
 		}
 	}
 }
+
+// FEATURE-CARD
+.feature-card {
+	padding:20px;
+	h3 {
+		text-transform: uppercase;
+		margin:10px;
+		color:@primary;
+		font-weight:bold;
+	}
+}
 // BUTTONS 
 
 .more-btn {
@@ -147,4 +167,32 @@
   -webkit-transition: all .15s ease;
   transition: all .15s ease;
   
+}
+// GETAPPOINTMENT
+
+.get-appointment {
+	width: 100vw;
+	background-color: @primary;
+	color:@primary-invert;
+	padding:20px;
+	display:flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin:2rem 0;
+	h3 {
+		font-size: 24px;
+	}
+	* {
+		margin: 5px;
+	}
+	.navbar-item {
+		font-size: 20px;
+		color:inherit !important;
+		padding:0;
+		padding-left:10px;
+		&:hover {
+			background:inherit !important;
+		}
+	}
 }

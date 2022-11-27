@@ -9,6 +9,7 @@ import '../assets/styles/main.less';
 import Hero from '../components/Hero';
 import ContactInfo from '../components/ContactInfo';
 import { getImage } from 'gatsby-plugin-image';
+import { GetAppointment } from '../components/GetAppointment';
 /* import FullWidthImage from '../components/FullWidthImage'; */
 
 // eslint-disable-next-line
@@ -33,13 +34,13 @@ export const IndexPageTemplate = ({
       {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <div className='main-container'>
         <ContactInfo />
-        <section className='about columns is-multiline p-10'>
-          <div className='column has-text-centered'>
+        <section className='about'>
+          <div>
             <PreviewCompatibleImage
               imageInfo={{ image: mainpitch.image }}
             />
           </div>
-          <div className='column is-6 p-10 text'>
+          <div>
             <div className='tile'>
               <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-touch'>
                 {mainpitch.subtitle}
@@ -53,8 +54,9 @@ export const IndexPageTemplate = ({
           </div>
         </section>
         <Features gridItems={intro.blurbs} />
+        <GetAppointment />
         <div className='column is-12'>
-          <h3 className='has-text-weight-semibold is-size-2 has-text-centered'>
+          <h3 className='has-text-weight-semibold is-size-2 has-text-centered m-b-2'>
 						En Son Yazılarım
           </h3>
           <BlogRoll />
@@ -136,7 +138,7 @@ export const pageQuery = graphql`
 					blurbs {
 						image {
 							childImageSharp {
-								gatsbyImageData(width: 90, quality: 64, layout: CONSTRAINED)
+								gatsbyImageData(width: 60, quality: 64, layout: CONSTRAINED)
 							}
 						}
             title

@@ -65,10 +65,10 @@ const Navbar = () => {
 							BLOG
             </Link>
             <Link className='navbar-item' to='/contact'>
-							RANDEVU
+							İLETİŞİM
             </Link>
             <Link className='navbar-item' to='/getappointment'>
-							iLETİŞİM
+							RANDEVU
             </Link>
           </div>
         </div>
