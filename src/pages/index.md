@@ -17,10 +17,6 @@ intro:
       title: Bireysel Terapi
       text: >
         Kişinin ruh sağlığı sorunlarına, danışmanlık yöntemlerine ve değerlerine, kişilik özelliklerine ve zihinsel uyumuna dayanan psikolojik bir teşhise 'bireysel terapi' denir. Depresyon, anksiyete veya travma ile ilgili sorunları olan bir kişinin bireysel terapi alması gerekebilir. Buna ek olarak, bazı insanlar, boşanma sürecinde olduklarında veya kişilerarası ilişkilerinde başka sorunlar yaşadıklarında, bir bireyden psikolojik yardım almayı tercih ederler. Bu durumlarda, kişi sorunlar hakkında endişe duyabilir ve bunlar üzerinde tek başına çalışması gerekebilir.
-    - image: /img/sexual.png
-      title: Cinsel Terapi
-      text: >
-        Cinsel terapi, soruna odaklanarak hem hastanın hem de doktorun ihtiyaçlarına hitap ederek cinsel sorunları olan kişilere yardımcı olur. Bu tedavi yöntemi kişilerin cinselliklerini anlamalarına ve sağlıklı cinsel ilişkiler geliştirmelerine yardımcı olur. Genellikle cinsel tatmini sağlamakta veya sürdürmekte güçlük çeken erkekler ve kadınlar için reçete edilir. Hastalar terapistlere erken boşalmadan (bir yetişkin eşinin önünde doruğa ulaşamadığında) kendi bedenlerine karşı şiddetli bir isteksizliğe kadar değişen sorunlarla gelir. Yaygın olarak tedavi edilen bazı problemler erektil disfonksiyon, libido eksikliği (cinsel istek veya enerji), orgazm eksikliği ve kendi cinsel organlarına karşı isteksizliktir.
     - image: /img/Couple.png
       title: Çift Terapisi
       text: >

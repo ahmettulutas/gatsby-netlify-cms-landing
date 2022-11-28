@@ -10,8 +10,12 @@
   src: local("angella-white"), url("../fonts/angella-white.otf") format("woff");
 }
 
-html {
-  width:100wv;
+html, body {
+  overflow-x: hidden !important;
+  width: 100vw !important;
+}
+* {
+  box-sizing: border-box;
 }
 @primary: #ec5a1b;
 @primary-invert: #fff;
@@ -23,7 +27,7 @@ html {
 
 .main-layout {
   display:grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: 1fr auto;
   min-height:100vh;
 }
 

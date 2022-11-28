@@ -5,7 +5,7 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 const FeatureGrid = ({ gridItems }) => (
   <div className='columns is-multiline feature-card'>
     {gridItems.map(item => (
-      <section key={item.text} className='column is-6' lang="tr">
+      <section key={item.text} className='column is-4' lang="tr">
 
         <div className='has-text-centered'>
           <PreviewCompatibleImage imageInfo={item} />
