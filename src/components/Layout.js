@@ -62,15 +62,10 @@ const TemplateWrapper = ({ children }) => {
         <meta charset='UTF-8'></meta>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
       </Helmet>
-      <div /* style={{
-        display: 'grid',
-        gridTemplateRows: 'auto 1fr auto',
-        minHeight: '100vh'
-      }} */ className='main-layout'>
+      <div className='main-layout'>
         <Navbar />
         <main>{children}</main>
         <Footer />
-
       </div>
       <FloatingWhatsApp
         phoneNumber='+905300954085'
@@ -78,6 +73,8 @@ const TemplateWrapper = ({ children }) => {
         chatMessage='Merhaba, nasıl yardımcı olabilirim?'
         placeHolder='Mesajınız'
         statusMessage='Şu anda aktif'
+        avatar={`${withPrefix('/')}img/psychology-logo.svg`}
+        notification={false}
       />
     </>
   );

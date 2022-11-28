@@ -1,7 +1,7 @@
 import React from 'react';
-import instagram from '../img/social/instagram2.svg';
-import mail from '../img/social/mail.svg';
-import phone from '../img/social/phone.svg';
+import instagram from '../assets/img/social/instagram2.svg';
+import mail from '../assets/img/social/mail.svg';
+import phone from '../assets/img/social/phone.svg';
 
 const ContactInfo = () => (
   <section className='contact-card'>

@@ -10,7 +10,9 @@
   src: local("angella-white"), url("../fonts/angella-white.otf") format("woff");
 }
 
-;
+html {
+  width:100wv;
+}
 @primary: #ec5a1b;
 @primary-invert: #fff;
 @body-color: #333;
@@ -19,31 +21,11 @@
 @dark-gray: #dbdada;
 
 
-
-.full-width-image-container {  
-  width: 100vw;
-  position: relative;
-  height:500px;
-  left: 50%;
-  right: 50%;
-  margin: 2em -50vw;
-  background-size: cover;
-  background-position: bottom;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h1 {
-    color:@primary;
-  }
-}
-
 .main-layout {
   display:grid;
   grid-template-rows: auto 1fr auto;
   min-height:100vh;
 }
-
 
 
 .margin-top-0 {
@@ -106,7 +88,7 @@
   padding: 0 1rem;
 }
 
-footer.footer {
+.footer {
   padding: 3rem 0rem 0rem;
   background-color: #f7f7f7;
 }
