@@ -26,7 +26,6 @@ collections:
           default: "blog-post",
         }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "PageDescription", name: "pageDescription", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Description", name: "description", widget: "text" }
       - { label: "Featured Post", name: "featuredpost", widget: "boolean" }
@@ -48,6 +47,7 @@ collections:
               default: "index-page",
             }
           - { label: Title, name: title, widget: string }
+          - { label: "PageDescription", name: "pagedescription", widget: "string" }
           - { label: Image, name: image, widget: image }
           - { label: Heading, name: heading, widget: string }
           - { label: Subheading, name: subheading, widget: string }
