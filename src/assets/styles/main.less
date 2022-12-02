@@ -8,15 +8,22 @@
   font-style: normal;
   font-weight: 400;
   src: local("angella-white"), url("../fonts/angella-white.otf") format("woff");
+  font-display: swap;
 }
 
-html, body {
-  overflow-x: hidden !important;
+
+html {
   width: 100vw !important;
 }
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
+body {
+  touch-action: pan-x pan-y;
+}
+
 @primary: #ec5a1b;
 @primary-invert: #fff;
 @body-color: #333;

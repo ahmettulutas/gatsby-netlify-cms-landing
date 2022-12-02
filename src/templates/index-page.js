@@ -1,18 +1,16 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
-import Layout from '../components/Layout';
-import Features from '../components/Features';
-import BlogRoll from '../components/BlogRoll';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-import '../assets/styles/main.less';
-import Hero from '../components/Hero';
+import GetAppointment from '../components/GetAppointment';
 import ContactInfo from '../components/ContactInfo';
 import { getImage } from 'gatsby-plugin-image';
-import { GetAppointment } from '../components/GetAppointment';
-/* import FullWidthImage from '../components/FullWidthImage'; */
+import BlogRoll from '../components/BlogRoll';
+import Features from '../components/Features';
+import Layout from '../components/Layout';
+import { Link, graphql } from 'gatsby';
+import Hero from '../components/Hero';
+import '../assets/styles/main.less';
+import PropTypes from 'prop-types';
 
-// eslint-disable-next-line
 export const IndexPageTemplate = ({
   image,
   title,
@@ -31,22 +29,19 @@ export const IndexPageTemplate = ({
         }
         subheading={subheading}
       />
-      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <div className='main-container'>
-        <ContactInfo />
+        <ContactInfo gridItems={intro.blurbs} />
         <section className='about'>
           <div>
-            <PreviewCompatibleImage
-              imageInfo={{ image: mainpitch.image }}
-            />
+            <PreviewCompatibleImage imageInfo={{ image: mainpitch.image }} />
           </div>
           <div>
-            <div className='tile'>
-              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-touch'>
+            <div style={{ textAlign: 'center' }}>
+              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-desktop'>
                 {mainpitch.subtitle}
               </h3>
             </div>
-            <div className='tile'>
+            <div className='tile' style={{ textAlign: 'center' }}>
               <p className='subtitle text--uppercase has-text-centered-touch'>
                 {mainpitch.description}
               </p>
