@@ -1,7 +1,7 @@
 /* eslint-disable */
 const {
     NODE_ENV,
-    URL: NETLIFY_SITE_URL = 'https://www.meltemulutas.com',
+    URL: NETLIFY_SITE_URL = 'https://meltemulutas.com',
     DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
     CONTEXT: NETLIFY_ENV = NODE_ENV
   } = process.env,
@@ -13,7 +13,7 @@ module.exports = {
     title: 'Psikolog Meltem Ulutaş',
     description:
 			'Uzman Psikolog Meltem Ulutaş | Blog ve İletişim Sayfası | Psikolojik Danışmanlık | Psikolojik Terapi',
-    siteUrl: 'https://www.meltemulutas.com/'
+    siteUrl: 'https://meltemulutas.com/'
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -126,7 +126,7 @@ module.exports = {
       resolve: 'gatsby-plugin-purgecss', // purges all unused/unreferenced css rules
       options: {
         develop: true, // Activates purging in npm run develop
-        purgeOnly: ['/all.sass', '/all.less'] // applies purging only on the specified files
+        purgeOnly: ['/all.sass', '/main.less'] // applies purging only on the specified files
       }
     }, // must be after other CSS plugins
     'gatsby-plugin-netlify' // make sure to keep it last in the array

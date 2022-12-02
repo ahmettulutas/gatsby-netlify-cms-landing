@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Meltem Ulutaş
 image: /img/jumbotron12.png
-
+pageDescription: 'Uzman Psikolog Meltem Ulutaş | Blog ve İletişim Sayfası | Psikolojik Danışmanlık | Psikolojik Terapi'
 heading: Psikolog Meltem Ulutaş
 subheading: UZMAN PSİKOLOG
 mainpitch:
