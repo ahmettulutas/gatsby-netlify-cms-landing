@@ -29,14 +29,11 @@ export const IndexPageTemplate = ({
         }
         subheading={subheading}
       />
-      {/* <FullWidthImage img={heroImage} title={title} subheading={subheading} /> */}
       <div className='main-container'>
         <ContactInfo gridItems={intro.blurbs} />
         <section className='about'>
           <div>
-            <PreviewCompatibleImage
-              imageInfo={{ image: mainpitch.image }}
-            />
+            <PreviewCompatibleImage imageInfo={{ image: mainpitch.image }} />
           </div>
           <div>
             <div style={{ textAlign: 'center' }}>
