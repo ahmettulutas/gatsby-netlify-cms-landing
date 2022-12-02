@@ -2,24 +2,21 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 
-const FeatureGrid = ({ gridItems }) => {
-  console.log(gridItems);
-  return (
-    <div className='columns is-multiline feature-card'>
-      {gridItems.map(item => (
-        <section key={item.text} className='column is-4' lang="tr">
+const FeatureGrid = ({ gridItems }) => (
+  <div className='columns is-multiline feature-card'>
+    {gridItems.map(item => (
+      <section key={item.text} className='column is-4' lang="tr">
 
-          <div className='has-text-centered'>
-            <PreviewCompatibleImage imageInfo={item} />
-          </div>
-          <h3 className='has-text-centered'>{item.title}</h3>
-          <p className='has-text-centered'>{item.text}</p>
+        <div className='has-text-centered'>
+          <PreviewCompatibleImage imageInfo={item} />
+        </div>
+        <h3 className='has-text-centered'>{item.title}</h3>
+        <p className='has-text-centered'>{item.text}</p>
 
-        </section>
-      ))}
-    </div>
-  );
-};
+      </section>
+    ))}
+  </div>
+);
 
 FeatureGrid.propTypes = {
   gridItems: PropTypes.arrayOf(
