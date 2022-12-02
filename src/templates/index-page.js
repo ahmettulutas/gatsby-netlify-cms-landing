@@ -2,9 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
-/* import Features from '../components/Features'; */
-/* import BlogRoll from '../components/BlogRoll'; */
-/* import ContactInfo from '../components/ContactInfo'; */
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import '../assets/styles/main.less';
 import Hero from '../components/Hero';
@@ -45,12 +42,12 @@ export const IndexPageTemplate = ({
             />
           </div>
           <div>
-            <div className='tile'>
-              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-touch'>
+            <div style={{ textAlign: 'center' }}>
+              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-desktop'>
                 {mainpitch.subtitle}
               </h3>
             </div>
-            <div className='tile'>
+            <div className='tile' style={{ textAlign: 'center' }}>
               <p className='subtitle text--uppercase has-text-centered-touch'>
                 {mainpitch.description}
               </p>

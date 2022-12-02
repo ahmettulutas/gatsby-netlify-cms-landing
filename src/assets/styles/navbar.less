@@ -14,20 +14,21 @@
       transition: 0.3s ease-in;
       bottom: 0;
       left: 0;
-      background-color: @primary
+      background-color: black;
     }
     &:hover {
-      color: @primary;
-      fill: @primary;
-      stroke: @primary;
+      color:black;
+      fill: @primary-invert;
+      stroke: @primary-invert;
       background-color: inherit !important;
       &::before {
         width:100%;
+        color:inherit;
       }
       svg {
-        fill: @primary;
-        stroke:@primary;
-        color:@primary;
+        fill: @primary-invert;
+        stroke:@primary-invert;
+        color:@primary-invert;
       }
     }
     img {
@@ -42,10 +43,10 @@
       background: transparent !important;
     }
     .navbar-item, span {
-      color:@primary;
+      color:@primary-invert;
       /* text-shadow: 1px 1px 1px #fff; */
       &:not(.navbar-logo)::before  {
-        background-color: @primary;
+        background-color: @primary-invert;
       }
     } 
   }
