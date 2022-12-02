@@ -1,6 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 
-const useSiteMetadata = () => {
+// eslint-disable-next-line func-style
+function useSiteMetadata () {
   const { site } = useStaticQuery(
     graphql`
 			query SITE_METADATA_QUERY {
@@ -14,6 +15,6 @@ const useSiteMetadata = () => {
 		`
   );
   return site.siteMetadata;
-};
+}
 
 export default useSiteMetadata;
