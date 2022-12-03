@@ -21,17 +21,8 @@ export default function FullWidthImage(props) {
         }}
       >
         {
-          img?.url
-            ?
-            <img
-              src={img}
-              style={{
-                gridArea: '1/1',
-                height,
-                width: '100%'
-              }}
-              alt=""
-            />
+          img?.url ?
+            <img src={img} style={{ gridArea: '1/1', height, width: '100%' }} alt="" />
             :
             <GatsbyImage
               image={img}
@@ -50,10 +41,8 @@ export default function FullWidthImage(props) {
         {(title || subheading) && (
           <div
             style={{
-              // By using the same grid area for both, they are stacked on top of each other
               gridArea: '1/1',
               position: 'relative',
-              // This centers the other elements inside the hero component
               placeItems: 'center',
               display: 'grid'
             }}
