@@ -60,7 +60,7 @@ const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, chi
 
       <meta property='og:description' content={description}></meta>
       <meta charset='UTF-8'></meta>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"></meta>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"></meta>
       <meta name="viewport" content="width=device-width, user-scalable=no" />
     </Helmet>
     <div className='main-layout'>
