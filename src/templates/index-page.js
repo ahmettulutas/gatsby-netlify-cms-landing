@@ -19,7 +19,6 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const heroImage = getImage(image) || image;
-
   return (
     <div>
       <Hero
@@ -70,6 +69,7 @@ IndexPageTemplate.propTypes = {
   image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
   heading: PropTypes.string,
+  pageDescription: PropTypes.string,
   subheading: PropTypes.string,
   mainpitch: PropTypes.object,
   description: PropTypes.string,
@@ -80,9 +80,8 @@ IndexPageTemplate.propTypes = {
 
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark;
-  console.log(frontmatter);
   return (
-    <Layout>
+    <Layout title={frontmatter.title} description={frontmatter.pageDescription} featuredImage={frontmatter.image}>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}
@@ -116,6 +115,7 @@ export const pageQuery = graphql`
 						gatsbyImageData(quality: 100, layout: FULL_WIDTH)
 					}
 				}
+        pageDescription
 				heading
 				subheading
 				mainpitch {

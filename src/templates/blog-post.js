@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-import { Helmet } from 'react-helmet';
+/* import { Helmet } from 'react-helmet'; */
 import { graphql } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
@@ -14,7 +14,7 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  helmet,
+  /*   helmet, */
   featuredImage
 
 }) => {
@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
 
   return (
     <>
-      {helmet || ''}
+      {/*       {helmet || ''} */}
       <section className='blog-content'>
 
         <div className='columns'>
@@ -71,14 +71,15 @@ BlogPostTemplate.propTypes = {
 };
 
 const BlogPost = ({ data }) => {
-  const { markdownRemark: post } = data;
+  const { markdownRemark: post } = data,
+    { title, description, featuredimage } = post.frontmatter;
   return (
-    <Layout>
+    <Layout title={title} description={description} featuredImage={featuredimage} titleTemplate='%s'>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
-        helmet={
+        /*         helmet={
           <Helmet titleTemplate='%s'>
             <title>{`${post.frontmatter.title}`}</title>
             <meta
@@ -87,10 +88,10 @@ const BlogPost = ({ data }) => {
             />
             <meta property="og:image" content={post.frontmatter.featuredimage} />
           </Helmet>
-        }
+        } */
         tags={post.frontmatter.tags}
-        title={post.frontmatter.title}
-        featuredImage={post.frontmatter.featuredimage}
+        title={title}
+        featuredImage={featuredimage}
       />
     </Layout>
   );
