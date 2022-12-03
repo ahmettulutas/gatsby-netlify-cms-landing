@@ -13,13 +13,7 @@ export default function FullWidthImage(props) {
 
   return (
     <React.Fragment>
-      <div
-        className="margin-top-0"
-        style={{
-          display: 'grid',
-          alignItems: 'center'
-        }}
-      >
+      <div className="margin-top-0" style={{ display: 'grid', alignItems: 'center' }}>
         {
           img?.url ?
             <img src={img} style={{ gridArea: '1/1', height, width: '100%' }} alt="" />
