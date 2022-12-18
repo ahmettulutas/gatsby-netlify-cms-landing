@@ -20,7 +20,6 @@
 		bottom: -1px;
 
 		svg {
-			width: calc(100% + 1.3px);
 			display: block;
 			transform: rotate(180deg);
 			fill: white;
@@ -56,8 +55,7 @@
 
 .contact-card {
 	margin: 3rem auto;
-	background: @light-gray;
-	/* box-shadow:0 5px 20px -10px #000; */
+	background-color: @primary-light;
 	padding: 1rem;
 	text-align: center;
 	gap: 1rem;
@@ -67,7 +65,9 @@
 	div,
 	a {
 		padding: 1rem;
+		border-radius: 10px;
 		flex: 1 1 250px;
+		box-shadow: 0 5px 20px -10px #000;
 		cursor: pointer;
 		background: @primary-invert;
 		display: flex;
@@ -77,7 +77,12 @@
 		text-decoration: none;
 		font-size: 1rem;
 		max-width: 100%;
-
+		transition: 0.2s ease-out !important;
+		
+			svg {
+					width: 40px;
+					height: auto;
+				}
 		p {
 			word-wrap: break-word;
 			width: 100%;
@@ -88,6 +93,9 @@
 			color: black;
 		}
 	}
+@media (max-width:900px) {
+	margin: 3rem 1rem;
+}
 }
 
 /* BLOGROLL  */
@@ -98,12 +106,13 @@
 	overflow-x: scroll;
 	background: white;
 	justify-content: flex-start;
+	width: 100%;
 
 	a {
 		color: black;
 	}
 
-	.blog-roll {
+.blogroll-card {
 		margin: 0.5rem;
 		flex: 0 0 340px;
 		display: flex;
@@ -146,13 +155,13 @@
 
 .about {
 	display: grid;
-		gap: 2rem;
+	gap: 2rem;
 		width: 100%;
 		margin: 1rem auto;
 		padding: 2rem;
 	place-content: center;
 
-	@media screen and (min-width:765px) {
+	@media (min-width:765px) {
 		grid-template-columns: repeat(auto-fit, minmax(350px, 500px));
 	}
 
@@ -202,7 +211,7 @@
 	h3 {
 		text-transform: uppercase;
 		margin: 10px;
-			color: @primary;
+		color: @primary;
 			font-weight: bold;
 	}
 }
@@ -211,20 +220,20 @@
 
 .more-btn {
 	display: inline-block;
-		padding: 12px 16px 10px;
+	padding: 12px 16px 10px;
 		font-size: 18px;
 		font-size: 1rem;
 		line-height: 1.25;
 		background-color: #fff;
 	border-radius: 0.25rem;
-		text-decoration: none;
+	text-decoration: none;
 		font-weight: 700;
 		color: @primary;
 		text-align: center;
 		-webkit-box-shadow: inset 0 0 0 2px @primary;
 		box-shadow: inset 0 0 0 2px @primary;
 	-webkit-transition: all 0.15s ease;
-		transition: all 0.15s ease;
+	transition: all 0.15s ease;
 }
 
 // GETAPPOINTMENT
@@ -233,12 +242,12 @@
 	width: 100vw;
 	background-color: @primary;
 	color: @primary-invert;
-		padding: 20px;
-		display: flex;
+	display: flex;
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
 	margin: 2rem 0;
+
 	h3 {
 		font-size: 18px;
 	}
@@ -250,11 +259,11 @@
 	.navbar-item {
 		font-size: 20px;
 		color: inherit !important;
-			padding: 1rem;
+		padding: .5rem;
 		
 			&:hover {
 				background: inherit !important;
-				outline: 1px solid white;
+			transform: scale(1.03);
 		}
 
 	}

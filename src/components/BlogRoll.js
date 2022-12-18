@@ -8,9 +8,9 @@ const BlogRollTemplate = props => {
 
   return (
     <>
-      <div className='blogroll-container is-centered'>
+      <div className='blogroll-container'>
         {posts?.map(({ node: post }) => (
-          <div key={post.id} className="blog-roll">
+          <div key={post.id} className="blogroll-card">
             <Link to={post.fields.slug}>
               <article>
                 {post?.frontmatter?.featuredimage && (
@@ -19,10 +19,8 @@ const BlogRollTemplate = props => {
                       imageInfo={{
                         image: post.frontmatter.featuredimage,
                         alt: `featured image thumbnail for post ${post.frontmatter.title}`,
-                        width: post.frontmatter.featuredimage.childImageSharp
-                          .gatsbyImageData.width,
-                        height: post.frontmatter.featuredimage.childImageSharp
-                          .gatsbyImageData.height
+                        width: post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.width,
+                        height: post.frontmatter.featuredimage.childImageSharp.gatsbyImageData.height
                       }} />
                   </div>
                 )}

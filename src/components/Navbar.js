@@ -1,8 +1,11 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
 
-const Navbar = () => {
-  const [navState, setNavState] = useState({ active: false, navBarActiveClass: '' }),
+const Navbar = ({ hasWhiteBg }) => {
+  const [navState, setNavState] = useState({
+      active: false,
+      navBarActiveClass: ''
+    }),
     navRef = useRef(),
     toggleHamburger = () => {
       setNavState({
@@ -16,7 +19,7 @@ const Navbar = () => {
       const { body, documentElement } = document;
       body.scrollTop || documentElement.scrollTop > 100
         ? navRef.current.classList.remove('transparent')
-        : navRef.current.classList.add('transparent');
+        : navRef.current.classList.add(`${hasWhiteBg ? 'hasWhiteBg' : 'transparent'}`);
     };
 
   useEffect(() => {
@@ -36,7 +39,7 @@ const Navbar = () => {
         <div className='navbar-brand'>
           <Link to='/' className='navbar-item navbar-logo' title='Logo'>
             <img
-              alt='uzman psikolog meltem ulutaş'
+              alt='brand logo'
               className='navbar-image'
               src='/img/logo.svg'
             />
@@ -49,9 +52,9 @@ const Navbar = () => {
             tabIndex={0}
             onKeyPress={() => toggleHamburger()}
             onClick={() => toggleHamburger()}>
-            <span style={{ height: '1px' }} />
-            <span style={{ height: '1px' }} />
-            <span style={{ height: '1px' }} />
+            <span style={{ height: '2px' }} />
+            <span style={{ height: '2px' }} />
+            <span style={{ height: '2px' }} />
           </div>
         </div>
         <div

@@ -20,7 +20,7 @@ export const IndexPageTemplate = ({
 }) => {
   const heroImage = getImage(image) || image;
   return (
-    <div>
+    <>
       <Hero
         title={title}
         background={
@@ -56,7 +56,7 @@ export const IndexPageTemplate = ({
           </Link>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -37,7 +37,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout title={'Meltem Ulutaş İletişim'}>
         <Hero title={'İletişim'} background={contact} hasDarkBg />
         <div className='hero-body'>
           <div className='container p-auto'>

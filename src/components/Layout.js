@@ -7,7 +7,7 @@ import './all.sass';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
-const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, children }) => (
+const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, children, hasWhiteBg }) => (
   <>
     <Helmet titleTemplate={titleTemplate} >
       <html lang='tr' />
@@ -57,14 +57,13 @@ const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, chi
         property='og:image'
         content={`${withPrefix('/')}${featuredImage}`}
       />
-
       <meta property='og:description' content={description}></meta>
       <meta charset='UTF-8'></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"></meta>
       <meta name="viewport" content="width=device-width, user-scalable=no" />
     </Helmet>
     <div className='main-layout'>
-      <Navbar />
+      <Navbar hasWhiteBg={hasWhiteBg}/>
       <main>{children}</main>
       <Footer />
     </div>

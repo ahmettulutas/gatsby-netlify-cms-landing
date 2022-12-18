@@ -14,24 +14,31 @@
 
 html {
   width: 100vw !important;
-overflow: scroll;
+  height: 100vh !important;
+  overflow-x: hidden;
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
 
-html::-webkit-scrollbar {
+/* html::-webkit-scrollbar {
   width: 0;
 }
 
+*/
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
+
 body {
   touch-action: pan-x pan-y;
 }
 
 @primary: #ec5a1b;
 @primary-invert: #fff;
+@primary-light: lighten(@primary, 30);
 @body-color: #333;
 @black: #2b2523;
 @light-gray: #f7f7f7;
