@@ -64,7 +64,7 @@ const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, chi
     </Helmet>
     <div className='main-layout'>
       <Navbar hasWhiteBg={hasWhiteBg}/>
-      <main>{children}</main>
+      <main style={{ width: '100%' }}>{children}</main>
       <Footer />
     </div>
     <FloatingWhatsApp
