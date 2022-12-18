@@ -7,7 +7,7 @@ import blog from '../../../static/img/blog-writing.jpg';
 const BlogIndexPage = () => (
   <Layout title={'Meltem Ulutaş Blog Yazıları'}>
     <Hero title={'Blog'} background={blog} hasDarkBg />
-    <section className='section'>
+    <section className='section' style={{ width: '100%' }}>
       <div className='container'>
         <div className='content'>
           <BlogRoll />
