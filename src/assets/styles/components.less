@@ -110,7 +110,7 @@
 	background: white;
 	justify-content: flex-start;
 	width: 100%;
-
+	
 	a {
 		color: black;
 	}
@@ -152,6 +152,9 @@
 	&::-webkit-scrollbar-thumb {
 		background: @primary;
 	}
+@media screen and (max-width: 767px) {
+	flex-direction: column;
+}
 }
 
 /* ABOUT */
@@ -159,7 +162,7 @@
 .about {
 	display: grid;
 	gap: 2rem;
-		width: 100%;
+	width: 100%;
 		margin: 1rem auto;
 		padding: 2rem;
 	place-content: center;
