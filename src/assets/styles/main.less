@@ -11,6 +11,11 @@
   font-display: swap;
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 html {
   width: 100vw !important;
@@ -26,14 +31,19 @@ html {
 }
 
 */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+::-webkit-scrollbar {
+  width: 0;
 }
 
-body {
-  touch-action: pan-x pan-y;
+@media only screen and (max-width: 767px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+      margin: 0px;
+      padding: 0px;
+      scroll-behavior: smooth;
+    }
 }
 
 @primary: #ec5a1b;

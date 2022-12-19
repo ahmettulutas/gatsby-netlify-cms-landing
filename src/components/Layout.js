@@ -7,7 +7,7 @@ import './all.sass';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
-const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, children, hasWhiteBg }) => (
+const Layout = ({ title, description, featuredImage, titleTemplate, children, hasWhiteBg }) => (
   <>
     <Helmet titleTemplate={titleTemplate} >
       <html lang='tr' />
@@ -64,7 +64,7 @@ const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, chi
     </Helmet>
     <div className='main-layout'>
       <Navbar hasWhiteBg={hasWhiteBg}/>
-      <main style={{ width: '100%' }}>{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
     <FloatingWhatsApp
@@ -79,4 +79,4 @@ const TemplateWrapper = ({ title, description, featuredImage, titleTemplate, chi
   </>
 );
 
-export default TemplateWrapper;
+export default Layout;

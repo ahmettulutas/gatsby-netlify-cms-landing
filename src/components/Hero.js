@@ -17,9 +17,8 @@ const Hero = ({ title, background, subheading, hasDarkBg = false }) => (
         viewBox='0 0 4080 400'
         preserveAspectRatio='none'>
         <path
-          className='elementor-shape-fill ha-shape-divider'
           opacity='0.2'
-          enableBackground='new    '
+          enableBackground='new'
           d='M4080,79.3V0L1179.4,0v79.3c0,0,694.9,437.4,1471.3,275.6
           S3575.7-152.5,4080,79.3z'></path>
         <path
