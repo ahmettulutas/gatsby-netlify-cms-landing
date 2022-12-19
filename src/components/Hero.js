@@ -7,7 +7,7 @@ const Hero = ({ title, background, subheading, hasDarkBg = false }) => (
     style={{ backgroundImage: `url(${background})` }}>
     <div className='hero-title-section'>
       {subheading && <h2 className='is-size-5-mobile'>{subheading}</h2>}
-      <h1 className={`is-size-1-mobile ${hasDarkBg ? 'invert' : ''}`}>
+      <h1 className={`is-size-1-mobile ${hasDarkBg ? 'invert' : ''}`} style={{ fontWeight: 600 }}>
         {title}
       </h1>
     </div>
