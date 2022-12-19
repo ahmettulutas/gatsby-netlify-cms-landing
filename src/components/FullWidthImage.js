@@ -4,7 +4,7 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 
 export default function FullWidthImage(props) {
   const {
-    height = 400,
+    height = 300,
     img,
     title,
     subheading,
@@ -16,7 +16,7 @@ export default function FullWidthImage(props) {
       <div className="margin-top-0" style={{ display: 'grid', alignItems: 'center' }}>
         {
           img?.url ?
-            <img src={img} style={{ gridArea: '1/1', height, width: '100%' }} alt="" />
+            <img src={img} style={{ gridArea: '3/1', height, width: '100%' }} alt="" />
             :
             <GatsbyImage
               image={img}

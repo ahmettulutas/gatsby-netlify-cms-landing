@@ -46,21 +46,21 @@ export default class Index extends React.Component {
                 <h1 className='title is-1'>İletişime Geçin</h1>
                 <div className='social-media'>
                   <a
-                    href='https://facebook.com'
+                    href='mailto:psikolog.meltem.ulutas@gmail.com'
                     rel='noreferrer'
                     target='_blank'
                     className='button is-light is-large'>
-                    <i className='fa fa-phone-square' aria-hidden='true'></i>
+                    <i className='fa fa-envelope' aria-hidden='true'></i>
                   </a>
                   <a
-                    href='https://instagram.com'
+                    href='https://instagram.com/psikologmeltemulutas/'
                     rel='noreferrer'
                     target='_blank'
                     className='button is-light is-large'>
                     <i className='fa fa-instagram' aria-hidden='true'></i>
                   </a>
                   <a
-                    href='https://twitter.com'
+                    href='https://api.whatsapp.com/send/?phone=05300954085'
                     rel='noreferrer'
                     target='_blank'
                     className='button is-light is-large'>
@@ -127,14 +127,12 @@ export default class Index extends React.Component {
                         id={'message'}></textarea>
                     </div>
                   </div>
-
-                  <div className='control'>
-                    <button
-                      type='submit'
-                      className='button is-link is-fullwidth has-text-weight-medium is-medium'>
-											Mesaj Yolla
-                    </button>
-                  </div>
+                  <button
+                    style={{ width: '100%' }}
+                    type='submit'
+                    className='more-btn p-10'>
+											Mesaj Gönder
+                  </button>
                 </form>
               </div>
             </div>

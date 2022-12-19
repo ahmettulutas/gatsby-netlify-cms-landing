@@ -2,11 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
 /* import { Helmet } from 'react-helmet'; */
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
-/* import FullWidthImage from '../components/FullWidthImage'; */
+/* import PreviewCompatibleImage from '../components/PreviewCompatibleImage'; */
+import FullWidthImage from '../components/FullWidthImage';
+import { getImage } from 'gatsby-plugin-image';
 
 export const BlogPostTemplate = ({
   content,
@@ -18,8 +19,8 @@ export const BlogPostTemplate = ({
   featuredImage
 
 }) => {
-  const PostContent = contentComponent || Content;
-
+  const PostContent = contentComponent || Content,
+    postImage = getImage(featuredImage) || featuredImage;
   return (
     <>
       {/*       {helmet || ''} */}
@@ -30,11 +31,12 @@ export const BlogPostTemplate = ({
             <h1 className='title is-size-2 has-text-weight-bold is-bold-light has-text-centered'>
               {title}
             </h1>
-            <div className='blog-image'>
+            {/*             <div className='blog-image'>
               <PreviewCompatibleImage
                 imageInfo={{ image: featuredImage }}
               />
-            </div>
+            </div> */}
+            <FullWidthImage img={postImage} />
             <p className='description'>{description}</p>
             <PostContent content={content} />
             {tags && tags.length
@@ -43,13 +45,9 @@ export const BlogPostTemplate = ({
                   <h4>Etiketler</h4>
                   <ul className='taglist'>
                     {tags.map(tag => (
-                      <li key={`${tag}tag`}>
-                        <a
-                          style={{ color: '#D64000' }}
-                          href={`/tags/${kebabCase(tag)}/`}>
-                          {tag}
-                        </a>
-                      </li>
+                      <Link key={`${tag}tag`} className='more-btn' to={`/tags/${kebabCase(tag)}/`}>
+                        {tag}
+                      </Link>
                     ))}
                   </ul>
                 </div>
@@ -118,7 +116,7 @@ export const pageQuery = graphql`
         featuredimage {
           childImageSharp {
             gatsbyImageData(
-              width: 300
+              width: 800
               quality: 100
               layout: CONSTRAINED
             )

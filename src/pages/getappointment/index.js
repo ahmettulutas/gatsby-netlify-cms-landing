@@ -43,26 +43,26 @@ export default class Index extends React.Component {
           <div className='container p-auto'>
             <div className='columns is-8 is-variable '>
               <div className='column is-half has-text-left'>
-                <h1 className='title is-1'>İletişime Geçin</h1>
+                <h1 className='title is-1'>Randevu Talebi Oluşturun</h1>
                 <div className='social-media'>
                   <a
-                    href='https://facebook.com'
-                    target='_blank'
+                    href='mailto:psikolog.meltem.ulutas@gmail.com'
                     rel='noreferrer'
+                    target='_blank'
                     className='button is-light is-large'>
-                    <i className='fa fa-phone-square' aria-hidden='true'></i>
+                    <i className='fa fa-envelope' aria-hidden='true'></i>
                   </a>
                   <a
-                    href='https://instagram.com'
-                    target='_blank'
+                    href='https://instagram.com/psikologmeltemulutas/'
                     rel='noreferrer'
+                    target='_blank'
                     className='button is-light is-large'>
                     <i className='fa fa-instagram' aria-hidden='true'></i>
                   </a>
                   <a
-                    href='https://twitter.com'
-                    target='_blank'
+                    href='https://api.whatsapp.com/send/?phone=05300954085'
                     rel='noreferrer'
+                    target='_blank'
                     className='button is-light is-large'>
                     <i className='fa fa-whatsapp' aria-hidden='true'></i>
                   </a>
@@ -75,7 +75,6 @@ export default class Index extends React.Component {
                   action='/contact/thanks/'
                   data-netlify='true'
                   data-netlify-honeypot='bot-field'
-                  data-netlify-recaptcha='true'
                   onSubmit={this.handleSubmit}>
                   {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
                   <input type='hidden' name='form-name' value='contact' />
@@ -102,7 +101,7 @@ export default class Index extends React.Component {
                   </div>
                   <div className='field'>
                     <label className='label' htmlFor='email'>
-											Email Adresiniz
+											Telefon Numaranız
                     </label>
                     <div className='control'>
                       <input
@@ -128,12 +127,13 @@ export default class Index extends React.Component {
                         id={'message'}></textarea>
                     </div>
                   </div>
-                  <div data-netlify-recaptcha='true'></div>
+
                   <div className='control'>
                     <button
+                      style={{ width: '100%' }}
                       type='submit'
-                      className='button is-link is-fullwidth has-text-weight-medium is-medium'>
-											Mesaj Yolla
+                      className='more-btn'>
+											Talep Oluştur
                     </button>
                   </div>
                 </form>
