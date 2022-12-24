@@ -90,14 +90,13 @@ OR
 yarn remove netlify-cms-media-library-cloudinary
 ```
 
-## Getting Started (Without Netlify)
+## Adding a Loader Spinner in Gatsby site
+run the following command to copy the default-html.js file and rename it as html.js and will place it in our src directory.
 
 ```
-$ gatsby new [SITE_DIRECTORY_NAME] https://github.com/netlify-templates/gatsby-starter-netlify-cms/
-$ cd [SITE_DIRECTORY_NAME]
-$ npm run build
-$ npm run start
+cp .cache/default-html.js src/html.js
 ```
+
 
 ### Setting up the CMS
 

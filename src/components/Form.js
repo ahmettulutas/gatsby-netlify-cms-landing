@@ -1,6 +1,7 @@
 import React from 'react';
 import FormInput from './FormInput.js';
 import emailjs from 'emailjs-com';
+import { navigate } from 'gatsby-link';
 
 const emptyState = {
     first_name: '',
@@ -14,14 +15,18 @@ const emptyState = {
       type: 'text',
       key: 1,
       name: 'first_name',
-      message: 'Lütfen adınızı ve soyadınızı eksiksiz giriniz.'
+      message: 'Lütfen adınızı ve soyadınızı eksiksiz giriniz.',
+      placeholder: 'Adınız ve soyadınızı buraya yazınız.',
+      required: true
     },
     {
       label: 'Email Adresiniz',
       type: 'email',
       key: 2,
       name: 'reply_to',
-      message: 'Geçersiz email adresi'
+      message: 'Geçersiz email adresi',
+      placeholder: 'Email adresinizi buraya yazınız.',
+      required: true
     },
     {
       pattern: '^.{20,500}$',
@@ -29,7 +34,9 @@ const emptyState = {
       type: 'textarea',
       key: 3,
       name: 'message',
-      message: 'Mesajınız en az 20 en fazla 500 karakter olmalıdır.'
+      message: 'Mesajınız en az 20 en fazla 500 karakter olmalıdır.',
+      placeholder: 'Mesajınızı buraya yazınız.',
+      required: true
     }
   ];
 
@@ -57,16 +64,18 @@ export const Form = () => {
         ).then(() => {
           window.alert('Mesajınız gönderildi.');
           setFormData(emptyState);
-        }).catch(error => window.alert(error));
+        }).then(() => navigate('/'))
+          .catch(error => window.alert(error));
     };
 
   return (
     <form className="form-container" onSubmit={handleSubmit}>
+      <h2>İletişime Geçin</h2>
       {inputs.map(input => (
         <FormInput changeData={handleChange} key={input.key} {...input} value={formData[input.name]} />
       ))}
       <input type="text" name="_gotcha" style={{ display: 'none' }} />
-      <button disabled={formDisabled} className='w-100 more-btn' type='submit'>Submit</button>
+      <button disabled={formDisabled} className='more-btn' type='submit'>Submit</button>
     </form>
   );
 };

@@ -1,29 +1,42 @@
 .form-container {
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+  box-shadow: 0 5px 20px -10px #000;
+  padding:20px;
+  h2 {
+    font-weight: bold;
+    text-align: center;
+  }
   .form-item {
     display: flex;
     flex-direction: column;
-    margin: 0.3rem;
     position: relative;
-
+    label, span {
+      font-size:14px;
+      margin:0.2rem 0;
+    }
     span {
       display: none;
-      color: red;
+      color: darken(@primary,5);
+
     }
 
-    input {
+    input, textarea {
       padding: 10px;
       border-radius: 5px;
-      border: 1px solid black;
-
-      &:valid[focused='false'] {
+      border: 1px solid @dark-gray;
+      outline: 1px solid @dark-gray;
+     &:valid[focused='true'] {
         border: 1px solid green;
-      }
+        outline: 1px solid green;
+      } 
 
-      &:invalid[focused='false'] {
-        border: 1px solid red;
+      &:invalid[focused='true'] {
+        border: 1px solid darken(@primary,5);
+        outline: 1px solid darken(@primary,5);
       }
-
-      &:invalid[focused='false']~span {
+      &:invalid[focused='true']~span {
         display: block;
       }
     }

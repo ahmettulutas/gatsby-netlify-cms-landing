@@ -6,7 +6,7 @@ import './all.sass';
 /* import useSiteMetadata from '../utils/SiteMetadata'; */
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
-
+/* import { Loading } from './Loading'; */
 const Layout = ({ title, description, featuredImage, titleTemplate, children, hasWhiteBg }) => (
   <>
     <Helmet titleTemplate={titleTemplate} >

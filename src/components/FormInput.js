@@ -12,8 +12,7 @@ const FormInput = props => {
           <input
             {...inputProps}
             onChange={changeData}
-            onFocus={() => setFocused(true)}
-            onBlur={() => setFocused(false)}
+            onBlur={() => setFocused(true)}
             // eslint-disable-next-line react/no-unknown-property
             focused={String(focused)}
           />
@@ -22,8 +21,7 @@ const FormInput = props => {
             rows={6}
             {...inputProps}
             onChange={changeData}
-            onFocus={() => setFocused(true)}
-            onBlur={() => setFocused(false)}
+            onBlur={() => setFocused(true)}
             // eslint-disable-next-line react/no-unknown-property
             focused={String(focused)}
           />
