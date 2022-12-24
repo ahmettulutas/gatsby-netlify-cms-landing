@@ -2,6 +2,8 @@
 @import "./blogpage.less";
 @import "./components.less";
 @import "./indexpage.less";
+@import "./form.less";
+@import "./components.less";
 
 @font-face {
   font-family: "AngellaWhite";
@@ -21,16 +23,11 @@ html {
   width: 100vw !important;
   height: 100vh !important;
   overflow-x: hidden;
-    &::-webkit-scrollbar {
+  &::-webkit-scrollbar {
       display: none;
     }
 }
 
-/* html::-webkit-scrollbar {
-  width: 0;
-}
-
-*/
 ::-webkit-scrollbar {
   width: 0;
 }
@@ -40,7 +37,7 @@ html {
   html,
   body {
     overflow-x: hidden;
-      margin: 0px;
+    margin: 0px;
       padding: 0px;
       scroll-behavior: smooth;
     }
@@ -54,37 +51,34 @@ html {
 @light-gray: #f7f7f7;
 @dark-gray: #dbdada;
 
-
 .main-layout {
-  display:grid;
+  display: grid;
   grid-template-rows: 1fr auto;
-  min-height:100vh;
+  min-height: 100vh;
 }
-
 
 .margin-top-0 {
   margin-top: 0 !important;
 }
 
-
-// Blog 
+// Blog
 
 .social {
   padding: 2em;
 }
+
 .social a {
-  padding: .5em .5em .3em .5em;
+  padding: 0.5em 0.5em 0.3em 0.5em;
   border-radius: 1em;
   background-color: @primary-invert;
-  margin: .5em;
+  margin: 0.5em;
   width: 1em;
   height: 1em;
   vertical-align: middle;
   display: inline;
 }
 
-
-// Taglist 
+// Taglist
 
 .blog-content .taglist {
   list-style: none;
@@ -96,6 +90,7 @@ html {
   flex-wrap: wrap;
   justify-content: left;
   align-items: center;
+
   li {
     padding: 0 2rem 1rem 0;
     margin-bottom: 1.5rem;
@@ -107,19 +102,15 @@ html {
   font-size: 1em !important;
   text-align: left;
 }
+
 .menu-list {
   list-style: none !important;
   text-align: left;
-  > a {
-    padding:5rem;
+>a {
+    padding: 5rem;
     &:hover {
       color: @primary;
     }
   }
 }
-
-.navbar-brand .navbar-item.logo {
-  padding: 0 1rem;
-}
-
 

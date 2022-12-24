@@ -9,23 +9,13 @@ const Footer = () => (
     <section className='menu'>
       <ul className='menu-list'>
         <li>
-          <Link to='/' className='navbar-item'>
-									Anasayfa
-          </Link>
+          <Link to='/' className='navbar-item'>Anasayfa</Link>
         </li>
         <li>
-          <Link className='navbar-item' to='/contact'>
-									İletişim
-          </Link>
+          <Link className='navbar-item' to='/contact'>İletişim</Link>
         </li>
         <li>
-          <a
-            className='navbar-item'
-            href='/admin/'
-            target='_blank'
-            rel='noopener noreferrer'>
-									Yönetim Paneli
-          </a>
+          <a className='navbar-item' href='/admin/' target='_blank' rel='noopener noreferrer'>Yönetim Paneli</a>
         </li>
       </ul>
     </section>

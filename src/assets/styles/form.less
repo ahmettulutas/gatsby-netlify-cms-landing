@@ -1,0 +1,32 @@
+.form-container {
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    margin: 0.3rem;
+    position: relative;
+
+    span {
+      display: none;
+      color: red;
+    }
+
+    input {
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid black;
+
+      &:valid[focused='false'] {
+        border: 1px solid green;
+      }
+
+      &:invalid[focused='false'] {
+        border: 1px solid red;
+      }
+
+      &:invalid[focused='false']~span {
+        display: block;
+      }
+    }
+
+  }
+}

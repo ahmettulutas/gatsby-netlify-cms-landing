@@ -2,12 +2,12 @@
 const {
     NODE_ENV,
     URL: NETLIFY_SITE_URL = 'https://meltemulutas.com',
-    DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
     CONTEXT: NETLIFY_ENV = NODE_ENV
-  } = process.env,
-  isNetlifyProduction = NETLIFY_ENV === 'production',
-  siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL;
+  } = process.env;
 
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
 module.exports = {
   siteMetadata: {
     title: 'Psikolog Meltem Ulutaş',

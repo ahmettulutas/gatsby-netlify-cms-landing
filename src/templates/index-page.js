@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import GetAppointment from '../components/GetAppointment';
@@ -19,7 +20,6 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const heroImage = getImage(image) || image;
-  console.log(title);
   return (
     <>
       <Hero
