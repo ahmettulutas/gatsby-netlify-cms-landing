@@ -3,6 +3,7 @@ import { navigate } from 'gatsby-link';
 import Layout from '../../components/Layout';
 import Hero from '../../components/Hero';
 import contact from '../../../static/img/contact.jpg';
+import { Form } from '../../components/Form';
 
 const encode = data => {
   Object.keys(data)
@@ -39,105 +40,10 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <Hero title={'Randevu'} background={contact} hasDarkBg />
-        <div className='hero-body'>
-          <div className='container p-auto'>
-            <div className='columns is-8 is-variable '>
-              <div className='column is-half has-text-left'>
-                <h1 className='title is-1'>Randevu Talebi Oluşturun</h1>
-                <div className='social-media'>
-                  <a
-                    href='mailto:psikolog.meltem.ulutas@gmail.com'
-                    rel='noreferrer'
-                    target='_blank'
-                    className='button is-light is-large'>
-                    <i className='fa fa-envelope' aria-hidden='true'></i>
-                  </a>
-                  <a
-                    href='https://instagram.com/psikologmeltemulutas/'
-                    rel='noreferrer'
-                    target='_blank'
-                    className='button is-light is-large'>
-                    <i className='fa fa-instagram' aria-hidden='true'></i>
-                  </a>
-                  <a
-                    href='https://api.whatsapp.com/send/?phone=05300954085'
-                    rel='noreferrer'
-                    target='_blank'
-                    className='button is-light is-large'>
-                    <i className='fa fa-whatsapp' aria-hidden='true'></i>
-                  </a>
-                </div>
-              </div>
-              <div className='column is-half has-text-left'>
-                <form
-                  name='contact'
-                  method='post'
-                  action='/contact/thanks/'
-                  data-netlify='true'
-                  data-netlify-honeypot='bot-field'
-                  onSubmit={this.handleSubmit}>
-                  {/* The `form-name` hidden field is required to support form submissions without JavaScript */}
-                  <input type='hidden' name='form-name' value='contact' />
-                  <div hidden>
-                    <label>
-											Don’t fill this out:{' '}
-                      <input name='bot-field' onChange={this.handleChange} />
-                    </label>
-                  </div>
-                  <div className='field'>
-                    <label className='label' htmlFor='name'>
-											İsminiz
-                    </label>
-                    <div className='control'>
-                      <input
-                        className='input is-medium'
-                        type='text'
-                        required={true}
-                        onChange={this.handleChange}
-                        name='name'
-                        id={'name'}
-                      />
-                    </div>
-                  </div>
-                  <div className='field'>
-                    <label className='label' htmlFor='email'>
-											Telefon Numaranız
-                    </label>
-                    <div className='control'>
-                      <input
-                        className='input is-medium'
-                        type='text'
-                        required={true}
-                        onChange={this.handleChange}
-                        name='email'
-                        id={'email'}
-                      />
-                    </div>
-                  </div>
-                  <div className='field'>
-                    <label className='label' htmlFor='message'>
-											Mesajınız
-                    </label>
-                    <div className='control'>
-                      <textarea
-                        className='textarea is-medium'
-                        required={true}
-                        onChange={this.handleChange}
-                        name='message'
-                        id={'message'}></textarea>
-                    </div>
-                  </div>
-
-                  <div className='control'>
-                    <button
-                      style={{ width: '100%' }}
-                      type='submit'
-                      className='more-btn'>
-											Talep Oluştur
-                    </button>
-                  </div>
-                </form>
-              </div>
+        <div className='container p-auto'>
+          <div className='columns is-centered' style={{ padding: '1rem' }}>
+            <div className='column is-half' style={{ margin: 'auto' }}>
+              <Form title={'Randevu Talebi Oluşturun'}/>
             </div>
           </div>
         </div>

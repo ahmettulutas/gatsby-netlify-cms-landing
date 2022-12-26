@@ -1,6 +1,6 @@
 .navbar {
   box-shadow: 0 5px 20px -10px #000;
-
+  padding-bottom:.4rem;
   .navbar-item {
     position: relative;
     font-weight: bold;
@@ -58,16 +58,23 @@
         background-color: @primary-invert;
       }
     }
+    @media screen and (max-width: 1024px) {
+      background: white;
+      .navbar-item,
+      span {
+        color:black;
+      }
+    }
   }
 
   &.hasWhiteBg {
 
     .navbar-item,
     span {
-      color: @primary;
+      color: black;
 
       &:not(.navbar-logo)::before {
-        background-color: @primary;
+        background-color: black;
       }
     }
   }

@@ -24,6 +24,7 @@ const Navbar = ({ hasWhiteBg }) => {
 
   useEffect(() => {
     window.addEventListener('scroll', toggleNavOnScroll);
+
     return () => {
       window.removeEventListener('scroll', toggleNavOnScroll);
     };

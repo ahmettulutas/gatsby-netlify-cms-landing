@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React from 'react';
-import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import GetAppointment from '../components/GetAppointment';
+import { AboutSection } from '../components/AboutSection';
 import ContactInfo from '../components/ContactInfo';
 import { getImage } from 'gatsby-plugin-image';
 import BlogRoll from '../components/BlogRoll';
@@ -31,23 +31,7 @@ export const IndexPageTemplate = ({
       />
       <div className='main-container'>
         <ContactInfo gridItems={intro.blurbs} />
-        <section className='about'>
-          <div>
-            <PreviewCompatibleImage imageInfo={{ image: mainpitch.image }} />
-          </div>
-          <div>
-            <div style={{ textAlign: 'center' }}>
-              <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered-desktop'>
-                {mainpitch.subtitle}
-              </h3>
-            </div>
-            <div className='tile' style={{ textAlign: 'center' }}>
-              <p className='subtitle text--uppercase has-text-centered-touch'>
-                {mainpitch.description}
-              </p>
-            </div>
-          </div>
-        </section>
+        <AboutSection mainpitch={mainpitch}/>
         <Features gridItems={intro.blurbs} />
         <GetAppointment />
         <BlogRoll />

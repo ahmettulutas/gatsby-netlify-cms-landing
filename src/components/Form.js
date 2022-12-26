@@ -2,48 +2,19 @@ import React from 'react';
 import FormInput from './FormInput.js';
 import emailjs from 'emailjs-com';
 import { navigate } from 'gatsby-link';
-
+import { normalizeTurkishPhone } from '../utils/helpers.js';
+import { contactInputs } from '../lib/constants';
 const emptyState = {
-    first_name: '',
-    reply_to: '',
-    message: ''
-  },
-  inputs = [
-    {
-      pattern: '^[-_ a-zA-Z0-9ğüşöçİĞÜŞÖÇ]{4,100}$',
-      label: 'Ad ve Soyad',
-      type: 'text',
-      key: 1,
-      name: 'first_name',
-      message: 'Lütfen adınızı ve soyadınızı eksiksiz giriniz.',
-      placeholder: 'Adınız ve soyadınızı buraya yazınız.',
-      required: true
-    },
-    {
-      label: 'Email Adresiniz',
-      type: 'email',
-      key: 2,
-      name: 'reply_to',
-      message: 'Geçersiz email adresi',
-      placeholder: 'Email adresinizi buraya yazınız.',
-      required: true
-    },
-    {
-      pattern: '^.{20,500}$',
-      label: 'Mesajınız',
-      type: 'textarea',
-      key: 3,
-      name: 'message',
-      message: 'Mesajınız en az 20 en fazla 500 karakter olmalıdır.',
-      placeholder: 'Mesajınızı buraya yazınız.',
-      required: true
-    }
-  ];
+  name_surname: '',
+  phone_number: '',
+  message: ''
+};
 
-export const Form = () => {
+
+export const Form = ({ title }) => {
   const [formData, setFormData] = React.useState(emptyState),
     formDisabled = Object.entries(formData).some(([key, value]) => {
-      const { pattern } = inputs.find(item => item.name === key),
+      const { pattern } = contactInputs.find(item => item.name === key),
         isValid = new RegExp(pattern, 'g').test(value);
       return !value || !isValid;
 
@@ -51,7 +22,9 @@ export const Form = () => {
 
     handleChange = e => {
       const { name, value } = e.target;
-      setFormData({ ...formData, [name]: value });
+      if (name === 'phone_number')
+        setFormData({ ...formData, [name]: normalizeTurkishPhone(value) });
+      else setFormData({ ...formData, [name]: value });
     },
 
     handleSubmit = e => {
@@ -70,12 +43,12 @@ export const Form = () => {
 
   return (
     <form className="form-container" onSubmit={handleSubmit}>
-      <h2>İletişime Geçin</h2>
-      {inputs.map(input => (
+      <h2 className='title is-2 is-capitalized has-text-centered'>{title}</h2>
+      {contactInputs.map(input => (
         <FormInput changeData={handleChange} key={input.key} {...input} value={formData[input.name]} />
       ))}
       <input type="text" name="_gotcha" style={{ display: 'none' }} />
-      <button disabled={formDisabled} className='more-btn' type='submit'>Submit</button>
+      <button disabled={formDisabled} className='more-btn' type='submit'>Gönder</button>
     </form>
   );
 };

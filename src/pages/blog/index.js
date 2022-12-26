@@ -9,6 +9,7 @@ const BlogIndexPage = () => (
     <Hero title={'Blog'} background={blog} hasDarkBg />
     <section className='section' style={{ width: '100%' }}>
       <div className='container'>
+        <h1 className="title is-1">Psikoloji Blog</h1>
         <div className='content'>
           <BlogRoll />
         </div>

@@ -1,5 +1,6 @@
-export const onInitialClientRender = () => {
+export const onClientEntry = () => {
   setTimeout(() => {
     document.getElementById('___loader').style.display = 'none';
-  }, 2000);
+    document.getElementById('___gatsby').style.display = 'block';
+  }, 1000);
 };

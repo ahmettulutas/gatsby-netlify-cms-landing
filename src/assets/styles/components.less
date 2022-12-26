@@ -114,6 +114,9 @@
 	a {
 		color: black;
 	}
+	@media screen and (max-width:765px) {
+		flex-direction: column;
+	}
 }
 
 .blogroll-card {
@@ -127,14 +130,14 @@
 	box-shadow: 0 5px 20px -10px #000;
 
 	&:hover {
-			transform: scale(0.99);
-			transition: 0.2s ease-out;
-
-
+		transform: scale(0.99);
+		transition: 0.2s ease-out;
 	}
-		section {
-			padding: 0.6rem 0.8rem;
-		}
+
+	section {
+		padding: 0.6rem 0.8rem;
+	}
+
 	.button {
 		background: transparent;
 		width: 50%;
@@ -151,8 +154,7 @@
 
 	&::-webkit-scrollbar-thumb {
 		background: @primary;
-	
-}
+	}
 }
 
 /* ABOUT */
@@ -175,6 +177,12 @@
 		/*  font-family: Arial, Helvetica, sans-serif; */
 		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
 			'Lucida Sans', Arial, sans-serif;
+	}
+	@media screen and (max-width:768px) {
+		p {
+			font-size: 14px;
+			line-height: 20px;
+		}
 	}
 
 	.gatsby-image-wrapper {
@@ -242,6 +250,12 @@
 		border: 2px solid @body-color;
 		color: @body-color;
 		opacity:0.4;
+	}
+	&:enabled {
+		border:2px solid @dark-gray;
+		background-color: @dark-gray;
+		color: black;
+		font-weight:bold;
 	}
 }
 

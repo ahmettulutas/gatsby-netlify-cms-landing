@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import './all.sass';
-/* import useSiteMetadata from '../utils/SiteMetadata'; */
+/* import {useSiteMetadata} from '../utils/helpers/'; */
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 /* import { Loading } from './Loading'; */
