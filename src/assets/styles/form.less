@@ -5,8 +5,11 @@
   border-radius: 10px;
   background-color: @light-gray;
   padding: 20px 30px;
-  margin: 2rem auto;
-
+  margin: 3rem auto;
+  * {
+    border-radius: 5px;
+    font-size: 16px;
+  }
   .form-item {
     display: flex;
     flex-direction: column;
@@ -14,7 +17,6 @@
 
     label,
     span {
-      font-size: 14px;
       font-weight: bold;
       margin: 0.2rem 0;
     }
@@ -22,29 +24,42 @@
     span {
       display: none;
       color: darken(@primary, 5);
-
     }
+    
+    .input-container {
+      display: grid;
 
-    input,
-    textarea {
-      padding: 10px;
-      border-radius: 5px;
-      border: 2px solid @dark-gray;
-
-      &:focus {
-        outline: none;
+      i {
+        display: flex;
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        left: 5px;
       }
 
+      input, 
+      textarea {
+        border-radius: 5px;
+        border: 2px solid @dark-gray;
+        
+        &:focus {
+          outline: none;
+        }
 
-/*       &:invalid[focused='true'] {
-        border: 2px solid darken(@primary, 5);
-      } */
+        &:invalid[focused='true']~span {
+          display: block;
+        }
 
-      &:invalid[focused='true']~span {
-        display: block;
       }
-
+      textarea {
+        padding: 15px;
+        resize: none;
+      }
+      input {
+        height: 40px;
+        padding-left: 40px;
+        line-height:40px;
+      }
     }
-
+    }
   }
-}
