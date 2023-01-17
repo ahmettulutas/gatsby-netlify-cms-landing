@@ -1,9 +1,10 @@
 import React from 'react';
 import FormInput from './FormInput.js';
 import emailjs from 'emailjs-com';
-import { navigate } from 'gatsby-link';
+/* import { navigate } from 'gatsby-link'; */
 import { normalizeTurkishPhone } from '../utils/helpers.js';
 import { contactInputs } from '../lib/constants';
+
 const emptyState = {
   name_surname: '',
   phone_number: '',
@@ -13,7 +14,8 @@ const emptyState = {
 
 export const Form = ({ title }) => {
   const [formData, setFormData] = React.useState(emptyState),
-    formDisabled = Object.entries(formData).some(([key, value]) => {
+    [loading, setLoading] = React.useState(false),
+    checkInputsValid = Object.entries(formData).some(([key, value]) => {
       const { pattern } = contactInputs.find(item => item.name === key),
         isValid = new RegExp(pattern, 'g').test(value);
       return !value || !isValid;
@@ -29,16 +31,20 @@ export const Form = ({ title }) => {
 
     handleSubmit = e => {
       e.preventDefault();
-      if (Object.values(formData).some(item => !item))
+      if (Object.values(formData).some(item => !item)) {
         return;
-      else
+      }
+      else {
+        setLoading(true);
         emailjs.send(
           process.env.GATSBY_FORM_SERVICE_ID, process.env.GATSBY_FORM_TEMPLATE_ID, formData, process.env.GATSBY_FORM_PUBLIC_KEY
         ).then(() => {
+          setLoading(false);
           window.alert('Mesajınız gönderildi.');
           setFormData(emptyState);
-        }).then(() => navigate('/'))
+        })/* .then(() => navigate('/')) */
           .catch(error => window.alert(error));
+      }
     };
 
   return (
@@ -48,7 +54,7 @@ export const Form = ({ title }) => {
         <FormInput changeData={handleChange} key={input.key} {...input} value={formData[input.name]} />
       ))}
       <input type="text" name="_gotcha" style={{ display: 'none' }} />
-      <button disabled={formDisabled} className='more-btn' type='submit'>Gönder</button>
+      <button disabled={checkInputsValid} className={`button is-success ${loading && 'is-loading'}`} type='submit'>Gönder</button>
     </form>
   );
 };

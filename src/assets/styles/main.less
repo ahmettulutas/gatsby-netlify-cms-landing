@@ -24,8 +24,9 @@ html {
   width: 100vw !important;
   height: 100vh !important;
   overflow-x: hidden;
+
   &::-webkit-scrollbar {
-      display: none;
+    display: none;
     }
 }
 
@@ -39,7 +40,7 @@ html {
   body {
     overflow-x: hidden;
     margin: 0px;
-      padding: 0px;
+    padding: 0px;
       scroll-behavior: smooth;
     }
 }
@@ -51,6 +52,7 @@ html {
 @black: #2b2523;
 @light-gray: #f7f7f7;
 @dark-gray: #dbdada;
+@navy-blue: rgb(46, 85, 145);
 
 .main-layout {
   display: grid;
@@ -107,11 +109,12 @@ html {
 .menu-list {
   list-style: none !important;
   text-align: left;
->a {
+
+  >a {
     padding: 5rem;
+
     &:hover {
       color: @primary;
     }
   }
 }
-

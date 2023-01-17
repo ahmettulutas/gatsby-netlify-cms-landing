@@ -46,7 +46,7 @@
           outline: none;
         }
 
-        &:invalid[focused='true']~span {
+                &:not(:placeholder-shown):invalid[focused='true']~span {
           display: block;
         }
 

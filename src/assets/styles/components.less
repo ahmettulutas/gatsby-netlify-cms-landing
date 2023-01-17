@@ -41,7 +41,7 @@
 
 		h1 {
 			font-size: 6rem;
-			color: @black;
+			color: @navy-blue;
 			margin-top: 10px;
 			text-shadow: 2px 2px 2px #26272a;
 			font-family: 'AngellaWhite';
@@ -93,7 +93,7 @@
 		}
 
 		&:hover {
-			color: black;
+			color: @navy-blue;
 		}
 	}
 @media (max-width:900px) {
@@ -112,7 +112,7 @@
 	width: 100%;
 
 	a {
-		color: black;
+		color: @navy-blue;
 	}
 	@media screen and (max-width:765px) {
 		flex-direction: column;
@@ -201,7 +201,7 @@
 
 	h1 {
 		font-size: 6rem;
-		color: @black;
+		color: @navy-blue;
 		margin-top: 10px;
 		text-shadow: 2px 2px 2px #26272a;
 		font-family: 'AngellaWhite';
@@ -254,7 +254,7 @@
 	&:enabled {
 		border:2px solid @dark-gray;
 		background-color: @dark-gray;
-		color: black;
+		color: @navy-blue;
 		font-weight:bold;
 	}
 }
@@ -264,7 +264,8 @@
 .get-appointment {
 	width: 100vw;
 	background-color: lighten(@primary, 10);
-	color: @primary-invert;
+	color: rgb(46, 85, 145);
+		font-weight: bold;
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
@@ -283,8 +284,8 @@
 		font-size: 20px;
 		color: inherit !important;
 		padding: .5rem;
-&:hover {
-		background: inherit !important;
+		&:hover {
+				background: inherit !important;
 			transform: scale(1.03);
 		}
 
@@ -294,14 +295,14 @@
 // FOOTER
 
 .footer {
-	padding: 3rem 0rem 0rem;
-	background-color: @light-gray;
+	padding: 3rem 0rem 1rem;
+		background-color: @primary-light;
 	.navbar-item {
 		width: 50%;
 		transition: all 200ms ease-in;
-
+		font-weight: bold;
 		&:hover {
-			background-color: darken(@light-gray, 5);
+			background-color: darken(@primary-light, 15);
 		}
 	}
 }

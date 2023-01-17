@@ -15,11 +15,11 @@
       transition: 0.3s ease-in;
       bottom: 0;
       left: 0;
-      background-color: black;
+      background-color: @navy-blue;
     }
 
     &:hover {
-      color: black;
+      color: @navy-blue;
       fill: @primary-invert;
       stroke: @primary-invert;
       background-color: inherit !important;
@@ -58,9 +58,8 @@
     }
     @media screen and (max-width: 1024px) {
       padding-bottom: 0;
-      background: white;
       .navbar-item, span {
-        color: black;
+        color: @navy-blue;
       }
     }
   }
@@ -68,9 +67,9 @@
   &.hasWhiteBg {
 
     .navbar-item, span {
-      color: black;
+      color: @navy-blue;
       &:not(.navbar-logo)::before {
-        background-color: black;
+        background-color: @navy-blue;
       }
     }
   }

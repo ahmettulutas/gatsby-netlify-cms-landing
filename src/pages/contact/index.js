@@ -11,10 +11,10 @@ const Contact = () => (
     <div className='container p-3'>
       <div className='columns is-8 is-variable '>
         <div className='column is-half has-text-left'>
-          <ContactInfo />
+          <Form title={'İletişime Geçin'}/>
         </div>
         <div className='column is-half has-text-left'>
-          <Form title={'İletişime Geçin'}/>
+          <ContactInfo />
         </div>
       </div>
     </div>
