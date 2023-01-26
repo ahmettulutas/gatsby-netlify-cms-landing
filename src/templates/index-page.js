@@ -33,7 +33,7 @@ export const IndexPageTemplate = ({
         <ContactInfo gridItems={intro.blurbs} />
         <AboutSection mainpitch={mainpitch}/>
         <Features gridItems={intro.blurbs} />
-        <GetAppointment />
+       {/*  <GetAppointment /> */}
         <BlogRoll />
         <div className='column is-12 has-text-centered'>
           <Link className='more-btn' to='/blog'>

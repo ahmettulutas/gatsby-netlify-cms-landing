@@ -38,7 +38,7 @@ const Navbar = ({ hasWhiteBg }) => {
       aria-label='main-navigation'>
       <div className='container'>
         <div className='navbar-brand'>
-          <Link to='/' className='navbar-item navbar-logo' title='Logo'>
+          <Link to='/' className='navbar-item navbar-logo' title='Logo' activeClassName={'active'} activeStyle={{ color: 'green' }}>
             <img
               alt='brand logo'
               className='navbar-image'
