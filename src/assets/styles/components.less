@@ -11,7 +11,9 @@
 	height: 100vh;
 	display: grid;
 	place-items: center;
-	position: relative;
+	@media screen and (max-width: 768px) {
+			background-attachment: scroll;
+		}
 
 	.overlay {
 		position: absolute;

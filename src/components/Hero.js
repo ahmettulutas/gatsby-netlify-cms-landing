@@ -14,6 +14,7 @@ const Hero = ({ title, background, subheading, hasDarkBg = false }) => (
       </h1>
     </div>
   </div>
+
 );
 
 Hero.propTypes = {
