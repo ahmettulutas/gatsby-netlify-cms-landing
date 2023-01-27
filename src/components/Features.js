@@ -1,12 +1,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
+import { BackgroundTitle } from './BackgroundTitle';
 
 const FeatureGrid = ({ gridItems }) => (
-  <section>
-    <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen has-text-centered'>
-      Uzmanlıklarım
-    </h3>
+  <section className='page-container'>
+    <BackgroundTitle title={'Uzmanlıklarım'} />
+    <div>
+      <h3 className='size-1 highlighted m-auto'>Uzmanlıklarım</h3>
+    </div>
     <div className='feature-cards'>
 
       {gridItems.map(item => (

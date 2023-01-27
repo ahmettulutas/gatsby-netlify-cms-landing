@@ -30,7 +30,7 @@ export const IndexPageTemplate = ({
         subheading={subheading}
       />
       <div className='main-container'>
-        <ContactInfo gridItems={intro.blurbs} />
+{/*         <ContactInfo gridItems={intro.blurbs} /> */}
         <AboutSection mainpitch={mainpitch}/>
         <Features gridItems={intro.blurbs} />
        {/*  <GetAppointment /> */}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
+import Logo from '../img/logo.inline.svg';
 
 const Navbar = ({ hasWhiteBg }) => {
   const [navState, setNavState] = useState({
@@ -38,12 +39,8 @@ const Navbar = ({ hasWhiteBg }) => {
       aria-label='main-navigation'>
       <div className='container'>
         <div className='navbar-brand'>
-          <Link to='/' className='navbar-item navbar-logo' title='Logo' activeClassName={'active'} activeStyle={{ color: 'green' }}>
-            <img
-              alt='brand logo'
-              className='navbar-image'
-              src='/img/logo.svg'
-            />
+          <Link to='/' className='navbar-item navbar-logo' title='Logo'>
+            <Logo />
           </Link>
           {/* Hamburger menu */}
           <div
@@ -62,16 +59,16 @@ const Navbar = ({ hasWhiteBg }) => {
           id='navMenu'
           className={`navbar-menu ${navState.navBarActiveClass}`}>
           <div className='navbar-end has-text-right'>
-            <Link className='navbar-item' to='/'>
+            <Link className='navbar-item' to='/' activeClassName={'active'}>
 							ANASAYFA
             </Link>
-            <Link className='navbar-item' to='/blog'>
+            <Link className='navbar-item' to='/blog' activeClassName={'active'}>
 							BLOG
             </Link>
-            <Link className='navbar-item' to='/contact'>
+            <Link className='navbar-item' to='/contact' activeClassName={'active'}>
 							İLETİŞİM
             </Link>
-            <Link className='navbar-item' to='/getappointment'>
+            <Link className='navbar-item' to='/getappointment' activeClassName={'active'}>
 							RANDEVU
             </Link>
           </div>

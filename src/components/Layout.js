@@ -2,11 +2,10 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import './all.sass';
-/* import {useSiteMetadata} from '../utils/helpers/'; */
+import '../assets/styles/all.sass';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
-/* import { Loading } from './Loading'; */
+
 const Layout = ({ title, description, featuredImage, titleTemplate, children, hasWhiteBg }) => (
   <>
     <Helmet titleTemplate={titleTemplate} >

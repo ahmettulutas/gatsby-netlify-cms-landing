@@ -9,7 +9,7 @@ const Hero = ({ title, background, subheading, hasDarkBg = false }) => (
     <div className='overlay'></div>
     <div className='hero-title-section'>
       {subheading && <h2 className='is-size-5-mobile'>{subheading}</h2>}
-      <h1 className={`is-size-1-mobile ${hasDarkBg ? 'invert' : ''}`} style={{ fontWeight: 600 }}>
+      <h1 className={`is-size-1-mobile ${hasDarkBg ? 'invert' : ''}`}>
         {title}
       </h1>
     </div>

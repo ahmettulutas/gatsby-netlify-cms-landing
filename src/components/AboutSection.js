@@ -1,12 +1,15 @@
 import React from 'react';
+import { BackgroundTitle } from './BackgroundTitle';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
 
 export const AboutSection = ({ mainpitch }) => (
   <div className='page-container'>
+
     <section className='about'>
+      <BackgroundTitle title={'Hakkımda'} />
       <div>
         <div>
-          <h3 className='is-size-1-mobile is-size-1-tablet is-size-1-widescreen'>
+          <h3 className='size-1 highlighted'>
             {mainpitch.subtitle}
           </h3>
         </div>
@@ -16,7 +19,9 @@ export const AboutSection = ({ mainpitch }) => (
           </p>
         </div>
       </div>
-      <PreviewCompatibleImage imageInfo={{ image: mainpitch.image }} />
+      <div className="about-image-container">
+        <PreviewCompatibleImage imageInfo={{ image: mainpitch.image }} />
+      </div>
     </section>
   </div>
 );

@@ -4,6 +4,7 @@
   margin: 0 auto;
   height: 100%;
 }
+
 .flex {
   display:flex;
 }
@@ -13,42 +14,17 @@
   margin:0 auto;
 }
 
-.py-1 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+
+.generateCSS(@i) when (@i =< 10) {
+  .py-@{i} { padding-right: @i*1rem; padding-left: @i*1rem; }
+  .px-@{i} { padding-right: @i*1rem; padding-left: @i*1rem; }
+  .my-@{i} { margin-top: @i*1rem; margin-bottom: @i*1rem; }
+  .mx-@{i} { margin-right: @i*1rem; margin-left: @i*1rem; }
+  .generateCSS(@i + 1);
 }
 
-.py-2 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-}
+.generateCSS(1);
 
-.px-1 {
-  padding-right: 1rem;
-  padding-left: 1rem;
-}
-
-.px-2 {
-  padding-right: 2rem;
-  padding-left: 2rem;
-}
-
-.my-1 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-
-.my-2 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-
-.mx-1 {
-  margin-right: 1rem;
-  margin-left: 1rem;
-}
-
-.mx-2 {
-  margin-right: 2rem;
-  margin-left: 2rem;
+.m-auto {
+  margin: auto;
 }

@@ -7,3 +7,30 @@
   line-height: 1.8;
   color: #777;
 }
+.size-1 {
+  font-size: 3rem;
+}
+
+.text-centered {
+  text-align: center;
+}
+
+.highlighted {
+  position: relative;
+  display: table;
+  font-weight: 500;
+  .my-1();
+  
+  &::before {
+    /* Highlight color */
+    background-color: @primary;
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 50%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
+}
