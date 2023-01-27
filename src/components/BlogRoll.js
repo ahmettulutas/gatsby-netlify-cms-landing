@@ -25,7 +25,7 @@ const BlogRollTemplate = props => {
                   </div>
                 )}
                 <section>
-                  <h3 className='has-text-primary is-size-5 mt-1 mb-1'>
+                  <h3 className='size-3'>
                     {post.frontmatter.title}
                   </h3>
                   <p className=' is-size-6'>
