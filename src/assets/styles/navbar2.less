@@ -3,7 +3,7 @@
   right: 0;
   left: 0;
   background-color: white;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   display: block;
   position: fixed;
   z-index: 10;
@@ -11,21 +11,20 @@
   .page-container {
     display: flex;
     justify-content: space-between;
-
   }
 
   .navbar-logo {
     width: 150px;
     margin: 0.3rem 0;
-    transition: margin-top .3s ease-in;
-    color:inherit;
+    transition: margin-top 0.3s ease-in;
+    color: inherit;
     display: flex;
     svg {
       width: 100%;
       height: auto;
     }
   }
-    .hamburger {
+  .hamburger {
     display: none;
     transition: all 0.3s ease;
     div {
@@ -60,7 +59,9 @@
         background-color: @primary-invert;
       }
     }
-    .navbar-logo, .hamburger, .nav-links {
+    .navbar-logo,
+    .hamburger,
+    .nav-links {
       margin-top: 20px;
     }
     .hamburger:not(.toggle) > div {
@@ -121,8 +122,6 @@
     }
   }
 
-
-
   /*Stying for small screens*/
   @media screen and (max-width: 800px) {
     z-index: 3;
@@ -162,22 +161,30 @@
         color: black;
       }
       .navbar-item {
-        opacity: 1;
-        color:inherit !important;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-30%);
+        color: inherit !important;
         &:nth-child(1) {
-          transition: all 0.5s ease 0.2s;
+          transition: all 0.2s ease 0.4s;
+          -webkit-transition: all 0.2s ease 0.4s;
         }
         &:nth-child(2) {
-          transition: all 0.5s ease 0.4s;
+          transition: all 0.4s ease 0.7s;
+          -webkit-transition: all 0.4s ease 0.7s;
         }
         &:nth-child(3) {
-          transition: all 0.5s ease 0.6s;
+          transition: all 0.6s ease 1s;
+          -webkit-transition: all 0.6s ease 1s;
         }
         &:nth-child(4) {
-          transition: all 0.5s ease 0.7s;
+          transition: all 0.8s ease 1.3s;
+          -webkit-transition: all 0.8s ease 1.3s;
         }
         &.fade {
-          opacity: 0;
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0%);
         }
       }
     }

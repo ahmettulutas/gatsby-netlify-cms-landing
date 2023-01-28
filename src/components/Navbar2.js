@@ -10,6 +10,10 @@ const Navbar2 = () => {
     toggleHamburger = () => {
       navLinks.current.classList.toggle('open');
       hamburger.current.classList.toggle('toggle');
+      console.log(navLinks.current.children);
+      Array.prototype.forEach.call(navLinks.current.children, child => {
+        child.classList.toggle('fade');
+      });
     },
 
     toggleNavOnScroll = () => {
