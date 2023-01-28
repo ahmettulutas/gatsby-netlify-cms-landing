@@ -25,7 +25,7 @@
       display: none;
       color: darken(@primary, 5);
     }
-    
+
     .input-container {
       display: grid;
 
@@ -37,19 +37,18 @@
         left: 5px;
       }
 
-      input, 
+      input,
       textarea {
         border-radius: 5px;
         border: 2px solid @dark-gray;
-        
+
         &:focus {
           outline: none;
         }
 
-                &:not(:placeholder-shown):invalid[focused='true']~span {
+        &:not(:placeholder-shown):invalid[focused='true'] ~ span {
           display: block;
         }
-
       }
       textarea {
         padding: 15px;
@@ -58,8 +57,8 @@
       input {
         height: 40px;
         padding-left: 40px;
-        line-height:40px;
+        line-height: 40px;
       }
     }
-    }
   }
+}

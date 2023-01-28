@@ -1,81 +1,67 @@
-import React, { useEffect, useState, useRef } from 'react';
 import { Link } from 'gatsby';
+import React, { useEffect, useRef } from 'react';
 import Logo from '../img/logo.inline.svg';
 
 const Navbar = ({ hasWhiteBg }) => {
-  const [navState, setNavState] = useState({
-      active: false,
-      navBarActiveClass: ''
-    }),
-    navRef = useRef(),
+  const
+    navbar = useRef(),
+    navLinks = useRef(),
+    hamburger = useRef(),
     toggleHamburger = () => {
-      setNavState({
-        active: !navState.active,
-        ...(navState.active
-          ? { navBarActiveClass: 'is-active' }
-          : { navBarActiveClass: '' })
+      navLinks.current.classList.toggle('open');
+      hamburger.current.classList.toggle('toggle');
+      console.log(navLinks.current.children);
+      Array.prototype.forEach.call(navLinks.current.children, child => {
+        child.classList.toggle('fade');
       });
     },
+
     toggleNavOnScroll = () => {
       const { body, documentElement } = document;
       body.scrollTop || documentElement.scrollTop > 100
-        ? navRef.current.classList.remove('transparent')
-        : navRef.current.classList.add(`${hasWhiteBg ? 'hasWhiteBg' : 'transparent'}`);
+        ? navbar.current.classList.remove('transparent')
+        : navbar.current.classList.add(`${!hasWhiteBg && 'transparent'}`);
     };
 
   useEffect(() => {
     window.addEventListener('scroll', toggleNavOnScroll);
-
     return () => {
       window.removeEventListener('scroll', toggleNavOnScroll);
     };
   }, []);
 
   return (
-    <nav
-      ref={navRef}
-      className='navbar is-fixed-top transparent'
-      role='navigation'
-      aria-label='main-navigation'>
-      <div className='container'>
-        <div className='navbar-brand'>
-          <Link to='/' className='navbar-item navbar-logo' title='Logo'>
+    <nav role='navigation' aria-label='main-navigation' className={`nav-bar ${!hasWhiteBg && 'transparent'}`} ref={navbar}>
+      <div className='page-container'>
+        {/* Logo */}
+        <div className="navbar-logo">
+          <Link to='/' className='navbar-logo' title='Logo'>
             <Logo />
           </Link>
-          {/* Hamburger menu */}
-          <div
-            className={`navbar-burger burger ${navState.navBarActiveClass}`}
-            data-target='navMenu'
-            role='menuitem'
-            tabIndex={0}
-            onKeyPress={() => toggleHamburger()}
-            onClick={() => toggleHamburger()}>
-            <span style={{ height: '2px' }} />
-            <span style={{ height: '2px' }} />
-            <span style={{ height: '2px' }} />
-          </div>
         </div>
-        <div
-          id='navMenu'
-          className={`navbar-menu ${navState.navBarActiveClass}`}>
-          <div className='navbar-end has-text-right'>
-            <Link className='navbar-item' to='/' activeClassName={'active'}>
-							ANASAYFA
-            </Link>
-            <Link className='navbar-item' to='/blog' activeClassName={'active'}>
-							BLOG
-            </Link>
-            <Link className='navbar-item' to='/contact' activeClassName={'active'}>
-							İLETİŞİM
-            </Link>
-            <Link className='navbar-item' to='/getappointment' activeClassName={'active'}>
-							RANDEVU
-            </Link>
-          </div>
+        {/* Hamburger Menu */}
+        <div ref={hamburger} className="hamburger" onKeyPress={() => toggleHamburger()} onClick={() => toggleHamburger()}>
+          <div className="line1"></div>
+          <div className="line2"></div>
+          <div className="line3"></div>
         </div>
+        {/* Nav Links */}
+        <ul ref={navLinks} className='nav-links'>
+          <li className='navbar-item'>
+            <Link to='/' activeClassName={'active'}>ANASAYFA</Link>
+          </li>
+          <li className='navbar-item'>
+            <Link to='/blog' activeClassName={'active'}>BLOG</Link>
+          </li>
+          <li className='navbar-item'>
+            <Link to='/contact' activeClassName={'active'}>İLETİŞİM</Link>
+          </li>
+          <li className='navbar-item'>
+            <Link to='/getappointment' activeClassName={'active'}>RANDEVU</Link>
+          </li>
+        </ul>
       </div>
     </nav>
   );
 };
-
 export default Navbar;

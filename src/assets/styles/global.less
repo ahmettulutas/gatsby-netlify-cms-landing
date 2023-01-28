@@ -6,20 +6,31 @@
 }
 
 .flex {
-  display:flex;
+  display: flex;
 }
 
 .image-container {
-  width:70%;
-  margin:0 auto;
+  width: 70%;
+  margin: 0 auto;
 }
 
-
 .generateCSS(@i) when (@i =< 10) {
-  .py-@{i} { padding-right: @i*1rem; padding-left: @i*1rem; }
-  .px-@{i} { padding-right: @i*1rem; padding-left: @i*1rem; }
-  .my-@{i} { margin-top: @i*1rem; margin-bottom: @i*1rem; }
-  .mx-@{i} { margin-right: @i*1rem; margin-left: @i*1rem; }
+  .py-@{i} {
+    padding-right: @i*1rem;
+    padding-left: @i*1rem;
+  }
+  .px-@{i} {
+    padding-right: @i*1rem;
+    padding-left: @i*1rem;
+  }
+  .my-@{i} {
+    margin-top: @i*1rem;
+    margin-bottom: @i*1rem;
+  }
+  .mx-@{i} {
+    margin-right: @i*1rem;
+    margin-left: @i*1rem;
+  }
   .generateCSS(@i + 1);
 }
 

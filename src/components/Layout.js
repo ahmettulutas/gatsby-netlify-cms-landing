@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
-import Navbar2 from '../components/Navbar2';
+import Navbar from '../components/Navbar';
 import '../assets/styles/all.sass';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
@@ -62,7 +62,7 @@ const Layout = ({ title, description, featuredImage, titleTemplate, children, ha
       <meta name="viewport" content="width=device-width, user-scalable=no" />
     </Helmet>
     <div className='main-layout'>
-      <Navbar2 hasWhiteBg={hasWhiteBg}/>
+      <Navbar hasWhiteBg={hasWhiteBg}/>
       <main>{children}</main>
       <Footer />
     </div>
