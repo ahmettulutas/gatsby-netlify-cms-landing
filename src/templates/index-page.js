@@ -1,8 +1,7 @@
-/* eslint-disable */
 import React from 'react';
-import GetAppointment from '../components/GetAppointment';
+/* import GetAppointment from '../components/GetAppointment'; */
 import { AboutSection } from '../components/AboutSection';
-import ContactInfo from '../components/ContactInfo';
+/* import ContactInfo from '../components/ContactInfo'; */
 import { getImage } from 'gatsby-plugin-image';
 import BlogRoll from '../components/BlogRoll';
 import Features from '../components/Features';
@@ -11,6 +10,7 @@ import { Link, graphql } from 'gatsby';
 import Hero from '../components/Hero';
 import '../assets/styles/main.less';
 import PropTypes from 'prop-types';
+
 
 export const IndexPageTemplate = ({
   image,
@@ -30,10 +30,8 @@ export const IndexPageTemplate = ({
         subheading={subheading}
       />
       <div className='main-container'>
-{/*         <ContactInfo gridItems={intro.blurbs} /> */}
         <AboutSection mainpitch={mainpitch}/>
         <Features gridItems={intro.blurbs} />
-       {/*  <GetAppointment /> */}
         <BlogRoll />
         <div className='column is-12 has-text-centered'>
           <Link className='more-btn' to='/blog'>

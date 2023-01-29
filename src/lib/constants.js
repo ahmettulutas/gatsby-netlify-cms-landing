@@ -35,3 +35,10 @@ export const contactInputs = [
 
   }
 ];
+
+export const animations = {
+  slideLeft: 'translateX(20%)',
+  slideRight: 'translateX(-20%)',
+  slideDown: 'translateY(-20%)',
+  slideUp: 'translateY(20%)'
+};

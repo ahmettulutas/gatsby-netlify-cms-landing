@@ -1,4 +1,5 @@
 import { graphql, useStaticQuery } from 'gatsby';
+import { animations } from '../lib/constants';
 
 export const normalizeTurkishPhone = str => {
   // Filter only numbers from the input
@@ -17,7 +18,7 @@ export const normalizeTurkishPhone = str => {
 
 
 // eslint-disable-next-line func-style
-function useSiteMetadata () {
+export function useSiteMetadata () {
   const { site } = useStaticQuery(
     graphql`
 			query SITE_METADATA_QUERY {
@@ -33,4 +34,9 @@ function useSiteMetadata () {
   return site.siteMetadata;
 }
 
-export default useSiteMetadata;
+
+export const generateTransform = translate => {
+  if (translate)
+    return Object.fromEntries(Object.entries(animations).map(([key, value]) => [key, value.replace(/\d+/, translate)]));
+  return animations;
+};
