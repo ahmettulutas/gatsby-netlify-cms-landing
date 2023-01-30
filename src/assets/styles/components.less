@@ -102,13 +102,11 @@
   gap: 1rem;
   grid-template-columns:repeat(auto-fit, minmax(300px, 400px));
   overflow-x: scroll;
+  grid-auto-flow: row;
   background: white;
 
   a {
     color: @text-gray;
-  }
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
   }
 }
 
