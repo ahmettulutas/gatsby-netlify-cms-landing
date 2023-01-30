@@ -4,10 +4,10 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import { BackgroundTitle } from './BackgroundTitle';
 import IntersectionObserverWrapper from './IntersectionObserver';
 
-const FeatureGrid = ({ gridItems }) => (
+const FeatureGrid = ({ gridItems, heading }) => (
   <section className='page-container my-1'>
-    <BackgroundTitle title={'Uzmanlıklarım'} />
-    <h3 className='highlighted'>Uzmanlıklarım</h3>
+    <BackgroundTitle title={heading} />
+    <h3 className='highlighted'>{heading}</h3>
     <div className='feature-cards'>
 
       {gridItems.map((item, index) => (

@@ -8,7 +8,7 @@ export const AboutSection = ({ mainpitch }) => (
   <div className='page-container'>
 
     <section className='about'>
-      <BackgroundTitle title={'Hakkında'} />
+      <BackgroundTitle title={mainpitch.subtitle} />
       <IntersectionObserverWrapper animationSlide={'slideRight'} translate={20} delay={800} once={false}>
         <div>
           <h3 className='highlighted'>
