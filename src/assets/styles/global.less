@@ -1,3 +1,102 @@
+@primary: #48c78e;
+@primary-invert: #fff;
+@primary-light: lighten(@primary, 30);
+@body-color: #333;
+@black: #2b2523;
+@light-gray: #f7f7f7;
+@dark-gray: #dbdada;
+@navy-blue: rgb(46, 85, 145);
+@primary-green: #48c78e;
+@text-gray: #777;;
+
+
+html {
+  width: 100vw !important;
+  height: 100vh !important;
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+:root {
+  font-size: 16px;
+
+  @media screen and (max-width: 2048px) {
+    font-size: 22px;
+  }
+  @media screen and (max-width: 768px) {
+    font-size: 15px;
+  }
+  @media screen and (max-width: 640px) {
+    font-size: 12px;
+  }  
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
+@media only screen and (max-width: 768px) {
+
+  html,
+  body {
+    overflow-x: hidden;
+    margin: 0px;
+    padding: 0px;
+      scroll-behavior: smooth;
+    }
+}
+
+
+.main-layout {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 100vh;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
+}
+
+// Blog
+
+.social {
+  padding: 2em;
+}
+
+.social a {
+  padding: 0.5em 0.5em 0.3em 0.5em;
+  border-radius: 1em;
+  background-color: @primary-invert;
+  margin: 0.5em;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
+  display: inline;
+}
+
+// Taglist
+
+.blog-content .taglist {
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 1.5rem;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  align-items: center;
+
+  li {
+    padding: 0 2rem 1rem 0;
+    margin-bottom: 1.5rem;
+    margin-top: 0;
+  }
+}
+
+
 .page-container {
   max-width: 1320px;
   width: 90%;
@@ -42,4 +141,22 @@
 
 .mb-025 {
   margin-bottom: 0.25rem;
+}
+
+.menu-label {
+  font-size: 1em !important;
+  text-align: left;
+}
+
+.menu-list {
+  list-style: none !important;
+  text-align: left;
+
+  >a {
+    padding: 5rem;
+
+    &:hover {
+      color: @primary;
+    }
+  }
 }

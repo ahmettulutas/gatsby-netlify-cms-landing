@@ -8,13 +8,13 @@ export const AboutSection = ({ mainpitch }) => (
   <div className='page-container'>
 
     <section className='about'>
-      <BackgroundTitle title={'Hakkımda'} />
+      <BackgroundTitle title={'Hakkında'} />
       <IntersectionObserverWrapper animationSlide={'slideRight'} translate={20} delay={800} once={false}>
         <div>
-          <h3 className='size-1 highlighted'>
+          <h3 className='highlighted'>
             {mainpitch.subtitle}
           </h3>
-          <p className='subtitle text--uppercase'>
+          <p>
             {mainpitch.description}
           </p>
         </div>

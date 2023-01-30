@@ -8,6 +8,7 @@ const BlogRollTemplate = props => {
 
   return (
     <div className='page-container'>
+      <h1 className='highlighted m-auto'>Blog</h1>
       <div className='blogroll-container'>
         {posts?.map(({ node: post }) => (
           <div key={post.id} className="blogroll-card">
@@ -28,7 +29,7 @@ const BlogRollTemplate = props => {
                   <h3 className='size-3 mb-025'>
                     {post.frontmatter.title}
                   </h3>
-                  <p className=' is-size-6'>
+                  <p>
                     {post.excerpt}
                   </p>
                 </section>

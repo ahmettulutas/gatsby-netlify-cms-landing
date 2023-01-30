@@ -7,9 +7,7 @@ import IntersectionObserverWrapper from './IntersectionObserver';
 const FeatureGrid = ({ gridItems }) => (
   <section className='page-container my-1'>
     <BackgroundTitle title={'Uzmanlıklarım'} />
-    <div>
-      <h3 className='size-1 highlighted m-auto'>Uzmanlıklarım</h3>
-    </div>
+    <h3 className='highlighted'>Uzmanlıklarım</h3>
     <div className='feature-cards'>
 
       {gridItems.map((item, index) => (

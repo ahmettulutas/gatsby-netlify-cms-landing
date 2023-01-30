@@ -21,12 +21,9 @@ const IntersectionObserverWrapper = ({ children, delay, animationSlide, translat
 
         });
       },
-
       observer = new IntersectionObserver(observerCallback);
     if (targetRef.current)
       observer.observe(targetRef.current);
-    if (hasIntersected)
-      observer.unobserve(targetRef.current);
     return () => {
       observer.disconnect();
     };
