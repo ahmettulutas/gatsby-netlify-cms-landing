@@ -7,6 +7,8 @@ description: >
   düşüncelerini ve duygularını değiştirmelerine yardımcı olan tekniktir. 
 featuredpost: true
 featuredimage: /img/priscilla-du-preez-f9dfujos9eu-unsplash.jpg
+tags:
+  - terapi
 ---
 Terapistin kullandığı yaklaşıma bağlı olarak çok çeşitli teknikler ve stratejiler kullanılabilir. Hemen hemen tüm psikoterapi türleri, terapötik bir ilişki geliştirmeyi, iletişim kurmayı ve problem yaratan düşünce veya davranışların üstesinden gelmek için çalışmayı içerir. 
 
