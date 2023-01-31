@@ -95,7 +95,7 @@ export const pageQuery = graphql`
 						gatsbyImageData(quality: 100, layout: FULL_WIDTH)
 					}
 				}
-        pageDescription
+        pagedescription
 				heading
 				subheading
 				mainpitch {
@@ -120,7 +120,6 @@ export const pageQuery = graphql`
 						text
 					}
 					heading
-					description
 				}
 			}
 		}

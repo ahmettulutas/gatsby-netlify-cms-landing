@@ -22,7 +22,7 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content,
     postImage = getImage(featuredImage) || featuredImage;
   return (
-    <>
+    <div className='page-container'>
       {/*       {helmet || ''} */}
       <section className='blog-content'>
 
@@ -56,7 +56,7 @@ export const BlogPostTemplate = ({
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 };
 

@@ -47,29 +47,7 @@ intro:
     - image: /img/online-therapy.png
       title: Online Terapi
       text: >
-        Online terapi, insanlara danışmanlık sağlamak için bilgisayar ve
-        telekomünikasyon teknolojisini kullanan bir tür zihinsel sağlık
-        hizmetidir. Danışanlar, video konferanslar aracılığıyla veya bir
-        bilgisayardan bir dizi soruyu yanıtlayarak terapistlerin danışmanlığına
-        erişebilir. Online terapi, bir ruh sağlığı uzmanı tarafından
-        sağlanabilir ve insanlar madde bağımlılığı, depresyon, stres ve kaygı
-        gibi konularda yardım aradıkça popülaritesi artmaktadır.
-  heading: Uzmanlıklarım
-  description: >
-    Cinsel terapi, soruna odaklanarak hem hastanın hem de doktorun ihtiyaçlarına
-    hitap ederek cinsel sorunları olan kişilere yardımcı olur. Bu tedavi yöntemi
-    kişilerin cinselliklerini anlamalarına ve sağlıklı cinsel ilişkiler
-    geliştirmelerine yardımcı olur. Genellikle cinsel tatmini sağlamakta veya
-    sürdürmekte güçlük çeken erkekler ve kadınlar için reçete edilir. Hastalar
-    terapistlere erken boşalmadan (bir yetişkin eşinin önünde doruğa
-    ulaşamadığında) kendi bedenlerine karşı şiddetli bir isteksizliğe kadar
-    değişen sorunlarla gelir. Yaygın olarak tedavi edilen bazı problemler
-    erektil disfonksiyon, libido eksikliği (cinsel istek veya enerji), orgazm
-    eksikliği ve kendi cinsel organlarına karşı isteksizliktir.
-pageDescription: Uzman Psikolog Meltem Ulutaş | Blog ve İletişim Sayfası |
-  Psikolojik Danışmanlık | Psikolojik Terapi
-description: asddaa
-main:
-  heading: asdad
-  description: asdada
+        Online terapi, insanlara danışmanlık sağlamak için bilgisayar ve telekomünikasyon teknolojisini kullanan bir tür zihinsel sağlık hizmetidir. Danışanlar, video konferanslar aracılığıyla veya bir bilgisayardan bir dizi soruyu yanıtlayarak terapistlerin danışmanlığına erişebilir. Online terapi, bir ruh sağlığı uzmanı tarafından sağlanabilir ve insanlar madde bağımlılığı, depresyon, stres ve kaygı gibi konularda yardım aradıkça popülaritesi artmaktadır.
+  heading: What we offer
+
 ---
