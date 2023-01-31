@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Hero = ({ title, background, subheading, hasDarkBg = false }) => (
+const Hero = ({ title, background, subheading }) => (
   <div
     className='hero-main'
     style={{ backgroundImage: `url(${background})` }}>
@@ -9,7 +9,7 @@ const Hero = ({ title, background, subheading, hasDarkBg = false }) => (
     <div className='overlay'></div>
     <div className='hero-title-section'>
       {subheading && <h2 className='is-size-5-mobile'>{subheading}</h2>}
-      <h1 className={`is-size-1-mobile ${hasDarkBg ? 'invert' : ''}`}>
+      <h1>
         {title}
       </h1>
     </div>

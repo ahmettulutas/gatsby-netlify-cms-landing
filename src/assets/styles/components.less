@@ -103,8 +103,7 @@
   grid-template-columns:repeat(auto-fit, minmax(300px, 400px));
   overflow-x: scroll;
   grid-auto-flow: row;
-  background: white;
-
+  
   a {
     color: @text-gray;
   }
@@ -118,6 +117,7 @@
   flex-direction: column;
   justify-content: space-between;
   box-shadow: 0 5px 20px -10px #000;
+  background: white;
 
   &:hover {
     transform: scale(0.99);
@@ -264,8 +264,9 @@
   // BUTTONS
 
   .more-btn {
-    display: inline-block;
+    margin: auto;
     padding: 12px 16px 10px;
+    display: block;
     font-size: 18px;
     font-size: 1rem;
     line-height: 1.25;
@@ -273,7 +274,7 @@
     border-radius: 0.25rem;
     text-decoration: none;
     font-weight: 700;
-    color: @primary;
+    color: @primary  !important;
     cursor: pointer;
     text-align: center;
     border: 2px solid @primary;
@@ -355,6 +356,7 @@
   transform: translate(0, 30%);
   overflow: hidden;
   max-width: 100%;
+  text-align: center;
 
   h1 {
     text-transform: uppercase;

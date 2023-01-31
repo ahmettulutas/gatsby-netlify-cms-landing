@@ -6,8 +6,9 @@ import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
 /* import PreviewCompatibleImage from '../components/PreviewCompatibleImage'; */
-import FullWidthImage from '../components/FullWidthImage';
+/* import FullWidthImage from '../components/FullWidthImage'; */
 import { getImage } from 'gatsby-plugin-image';
+import Hero from '../components/Hero';
 
 export const BlogPostTemplate = ({
   content,
@@ -22,41 +23,43 @@ export const BlogPostTemplate = ({
   const PostContent = contentComponent || Content,
     postImage = getImage(featuredImage) || featuredImage;
   return (
-    <div className='page-container'>
-      {/*       {helmet || ''} */}
-      <section className='blog-content'>
+    <>
+      <Hero
+        title={title}
+        background={
+          postImage.url ? postImage.url : featuredImage.childImageSharp.gatsbyImageData.images.fallback.src || featuredImage.image
+        }
+      />
 
-        <div className='columns'>
-          <div className='column is-10 is-offset-1'>
-            <h1 className='title is-size-2 has-text-weight-bold is-bold-light has-text-centered'>
-              {title}
-            </h1>
-            {/*             <div className='blog-image'>
+      <div className='page-container'>
+        {/*       {helmet || ''} */}
+        <section className='blog-content'>
+
+          {/*             <div className='blog-image'>
               <PreviewCompatibleImage
                 imageInfo={{ image: featuredImage }}
               />
             </div> */}
-            <FullWidthImage img={postImage} />
-            <p className='description'>{description}</p>
-            <PostContent content={content} />
-            {tags && tags.length
-              ? (
-                <div style={{ marginTop: '4rem' }}>
-                  <h4>Etiketler</h4>
-                  <ul className='taglist'>
-                    {tags.map(tag => (
-                      <Link key={`${tag}tag`} className='more-btn' to={`/tags/${kebabCase(tag)}/`}>
-                        {tag}
-                      </Link>
-                    ))}
-                  </ul>
-                </div>
-              )
-              : null}
-          </div>
-        </div>
-      </section>
-    </div>
+          {/* <FullWidthImage img={postImage} /> */}
+          <p className='description'>{description}</p>
+          <PostContent content={content} />
+          {tags && tags.length
+            ? (
+              <div style={{ marginTop: '4rem' }}>
+                <h4>Etiketler</h4>
+                <ul className='taglist'>
+                  {tags.map(tag => (
+                    <Link key={`${tag}tag`} className='more-btn' to={`/tags/${kebabCase(tag)}/`}>
+                      {tag}
+                    </Link>
+                  ))}
+                </ul>
+              </div>
+            )
+            : null}
+        </section>
+      </div>
+    </>
   );
 };
 

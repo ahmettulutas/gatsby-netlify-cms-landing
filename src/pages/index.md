@@ -69,5 +69,5 @@ intro:
         sağlanabilir ve insanlar madde bağımlılığı, depresyon, stres ve kaygı
         gibi konularda yardım aradıkça popülaritesi artmaktadır.
   heading: Uzmanlıklar
-  description: lorem
+
 ---

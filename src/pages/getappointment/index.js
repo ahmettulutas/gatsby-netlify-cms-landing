@@ -39,7 +39,7 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout>
-        <Hero title={'Randevu'} background={contact} hasDarkBg />
+        <Hero title={'Randevu'} background={contact} />
         <div className='container p-auto'>
           <div className='columns is-centered' style={{ padding: '1rem' }}>
             <div className='column is-half' style={{ margin: 'auto' }}>

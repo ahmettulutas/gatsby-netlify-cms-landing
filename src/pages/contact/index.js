@@ -7,7 +7,7 @@ import ContactInfo from '../../components/ContactInfo';
 
 const Contact = () => (
   <Layout title={'Meltem Ulutaş İletişim'}>
-    <Hero title={'İletişim'} background={contact} hasDarkBg />
+    <Hero title={'İletişim'} background={contact} />
     <div className='container p-3'>
       <div className='columns is-8 is-variable '>
         <div className='column is-half has-text-left'>

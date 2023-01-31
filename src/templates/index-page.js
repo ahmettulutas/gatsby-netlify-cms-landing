@@ -20,7 +20,6 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const heroImage = getImage(image) || image;
-  console.log(intro);
   return (
     <>
       <Hero
@@ -34,7 +33,7 @@ export const IndexPageTemplate = ({
         <AboutSection mainpitch={mainpitch}/>
         <Features gridItems={intro.blurbs} heading={intro.heading}/>
         <BlogRoll />
-        <div className='column is-12 has-text-centered'>
+        <div className='page-container'>
           <Link className='more-btn' to='/blog'>
 							Daha Fazla
           </Link>

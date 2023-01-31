@@ -20,14 +20,17 @@
     transition: margin-top 0.3s ease-in;
     color: inherit;
     display: flex;
+
     svg {
       width: 100%;
       height: auto;
     }
   }
+
   .hamburger {
     display: none;
     transition: all 0.3s ease;
+
     div {
       width: 30px;
       height: 2px;
@@ -35,6 +38,7 @@
       margin: 5px;
       transition: all 0.3s ease;
     }
+
     &.toggle {
       .line1 {
         transform: rotate(-45deg) translate(-5px, 6px);
@@ -48,27 +52,8 @@
       .line3 {
         transform: rotate(45deg) translate(-5px, -6px);
       }
-    }
-  }
-  &.transparent {
-    background-color: transparent;
-    box-shadow: none;
-    .navbar-item,
-    .navbar-logo {
-      color: @primary-invert;
-      &::before {
-        background-color: @primary-invert;
-      }
-    }
-    .navbar-logo,
-    .hamburger,
-    .nav-links {
-      margin-top: 20px;
-    }
-    .hamburger:not(.toggle) > div {
-      background: white;
-    }
-  }
+        }
+        }
 
   /*Styling Links*/
   .nav-links {
@@ -88,33 +73,39 @@
       padding: 0;
       font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
         Roboto, 'Helvetica Neue', Arial, sans-serif;
+
       a {
         text-decoration: none;
         color: inherit;
         margin: 0 0.4vw;
         font-size: 18px;
+
         &:focus {
           color: inherit;
           background-color: transparent !important;
         }
+
         &.active {
           font-weight: bold;
         }
       }
+
       &::before {
         content: '';
         position: absolute;
         width: 0;
         height: 2px;
         transition: 0.3s ease-in;
-        bottom: 10%;
+        bottom: 5%;
         left: 0;
         background-color: black;
       }
+
       &:hover {
-        color: black;
+        color: inherit;
         background-color: inherit !important;
         transition: 0.2s ease-in;
+
         &::before {
           width: 100%;
           color: inherit;
@@ -123,12 +114,38 @@
     }
   }
 
+        &.transparent {
+          background-color: transparent;
+          color: white;
+          box-shadow: none;
+    
+          .navbar-item,
+          .navbar-logo {
+            color: @primary-invert;
+    
+            &::before {
+              background-color: white;
+            }
+          }
+    
+          .navbar-logo,
+          .hamburger,
+          .nav-links {
+            margin-top: 20px;
+          }
+    
+          .hamburger:not(.toggle)>div {
+            background: white;
+          }
+        }
   /*Stying for small screens*/
   @media screen and (max-width: 800px) {
     z-index: 3;
+
     .page-container {
       width: 100%;
     }
+
     .hamburger {
       display: block;
       position: absolute;
@@ -137,10 +154,12 @@
       top: 50%;
       transform: translate(-5%, -50%);
       z-index: 2;
+
       &.toggle {
         transition: all 0.7s ease;
       }
     }
+
     .nav-links {
       margin-top: 0 !important;
       position: fixed;
@@ -155,33 +174,40 @@
       justify-content: flex-start;
       align-items: flex-end;
       padding-top: 30vh;
+
       &.open {
         clip-path: circle(1000px at 90% -10%);
         -webkit-clip-path: circle(1000px at 90% -10%);
         pointer-events: all;
         color: black;
       }
+
       .navbar-item {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-30%);
         color: inherit !important;
+
         &:nth-child(1) {
           transition: all 0.2s ease 0.4s;
           -webkit-transition: all 0.2s ease 0.4s;
         }
+
         &:nth-child(2) {
           transition: all 0.4s ease 0.7s;
           -webkit-transition: all 0.4s ease 0.7s;
         }
+
         &:nth-child(3) {
           transition: all 0.6s ease 1s;
           -webkit-transition: all 0.6s ease 1s;
         }
+
         &:nth-child(4) {
           transition: all 0.8s ease 1.3s;
           -webkit-transition: all 0.8s ease 1.3s;
         }
+
         &.fade {
           opacity: 1;
           visibility: visible;
