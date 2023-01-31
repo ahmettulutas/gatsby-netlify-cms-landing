@@ -19,6 +19,20 @@ mainpitch:
     Nörodejeneratif Hastalıklardaki Rolü” üzerine deneysel çalışmalarını
     sürdürmektedir. Bilişsel Davranışçı Terapi ekolü ile seanslarını klinikte ve
     online platformda sürdürmektedir.
+hakkımda:
+  title: Haasdaa
+  subtitle: Hakkında
+  description: >-2
+        Lisans eğitimini Fatih Sultan Mehmet Vakıf Üniversitesi, Fen – Edebiyat
+        Fakültesi, Psikoloji bölümünde tamamlanmıştır. Lisans eğitiminin ardından
+        Almanya’ya gitmiş ve burada Bilişsel Davranışçı Terapi ekolünde eğitimler
+        almış ve süpervizör eşliğinde klinik gözlemlerini gerçekleştirmiştir. Yüksek
+        lisans eğitimine İstinye Üniversitesi, Sinirbilim Programında devam
+        etmektedir. Yüksek lisans tezinde “Nöroinflamasyonun Psikiyatrik ve
+        Nörodejeneratif Hastalıklardaki Rolü” üzerine deneysel çalışmalarını
+        sürdürmektedir. Bilişsel Davranışçı Terapi ekolü ile seanslarını klinikte ve
+        online platformda sürdürmektedir.
+  image: /img/meltemulutasprofile.jpg
 intro:
   blurbs:
     - image: /img/personal-growth.png
@@ -47,7 +61,13 @@ intro:
     - image: /img/online-therapy.png
       title: Online Terapi
       text: >
-        Online terapi, insanlara danışmanlık sağlamak için bilgisayar ve telekomünikasyon teknolojisini kullanan bir tür zihinsel sağlık hizmetidir. Danışanlar, video konferanslar aracılığıyla veya bir bilgisayardan bir dizi soruyu yanıtlayarak terapistlerin danışmanlığına erişebilir. Online terapi, bir ruh sağlığı uzmanı tarafından sağlanabilir ve insanlar madde bağımlılığı, depresyon, stres ve kaygı gibi konularda yardım aradıkça popülaritesi artmaktadır.
-  heading: What we offer
-
+        Online terapi, insanlara danışmanlık sağlamak için bilgisayar ve
+        telekomünikasyon teknolojisini kullanan bir tür zihinsel sağlık
+        hizmetidir. Danışanlar, video konferanslar aracılığıyla veya bir
+        bilgisayardan bir dizi soruyu yanıtlayarak terapistlerin danışmanlığına
+        erişebilir. Online terapi, bir ruh sağlığı uzmanı tarafından
+        sağlanabilir ve insanlar madde bağımlılığı, depresyon, stres ve kaygı
+        gibi konularda yardım aradıkça popülaritesi artmaktadır.
+  heading: Uzmanlıklar
+  description: lorem
 ---
