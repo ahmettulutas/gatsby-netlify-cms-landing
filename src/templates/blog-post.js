@@ -30,7 +30,7 @@ export const BlogPostTemplate = ({
         title={title}
         smallTitle
         background={
-          heroImage.url ? heroImage.url : heroImage.images.sources[0].srcSet || heroImage.image
+          heroImage?.url ? heroImage?.url : heroImage.images.sources[0].srcSet || heroImage.image
         }
       />
 
