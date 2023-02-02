@@ -39,7 +39,7 @@ const Navbar = ({ hasWhiteBg }) => {
           </Link>
         </div>
         {/* Hamburger Menu */}
-        <div ref={hamburger} className="hamburger" onKeyPress={() => toggleHamburger()} onClick={() => toggleHamburger()}>
+        <div ref={hamburger} className="hamburger" onClick={() => toggleHamburger()}>
           <div className="line1"></div>
           <div className="line2"></div>
           <div className="line3"></div>
@@ -58,6 +58,8 @@ const Navbar = ({ hasWhiteBg }) => {
           <li className='navbar-item'>
             <Link to='/getappointment' activeClassName={'active'}>RANDEVU</Link>
           </li>
+          {/* Overlay */}
+          <section className='navbar-overlay'></section>
         </ul>
       </div>
     </nav>

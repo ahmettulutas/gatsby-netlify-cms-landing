@@ -40,7 +40,7 @@ export default class Index extends React.Component {
     return (
       <Layout>
         <Hero title={'Randevu'} background={contact} />
-        <div className='container p-auto'>
+        <div className='page-container'>
           <div className='columns is-centered' style={{ padding: '1rem' }}>
             <div className='column is-half' style={{ margin: 'auto' }}>
               <Form title={'Randevu Talebi Oluşturun'}/>

@@ -1,12 +1,10 @@
 import React from 'react';
-/* import GetAppointment from '../components/GetAppointment'; */
 import { AboutSection } from '../components/AboutSection';
-/* import ContactInfo from '../components/ContactInfo'; */
 import { getImage } from 'gatsby-plugin-image';
 import BlogRoll from '../components/BlogRoll';
 import Features from '../components/Features';
 import Layout from '../components/Layout';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 import Hero from '../components/Hero';
 import '../assets/styles/main.less';
 import PropTypes from 'prop-types';
@@ -29,15 +27,11 @@ export const IndexPageTemplate = ({
         }
         subheading={subheading}
       />
-      <div className='main-container'>
+      <div className='page-container'>
         <AboutSection mainpitch={mainpitch}/>
         <Features gridItems={intro.blurbs} heading={intro.heading}/>
+        <h1 className='highlighted m-auto'>Blog</h1>
         <BlogRoll />
-        <div className='page-container'>
-          <Link className='more-btn' to='/blog'>
-							Daha Fazla
-          </Link>
-        </div>
       </div>
     </>
   );
@@ -59,8 +53,9 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark,
     heroImage = getImage(frontmatter.image) || frontmatter.image;
+  console.log('hr', heroImage);
   return (
-    <Layout title={frontmatter.title} description={frontmatter.pageDescription} featuredImage={heroImage.images.fallback.src}>
+    <Layout title={frontmatter.title} description={frontmatter.pageDescription} metaImage={heroImage.images.fallback.src}>
       <IndexPageTemplate
         image={frontmatter.image}
         title={frontmatter.title}

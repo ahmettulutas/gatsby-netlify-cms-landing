@@ -17,17 +17,19 @@ export const BlogPostTemplate = ({
   tags,
   title,
   /*   helmet, */
-  featuredImage
+  image
 
 }) => {
   const PostContent = contentComponent || Content,
-    postImage = getImage(featuredImage) || featuredImage;
+    heroImage = getImage(image) || image;
   return (
     <>
       <Hero
+        isHalfHero
         title={title}
+        smallTitle
         background={
-          postImage.url ? postImage.url : featuredImage.childImageSharp.gatsbyImageData.images.fallback.src || featuredImage.image
+          heroImage.url ? heroImage.url : image.childImageSharp.gatsbyImageData.images.fallback.src || heroImage.image
         }
       />
 
@@ -73,9 +75,10 @@ BlogPostTemplate.propTypes = {
 
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data,
-    { title, description, featuredimage } = post.frontmatter;
+    { title, description, featuredimage } = post.frontmatter,
+    heroImage = getImage(featuredimage) || featuredimage;
   return (
-    <Layout title={title} description={description} featuredImage={featuredimage} titleTemplate='%s' hasWhiteBg>
+    <Layout title={title} description={description} metaImage={heroImage.images.fallback.src} titleTemplate='%s' /* hasWhiteBg */>
       <BlogPostTemplate
         content={post.html}
         contentComponent={HTMLContent}
@@ -92,7 +95,7 @@ const BlogPost = ({ data }) => {
         } */
         tags={post.frontmatter.tags}
         title={title}
-        featuredImage={featuredimage}
+        image={featuredimage}
       />
     </Layout>
   );

@@ -6,7 +6,8 @@ import blog from '../../../static/img/blog-writing.jpg';
 import { BackgroundTitle } from '../../components/BackgroundTitle';
 
 const BlogIndexPage = () => (
-  <Layout title={'Meltem Ulutaş Blog Yazıları'}>
+  <Layout title={'Meltem Ulutaş Blog'}>
+
     <Hero title={'Blog'} background={blog} />
     <section className='page-container'>
       <BackgroundTitle title="Psikoloji" />

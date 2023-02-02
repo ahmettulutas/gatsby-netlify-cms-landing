@@ -6,7 +6,7 @@ import '../assets/styles/all.sass';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
-const Layout = ({ title, description, featuredImage, titleTemplate, children, hasWhiteBg }) => (
+const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhiteBg }) => (
   <>
     <Helmet titleTemplate={titleTemplate} >
       <html lang='tr' />
@@ -51,10 +51,10 @@ const Layout = ({ title, description, featuredImage, titleTemplate, children, ha
       <meta
         property='og:site_name'
         content='Uzman Psikolog Meltem Ulutaş'></meta>
-      {/*       <meta property="og:image" content={featuredImage} /> */}
+      <meta property="og:image" content={metaImage} />
       <meta
         property='og:image'
-        content={`${withPrefix('/')}${featuredImage}`}
+        content={`${withPrefix('/')}${metaImage}`}
       />
       <meta property='og:description' content={description}></meta>
       <meta charset='UTF-8'></meta>
@@ -62,7 +62,7 @@ const Layout = ({ title, description, featuredImage, titleTemplate, children, ha
       <meta name="viewport" content="width=device-width, user-scalable=no" />
     </Helmet>
     <div className='main-layout'>
-      <Navbar hasWhiteBg={hasWhiteBg}/>
+      <Navbar hasWhiteBg={hasWhiteBg} />
       <main>{children}</main>
       <Footer />
     </div>
@@ -74,6 +74,7 @@ const Layout = ({ title, description, featuredImage, titleTemplate, children, ha
       statusMessage='Şu anda aktif'
       avatar={`${withPrefix('/')}img/psychology-logo.svg`}
       notification={false}
+      buttonStyle={{ bottom: '1rem', right: '1rem' }}
     />
   </>
 );

@@ -31,17 +31,20 @@
     h2 {
       font-size: 1.5rem;
     }
-
     h1 {
-      font-size: 6rem;
+      font-size: 2rem;
       color: @primary-invert;
       margin-top: 10px;
       font-family: 'Open Sans, Arial, sans-serif';
       letter-spacing: 0.3cm;
-      font-weight: 100;
+      font-weight: 700;
       &.invert {
         color: @primary-invert;
       }
+    }
+    h1:not('small-title') {
+      font-size: 6rem;
+      font-weight: 100;
     }
   }
 }
@@ -100,10 +103,10 @@
   margin: 2rem auto;
   display: grid;
   gap: 1rem;
-  grid-template-columns:repeat(auto-fit, minmax(300px, 400px));
+  grid-template-columns: repeat(auto-fit, minmax(270px, 310px));
   overflow-x: scroll;
   grid-auto-flow: row;
-  
+
   a {
     color: @text-gray;
   }
@@ -140,7 +143,7 @@
     border: none;
     color: @primary;
     font-weight: bold;
-    font-size: .9rem;
+    font-size: 0.9rem;
     padding: 0;
   }
 
@@ -152,7 +155,6 @@
   &::-webkit-scrollbar-thumb {
     background: @primary;
   }
-
 }
 
 /* ABOUT */
@@ -193,29 +195,6 @@
     p {
       font-size: 16px;
       line-height: 24px;
-    }
-  }
-}
-
-.hero-title-section {
-  text-align: center;
-  letter-spacing: 0.3cm;
-  color: @primary-invert;
-
-  h2 {
-    font-size: 1.5rem;
-  }
-
-  h1 {
-    font-size: 6rem;
-    color: @navy-blue;
-    margin-top: 10px;
-    text-shadow: 2px 2px 2px #26272a;
-    font-family: 'AngellaWhite';
-    letter-spacing: 0.3cm;
-
-    &.invert {
-      color: @primary-invert;
     }
   }
 }
@@ -274,7 +253,7 @@
     border-radius: 0.25rem;
     text-decoration: none;
     font-weight: 700;
-    color: @primary  !important;
+    color: @primary !important;
     cursor: pointer;
     text-align: center;
     border: 2px solid @primary;
@@ -325,21 +304,6 @@
     }
   }
 
-  // FOOTER
-
-  .footer {
-    padding: 3rem 0rem 1rem;
-    background-color: @primary-light;
-    .navbar-item {
-      width: 50%;
-      transition: all 200ms ease-in;
-      font-weight: bold;
-      &:hover {
-        background-color: darken(@primary-light, 15);
-      }
-    }
-  }
-
   // THANKYOU
   .thankyoucontent {
     display: grid;
@@ -360,10 +324,39 @@
 
   h1 {
     text-transform: uppercase;
-    color: #f3f3fb;
+    color: #f8f8f8;
     font-size: 20vw;
   }
   @media (max-width: 768px) {
     transform: translate(0, 100%);
+  }
+}
+// FOOTER
+
+.footer {
+  background-color: #fafafa;
+  padding: 1rem 0 3rem;
+  font-size: 0.6rem;
+  a {
+    color: @primary;
+    font-weight: 700;
+  }
+  .footer-links {
+    .my-1();
+    display: flex;
+    a {
+      display: block;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 0.3rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
+
+        fill: currentColor;
+      }
+    }
   }
 }

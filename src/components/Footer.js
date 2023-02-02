@@ -1,22 +1,50 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
-/* import instagram from '../img/social/instagram.svg';
-import mail from '../img/social/mail.svg';
-import phone from '../img/social/phone.svg'; */
-
+import Instagram from '../img/instagram.inline.svg';
+import Mail from '../img/mail.inline.svg';
+import Whatsapp from '../img/whatsapp.inline.svg';
+import Linkedin from '../img/linkedin.inline.svg';
 const Footer = () => (
   <footer className='footer'>
-    <section className='menu'>
-      <ul className='menu-list'>
+    <section className='page-container flex space-between mobile-column-direction'>
+      <div>
+        <p>&copy; 2023 Meltem Ulutaş. Tüm hakları saklıdır.</p>
+        <p>Designed by <a href="https://www.linkedin.com/in/ahmet-ulutas/" target="_blank" rel="noreferrer">Ahmet Ulutaş</a></p>
+        <a href='/admin/' target='_blank' rel='noopener noreferrer'>Yönetim Paneli</a>
+      </div>
+      <ul className='footer-links'>
         <li>
-          <Link to='/' className='navbar-item'>Anasayfa</Link>
+          <a
+            href='https://www.instagram.com/psikologmeltemulutas/'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <Instagram />
+          </a>
         </li>
         <li>
-          <Link className='navbar-item' to='/contact'>İletişim</Link>
+          <a
+            href='https://www.linkedin.com/in/meltem-uluta%C5%9F-1094ab1bb/'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <Linkedin />
+          </a>
         </li>
         <li>
-          <a className='navbar-item' href='/admin/' target='_blank' rel='noopener noreferrer'>Yönetim Paneli</a>
+          <a
+            href='https://api.whatsapp.com/send/?phone=05300954085'
+            target='_blank'
+            rel='noopener noreferrer'>
+            <Whatsapp />
+          </a>
         </li>
+        <li>
+          <a
+            target='_blank'
+            rel='noopener noreferrer'
+            href='mailto:psikolog.meltem.ulutas@gmail.com'>
+            <Mail />
+          </a>
+        </li>
+
       </ul>
     </section>
   </footer>
