@@ -18,13 +18,13 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const heroImage = getImage(image) || image;
-  console.log('hero', heroImage);
+  console.log('hero', heroImage, image);
   return (
     <>
       <Hero
         title={title}
         background={
-          heroImage.url ? heroImage.url : image.childImageSharp.gatsbyImageData.images.fallback.src || heroImage.image
+          heroImage.url ? heroImage.url : heroImage.images.fallback.src || heroImage.image
         }
         subheading={subheading}
       />
