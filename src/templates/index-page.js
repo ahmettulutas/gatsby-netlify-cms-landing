@@ -18,6 +18,7 @@ export const IndexPageTemplate = ({
   intro
 }) => {
   const heroImage = getImage(image) || image;
+  console.log('hero', heroImage);
   return (
     <>
       <Hero
@@ -29,7 +30,7 @@ export const IndexPageTemplate = ({
       />
       <div className='page-container'>
         <AboutSection mainpitch={mainpitch}/>
-        <Features gridItems={intro.blurbs} heading={intro.heading}/>
+        <Features features={intro.blurbs} heading={intro.heading}/>
         <h1 className='highlighted m-auto'>Blog</h1>
         <BlogRoll />
       </div>
@@ -53,7 +54,6 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark,
     heroImage = getImage(frontmatter.image) || frontmatter.image;
-  console.log('hr', heroImage);
   return (
     <Layout title={frontmatter.title} description={frontmatter.pageDescription} metaImage={heroImage.images.fallback.src}>
       <IndexPageTemplate

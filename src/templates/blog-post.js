@@ -22,6 +22,7 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content,
     heroImage = getImage(image) || image;
+  console.log(heroImage);
   return (
     <>
       <Hero
@@ -29,7 +30,7 @@ export const BlogPostTemplate = ({
         title={title}
         smallTitle
         background={
-          heroImage.url ? heroImage.url : image.childImageSharp.gatsbyImageData.images.fallback.src || heroImage.image
+          heroImage.url ? heroImage.url : heroImage.images.sources[0].srcSet || heroImage.image
         }
       />
 

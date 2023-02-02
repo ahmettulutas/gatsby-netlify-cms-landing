@@ -4,13 +4,13 @@ import PreviewCompatibleImage from '../components/PreviewCompatibleImage';
 import { BackgroundTitle } from './BackgroundTitle';
 import IntersectionObserverWrapper from './IntersectionObserver';
 
-const FeatureGrid = ({ gridItems, heading }) => (
+const FeatureGrid = ({ features, heading }) => (
   <section className='page-container my-1'>
     <BackgroundTitle title={heading} />
     <h3 className='highlighted'>{heading}</h3>
     <div className='feature-cards'>
 
-      {gridItems.map((item, index) => (
+      {features.map((item, index) => (
         <section key={item.text} lang="tr" className='feature'>
           <IntersectionObserverWrapper animationSlide={'slideUp'} translate={20} delay={800 * (index + 1)} once={false}>
             <div className='feature-image'>
