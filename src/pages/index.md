@@ -20,7 +20,7 @@ mainpitch:
     sürdürmektedir. Bilişsel Davranışçı Terapi ekolü ile seanslarını klinikte ve
     online platformda sürdürmektedir.
 hakkımda:
-  title: Haasdaa
+  title: Psikolog Meltem Ulutaş
   subtitle: Hakkında
   description: >-2
         Lisans eğitimini Fatih Sultan Mehmet Vakıf Üniversitesi, Fen – Edebiyat
@@ -32,7 +32,7 @@ hakkımda:
         Nörodejeneratif Hastalıklardaki Rolü” üzerine deneysel çalışmalarını
         sürdürmektedir. Bilişsel Davranışçı Terapi ekolü ile seanslarını klinikte ve
         online platformda sürdürmektedir.
-  image: /img/meltemulutasprofile.jpg
+  image: /img/home-jumbotron2.jpg
 intro:
   blurbs:
     - image: /img/personal-growth.png
@@ -69,5 +69,4 @@ intro:
         sağlanabilir ve insanlar madde bağımlılığı, depresyon, stres ve kaygı
         gibi konularda yardım aradıkça popülaritesi artmaktadır.
   heading: Uzmanlıklar
-
 ---
