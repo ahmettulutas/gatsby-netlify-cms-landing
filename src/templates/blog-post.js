@@ -22,6 +22,7 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content,
     heroImage = getImage(image) || image;
+  console.log(image, heroImage);
   return (
     <>
       <Hero
