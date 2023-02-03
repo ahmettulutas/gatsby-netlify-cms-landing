@@ -38,7 +38,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout>
+      <Layout title={'Randevu'} description={'Meltem Ulutaş ile iletişime geçin. Psikolog randevusu oluşturun. Psikolojik destek almak için iletişime geçin.'}>
         <Hero title={'Randevu'} background={contact} />
         <div className='page-container'>
           <div className='columns is-centered' style={{ padding: '1rem' }}>
