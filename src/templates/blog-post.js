@@ -16,13 +16,12 @@ export const BlogPostTemplate = ({
   description,
   tags,
   title,
-  /*   helmet, */
   image
 
 }) => {
   const PostContent = contentComponent || Content,
     heroImage = getImage(image) || image;
-  console.log(image, heroImage);
+  console.log('blog', heroImage);
   return (
     <>
       <Hero
@@ -30,12 +29,11 @@ export const BlogPostTemplate = ({
         title={title}
         smallTitle
         background={
-          heroImage?.url ? heroImage?.url : image.childImageSharp.gatsbyImageData.images.fallback.src || heroImage.image
+          heroImage.url ? heroImage.url : heroImage.images.fallback.src || heroImage.image
         }
       />
 
       <div className='page-container'>
-        {/*       {helmet || ''} */}
         <section className='blog-content'>
 
           {/*             <div className='blog-image'>

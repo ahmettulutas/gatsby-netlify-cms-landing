@@ -3,12 +3,13 @@ import Instagram from '../img/instagram.inline.svg';
 import Mail from '../img/mail.inline.svg';
 import Whatsapp from '../img/whatsapp.inline.svg';
 import Linkedin from '../img/linkedin.inline.svg';
+
 const Footer = () => (
   <footer className='footer'>
     <section className='page-container flex space-between mobile-column-direction'>
       <div>
         <p>&copy; 2023 Meltem Ulutaş. Tüm hakları saklıdır.</p>
-        <p>Designed by <a href="https://www.linkedin.com/in/ahmet-ulutas/" target="_blank" rel="noreferrer">Ahmet Ulutaş</a></p>
+        <p>Designed and developed by <a href="https://www.linkedin.com/in/ahmet-ulutas/" target="_blank" rel="noreferrer">Ahmet Ulutaş</a></p>
         <a href='/admin/' target='_blank' rel='noopener noreferrer'>Yönetim Paneli</a>
       </div>
       <ul className='footer-links'>

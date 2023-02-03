@@ -37,6 +37,10 @@ export function useSiteMetadata () {
 
 export const generateTransform = translate => {
   if (translate)
-    return Object.fromEntries(Object.entries(animations).map(([key, value]) => [key, value.replace(/\d+/, translate)]));
+    return Object.fromEntries(Object.entries(animations).map(([key, value]) => [key, value]));
   return animations;
 };
+
+export const generateTransform2 = (translate = 20) => Object.fromEntries(
+  Object.entries(animations).map(([key, value]) => [key, value.replace(/\d+/, translate)])
+);
