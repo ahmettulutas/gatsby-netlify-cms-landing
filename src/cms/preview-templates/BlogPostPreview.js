@@ -14,7 +14,7 @@ const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
         description={entry.getIn(['data', 'description'])}
         tags={tags && tags.toJS()}
         title={entry.getIn(['data', 'title'])}
-        image={getAsset(data.image)}
+        image={getAsset(data.featuredImage)}
       />
     );
   else
