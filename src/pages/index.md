@@ -7,7 +7,7 @@ heading: Psikolog Meltem Ulutaş
 subheading: UZMAN PSİKOLOG
 about:
   title: Psikolog Meltem Ulutaş
-  subtitle: Hakkındasssss
+  subtitle: Hakkında
   description: >
     Lisans eğitimini Fatih Sultan Mehmet Vakıf Üniversitesi, Fen – Edebiyat
     Fakültesi, Psikoloji bölümünde tamamlanmıştır. Lisans eğitiminin ardından
