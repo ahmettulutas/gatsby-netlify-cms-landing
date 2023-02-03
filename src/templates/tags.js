@@ -2,43 +2,45 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 import Layout from '../components/Layout';
+import Hero from '../components/Hero';
+import blog from '../../static/img/blog-writing.jpg';
 
-class TagRoute extends React.Component {
-  render () {
-    const posts = this.props.data.allMarkdownRemark.edges,
-      postLinks = posts.map(post => (
-        <li key={post.node.fields.slug}>
-          <Link to={post.node.fields.slug}>
-            <h2 className="is-size-2">{post.node.frontmatter.title}</h2>
-          </Link>
-        </li>
-      )),
-      { tag } = this.props.pageContext,
-      { title } = this.props.data.site.siteMetadata,
-      { totalCount } = this.props.data.allMarkdownRemark,
-      tagHeader = `${tag} etiketine sahip ${totalCount} blog yazısı bulundu.`;
-    return (
-      <Layout>
-        <section className='section'>
-          <Helmet title={`${tag} | ${title}`} />
-          <div className='container content'>
-            <div className='columns'>
-              <div
-                className='column is-10 is-offset-1'
-                style={{ marginBottom: '6rem' }}>
-                <h3 className='title is-size-4 is-bold-light'>{tagHeader}</h3>
-                <ul className='taglist'>{postLinks}</ul>
-                <p>
-                  <Link to='/tags/'>Bütün etiketleri listele</Link>
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </Layout>
-    );
-  }
-}
+const TagRoute = ({ data, pageContext }) => {
+  const posts = data.allMarkdownRemark.edges,
+    postLinks = posts.map(post => (
+      <li key={post.node.fields.slug}>
+        <Link to={post.node.fields.slug}>
+          <h2 className="size-2">{post.node.frontmatter.title}</h2>
+        </Link>
+      </li>
+    )),
+    { tag } = pageContext,
+    { title } = data.site.siteMetadata,
+    { totalCount } = data.allMarkdownRemark,
+    tagHeader =` ${tag} etiketine sahip ${totalCount} blog yazısı bulundu.`;
+  return (
+    <Layout>
+      <Helmet title={`${tag} | ${title}`}/>
+      <Hero
+        isHalfHero
+        title={title}
+        smallTitle
+        background={blog}
+      />
+      <div className='page-container'>
+        <div
+          className='my-5'>
+          <h1 className='size-3'>{tagHeader}</h1>
+          <ul className='taglist'>{postLinks}</ul>
+          <p>
+            <Link to='/tags/'>Bütün etiketleri listele</Link>
+          </p>
+        </div>
+      </div>
+    </Layout>
+  );
+};
+
 
 export default TagRoute;
 

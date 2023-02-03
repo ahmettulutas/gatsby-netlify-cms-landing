@@ -4,6 +4,8 @@ import Layout from '../../components/Layout';
 import Hero from '../../components/Hero';
 import contact from '../../../static/img/contact.jpg';
 import { Form } from '../../components/Form';
+import ContactInfo from '../../components/ContactInfo';
+import { BackgroundTitle } from '../../components/BackgroundTitle';
 
 const encode = data => {
   Object.keys(data)
@@ -39,13 +41,16 @@ export default class Index extends React.Component {
   render() {
     return (
       <Layout title={'Randevu'} description={'Meltem Ulutaş ile iletişime geçin. Psikolog randevusu oluşturun. Psikolojik destek almak için iletişime geçin.'}>
-        <Hero title={'Randevu'} background={contact} />
+        <Hero title={'Randevu'} background={contact} isHalfHero/>
         <div className='page-container'>
-          <div className='columns is-centered' style={{ padding: '1rem' }}>
-            <div className='column is-half' style={{ margin: 'auto' }}>
-              <Form title={'Randevu Talebi Oluşturun'}/>
+          <BackgroundTitle title={'Randevu'} />
+          <h1 className='highlighted'>Randevu Oluşturun</h1>
+          <section className='contact flex mobile-column-direction'>
+            <div className='contact-info'>
+              <ContactInfo />
             </div>
-          </div>
+            <Form/>
+          </section>
         </div>
       </Layout>
     );

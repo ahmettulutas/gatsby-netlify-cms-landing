@@ -51,48 +51,33 @@
 
 /* CONTACT */
 
-.contact-card {
-  margin: 3rem auto;
-  background-color: @primary-light;
-  padding: 1rem;
-  text-align: center;
-  gap: 1rem;
+.contact-links {
   display: flex;
-  flex-wrap: wrap;
-
-  div,
-  a {
-    padding: 1rem;
-    border-radius: 10px;
-    flex: 1 1 250px;
-    box-shadow: 0 5px 20px -10px #000;
-    cursor: pointer;
-    background: @primary-invert;
-    display: flex;
-    flex-direction: column;
+  flex-direction: column;
+  gap: 1rem;
+  li {
+    display: grid;
+    grid-template-columns: auto 1fr;
     align-items: center;
+    gap: 0.5rem;
     color: @primary;
-    text-decoration: none;
-    font-size: 1rem;
-    max-width: 100%;
-    transition: 0.2s ease-out !important;
-    svg {
-      width: 40px;
-      height: auto;
+    &:hover {
+      color: darken(@primary, 10);
+      cursor:pointer;
     }
+    a {
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 0.3rem;
 
-    p {
-      word-wrap: break-word;
-      width: 100%;
-      padding-top: 0.5rem;
-    }
+      svg {
+        width: 100%;
+        height: 100%;
+        display: block;
 
-    &:hover {
-      color: @navy-blue;
+        fill: currentColor;
+      }
     }
-  }
-  @media (max-width: 900px) {
-    margin: 3rem 1rem;
   }
 }
 
@@ -119,12 +104,13 @@
   border-radius: 5px;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: 0 5px 20px -10px #000;
+  box-shadow: 0 5px 20px -5px #000;
   background: white;
+  transition: 0.2s ease-out;
 
   &:hover {
-    transform: scale(0.99);
-    transition: 0.2s ease-out;
+    transform: scale(1.01);
+
   }
 
   section {
@@ -132,6 +118,7 @@
   }
   p {
     font-size: 0.85rem;
+    .light-text();
   }
   h3 {
     font-weight: 700;
@@ -145,15 +132,6 @@
     font-weight: bold;
     font-size: 0.9rem;
     padding: 0;
-  }
-
-  &::-webkit-scrollbar {
-    height: 3px;
-    margin: 0;
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: @primary;
   }
 }
 
@@ -272,45 +250,7 @@
     }
   }
 
-  // GETAPPOINTMENT
 
-  .get-appointment {
-    width: 100vw;
-    background-color: lighten(@primary, 10);
-    color: rgb(46, 85, 145);
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: 2rem 0;
-
-    h3 {
-      font-size: 18px;
-    }
-
-    * {
-      margin: 5px;
-    }
-
-    .navbar-item {
-      font-size: 20px;
-      color: inherit !important;
-      padding: 0.5rem;
-      &:hover {
-        background: inherit !important;
-        transform: scale(1.03);
-      }
-    }
-  }
-
-  // THANKYOU
-  .thankyoucontent {
-    display: grid;
-    place-items: center;
-    padding: 5rem 2rem;
-    text-align: center;
-  }
 }
 
 .background-title {
@@ -346,9 +286,13 @@
     display: flex;
     a {
       display: block;
-      width: 1.5rem;
-      height: 1.5rem;
-      margin-left: 0.3rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      margin-left: 0.4rem;
+      transition: all 0.1s ease-in;
+      &:hover {
+        transform: scale(1.1);
+      }
 
       svg {
         width: 100%;

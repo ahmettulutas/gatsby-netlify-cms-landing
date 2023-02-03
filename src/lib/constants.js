@@ -6,9 +6,8 @@ export const contactInputs = [
     key: 1,
     name: 'name_surname',
     message: 'Lütfen adınızı ve soyadınızı eksiksiz giriniz.',
-    placeholder: 'Adınız ve soyadınızı buraya yazınız.',
-    required: true,
-    icon: 'fa fa-user icon'
+    placeholder: 'Adınız ve soyadınız',
+    required: true
   },
   {
     pattern: '^\\+90\\s\\d{3}\\s\\d{3}\\s\\d{2}\\s\\d{2}$',
@@ -17,10 +16,9 @@ export const contactInputs = [
     key: 2,
     name: 'phone_number',
     message: 'Lütfen telefon numaranızı eksiksiz giriniz.',
-    placeholder: 'Örn. 05309892929',
+    placeholder: '+905309892929',
     required: true,
-    maxLength: 17,
-    icon: 'fa fa-phone icon'
+    maxLength: 17
   },
   {
     pattern: '^.{20,500}$', // still need pattern to disable & enable submit button.

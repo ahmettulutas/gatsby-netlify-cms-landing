@@ -61,8 +61,12 @@ html {
     font-weight: 400;
     line-height: 1.5;
   }
-
-
+li  {
+  list-style-type: none !important;
+}
+a:-webkit-any-link {
+  color: darken(@primary, 10);
+}
 
 .main-layout {
   display: grid;
@@ -70,9 +74,7 @@ html {
   min-height: 100vh;
 }
 
-.margin-top-0 {
-  margin-top: 0 !important;
-}
+
 
 // Blog
 
@@ -130,6 +132,9 @@ a {
   &.center {
     justify-content: center;
   }
+  &.column {
+    flex-direction: column;
+  }
   &.mobile-column-direction {
     @media screen and (max-width:768px) {
       flex-direction: column;
@@ -142,7 +147,7 @@ a {
   width: 70%;
   margin: 0 auto;
 }
-
+/* Spacing */ 
 .generateCSS(@i) when (@i =< 10) {
   .py-@{i} {
     padding-right: @i*1rem;
@@ -171,6 +176,10 @@ a {
 
 .mb-025 {
   margin-bottom: 0.25rem;
+}
+
+.margin-top-0 {
+  margin-top: 0 !important;
 }
 
 .menu-label {

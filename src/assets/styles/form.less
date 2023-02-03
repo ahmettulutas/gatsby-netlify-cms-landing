@@ -2,10 +2,6 @@
   display: flex;
   flex-direction: column;
   gap: 15px;
-  border-radius: 10px;
-  background-color: @light-gray;
-  padding: 20px 30px;
-  margin: 3rem auto;
   * {
     border-radius: 5px;
     font-size: 16px;
@@ -28,22 +24,29 @@
 
     .input-container {
       display: grid;
+      position: relative;
+      }
+      input {
+        height: 70px;
+        font-size: 18px;
+        box-shadow: none !important;
+        border: 1px solid #cccccc;
+        background: #fff;
+        color: #555555;
 
-      i {
-        display: flex;
-        position: absolute;
-        height: 40px;
-        width: 40px;
-        left: 5px;
       }
 
       input,
       textarea {
         border-radius: 5px;
         border: 2px solid @dark-gray;
-
+        padding-left: 20px;
+        padding-right: 20px;
         &:focus {
           outline: none;
+          &::placeholder, ::-webkit-input-placeholder {
+            color:transparent;
+          }
         }
 
         &:not(:placeholder-shown):invalid[focused='true'] ~ span {
@@ -51,14 +54,28 @@
         }
       }
       textarea {
-        padding: 15px;
+        padding: 20px;
         resize: none;
       }
-      input {
-        height: 40px;
-        padding-left: 40px;
-        line-height: 40px;
-      }
+
+  }
+  .submit-button {
+    background-color: @primary;
+    color:white;
+    padding: 0.8rem 1.3rem;
+    width:fit-content;
+    width: clamp(100px, 100%, 150px);   
+    display:flex;
+    justify-content: center;
+    border:none !important;
+    cursor: pointer;
+    &:hover {
+      background-color: darken(@primary, 10);
     }
+    &:disabled {
+      background-color: lighten(@primary, 5);
+      color:@light-gray;
+      cursor:not-allowed;
+    }   
   }
 }

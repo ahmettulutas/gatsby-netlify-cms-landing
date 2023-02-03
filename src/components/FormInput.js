@@ -1,7 +1,7 @@
 import React from 'react';
 
 const FormInput = props => {
-  const { message, changeData, label, type, icon, ...inputProps } = props,
+  const { message, changeData, label, type, ...inputProps } = props,
     [focused, setFocused] = React.useState(false);
 
   return (
@@ -9,7 +9,6 @@ const FormInput = props => {
       <label>{label}</label>
       {type !== 'textarea' ?
         <div className='input-container'>
-          <i className={icon}></i>
           <input
             {...inputProps}
             onChange={changeData}
