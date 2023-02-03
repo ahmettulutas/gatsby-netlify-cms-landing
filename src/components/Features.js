@@ -5,7 +5,7 @@ import { BackgroundTitle } from './BackgroundTitle';
 import IntersectionObserverWrapper from './IntersectionObserver';
 
 const FeatureGrid = ({ features, heading }) => (
-  <section className='page-container my-1'>
+  <section className='my-1'>
     <BackgroundTitle title={heading} />
     <h3 className='highlighted'>{heading}</h3>
     <div className='feature-cards'>
