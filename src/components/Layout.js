@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-/* import '../assets/styles/all.sass'; */
+import '../assets/styles/all.sass';
 import { withPrefix } from 'gatsby';
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 

@@ -15,6 +15,7 @@ const FormInput = props => {
             onBlur={() => setFocused(true)}
             // eslint-disable-next-line react/no-unknown-property
             focused={String(focused)}
+            title={message}
           />
           <span>{message}</span>
         </div>
@@ -27,6 +28,7 @@ const FormInput = props => {
             onBlur={() => setFocused(true)}
             // eslint-disable-next-line react/no-unknown-property
             focused={String(focused)}
+            title={message}
           />
           <span>{message}</span>
         </div>

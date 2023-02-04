@@ -16,12 +16,12 @@ const emptyState = {
 export const Form = () => {
   const [formData, setFormData] = React.useState(emptyState),
     [loading, setLoading] = React.useState(false),
-    checkInputsValid = Object.entries(formData).some(([key, value]) => {
+    /*     checkInputsValid = Object.entries(formData).some(([key, value]) => {
       const { pattern } = contactInputs.find(item => item.name === key),
         isValid = new RegExp(pattern, 'g').test(value);
       return !value || !isValid;
 
-    }),
+    }), */
 
     handleChange = e => {
       const { name, value } = e.target;
@@ -54,7 +54,7 @@ export const Form = () => {
         <FormInput changeData={handleChange} key={input.key} {...input} value={formData[input.name]} />
       ))}
       <input type="text" name="_gotcha" style={{ display: 'none' }} />
-      <button disabled={checkInputsValid} className="submit-button" type='submit'>{loading ? <Loading type="white" size="small"/> : 'Gönder'}</button>
+      <button disabled={loading} className="submit-button" type='submit'>{loading ? <Loading type="white" size="small"/> : 'Gönder'}</button>
     </form>
   );
 };

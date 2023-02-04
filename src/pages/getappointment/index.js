@@ -40,7 +40,7 @@ export default class Index extends React.Component {
 
   render() {
     return (
-      <Layout title={'Randevu'} description={'Meltem Ulutaş ile iletişime geçin. Psikolog randevusu oluşturun. Psikolojik destek almak için iletişime geçin.'}>
+      <Layout title={'Meltem Ulutaş Randevu'} description={'Meltem Ulutaş ile iletişime geçin. Psikolog randevusu oluşturun. Psikolojik destek almak için iletişime geçin.'}>
         <Hero title={'Randevu'} background={contact} isHalfHero/>
         <div className='page-container'>
           <BackgroundTitle title={'Randevu'} />
