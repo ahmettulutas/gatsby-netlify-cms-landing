@@ -1,7 +1,7 @@
 import { graphql, useStaticQuery } from 'gatsby';
 import { animations } from '../lib/constants';
 
-/* export const normalizeTurkishPhone = str => {
+export const normalizeTurkishPhone = str => {
   // Filter only numbers from the input
   let cleaned = (`${str}`).replace(/\D/g, '');
   cleaned = cleaned.slice(2, cleaned.length);
@@ -15,7 +15,7 @@ import { animations } from '../lib/constants';
   else if (cleaned.length >= 9)
     return `+90 ${cleaned.slice(0, 3)} ${cleaned.slice(3, 6)} ${cleaned.slice(6, 8)} ${cleaned.slice(8)}`;
 };
- */
+
 
 // eslint-disable-next-line func-style
 export function useSiteMetadata () {

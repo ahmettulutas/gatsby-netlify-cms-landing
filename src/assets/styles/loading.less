@@ -1,4 +1,4 @@
-.loader {
+.loader-container {
   width: 120px;
   display: flex;
   justify-content: center;
@@ -11,18 +11,23 @@
     border-radius: 100%;
     margin: 0 3px;
     animation: loading 1s linear infinite;
+    -webkit-animation: loading 1s linear infinite; ;
     &:nth-child(0) {
       border: 1px solid black;
       animation-delay: 300ms;
+      -webkit-animation-delay: 300ms;
     }
     &:nth-child(1) {
       animation-delay: 200ms;
+      -webkit-animation-delay: 200ms;
     }
     &:nth-child(2) {
       animation-delay: 100ms;
+      -webkit-animation-delay: 100ms;
     }
     &:nth-child(3) {
       animation-delay: 0;
+      -webkit-animation-delay: 0;
     }
   }
 
