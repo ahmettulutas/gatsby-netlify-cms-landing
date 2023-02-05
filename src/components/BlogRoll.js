@@ -2,12 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql, StaticQuery } from 'gatsby';
 import PreviewCompatibleImage from './PreviewCompatibleImage';
+import { BackgroundTitle } from './BackgroundTitle';
 
 const BlogRollTemplate = props => {
   const { edges: posts } = props.data.allMarkdownRemark;
 
   return (
     <div className='blogroll-container'>
+      <BackgroundTitle title={'Blog'} />
       {posts?.map(({ node: post }) => (
         <div key={post.id} className="blogroll-card">
           <Link to={post.fields.slug}>

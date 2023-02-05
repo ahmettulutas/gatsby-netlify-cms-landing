@@ -1,10 +1,10 @@
 import React from 'react';
-/* import phone from '../img/social/phone.svg'; */
 import Mail from '../img/mail.inline.svg';
 import Whatsapp from '../img/whatsapp.inline.svg';
 import Linkedin from '../img/linkedin.inline.svg';
 import Instagram from '../img/instagram.inline.svg';
 import Location from '../img/location.inline.svg';
+
 const ContactInfo = () => (
   <div>
     <ul className='contact-links'>
@@ -15,7 +15,7 @@ const ContactInfo = () => (
           rel='noopener noreferrer'>
           <Location />
         </a>
-        <p>Şişli A Mahallesi B. Sokak No:75</p>
+        <p>Meşrutiyet, Rumeli Cd. No:6, 34983 Şişli/İstanbul</p>
       </li>
       <li>
         <a
@@ -54,7 +54,6 @@ const ContactInfo = () => (
         </a>
         <p>Mail</p>
       </li>
-
     </ul>
   </div>
 );
