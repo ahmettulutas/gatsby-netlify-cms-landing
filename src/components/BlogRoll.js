@@ -35,7 +35,7 @@ const BlogRollTemplate = props => {
               </section>
             </article>
           </Link>
-          <Link className='button' to={post.fields.slug}> Okumaya Devam Et →</Link>
+          <Link className='button' to={post.fields.slug}>Okumaya Devam Et →</Link>
         </div>
       ))}
     </div>

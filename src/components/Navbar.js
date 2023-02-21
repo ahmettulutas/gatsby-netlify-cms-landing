@@ -10,9 +10,11 @@ const Navbar = ({ hasWhiteBg }) => {
     toggleHamburger = () => {
       navLinks.current.classList.toggle('open');
       hamburger.current.classList.toggle('toggle');
-      Array.prototype.forEach.call(navLinks.current.children, child => {
+      const { children } = navLinks.current;
+
+      for (const child of children)
         child.classList.toggle('fade');
-      });
+
     },
 
     toggleNavOnScroll = () => {

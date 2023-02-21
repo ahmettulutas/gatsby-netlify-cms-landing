@@ -1,8 +1,7 @@
 import React from 'react';
 import FormInput from './FormInput.js';
 import emailjs from 'emailjs-com';
-/* import { navigate } from 'gatsby-link'; */
-import { normalizeTurkishPhone } from '../utils/helpers.js';
+/* import { normalizeTurkishPhone } from '../utils/helpers.js'; */
 import { contactInputs } from '../lib/constants';
 import { Loading } from './Loading.js';
 
@@ -16,18 +15,11 @@ const emptyState = {
 export const Form = () => {
   const [formData, setFormData] = React.useState(emptyState),
     [loading, setLoading] = React.useState(false),
-    /*     checkInputsValid = Object.entries(formData).some(([key, value]) => {
-      const { pattern } = contactInputs.find(item => item.name === key),
-        isValid = new RegExp(pattern, 'g').test(value);
-      return !value || !isValid;
-
-    }), */
-
     handleChange = e => {
       const { name, value } = e.target;
-      if (name === 'phone_number')
+      /* if (name === 'phone_number')
         setFormData({ ...formData, [name]: normalizeTurkishPhone(value) });
-      else setFormData({ ...formData, [name]: value });
+      else */ setFormData({ ...formData, [name]: value });
     },
 
     handleSubmit = e => {
@@ -37,14 +29,12 @@ export const Form = () => {
       }
       else {
         setLoading(true);
-        emailjs.send(
-          process.env.GATSBY_FORM_SERVICE_ID, process.env.GATSBY_FORM_TEMPLATE_ID, formData, process.env.GATSBY_FORM_PUBLIC_KEY
+        emailjs.send(process.env.GATSBY_FORM_SERVICE_ID, process.env.GATSBY_FORM_TEMPLATE_ID, process.env.GATSBY_FORM_PUBLIC_KEY, formData
         ).then(() => {
           setLoading(false);
           window.alert('Mesajınız gönderildi.');
           setFormData(emptyState);
-        })/* .then(() => navigate('/')) */
-          .catch(error => window.alert(error));
+        }).catch(error => window.alert(error));
       }
     };
 

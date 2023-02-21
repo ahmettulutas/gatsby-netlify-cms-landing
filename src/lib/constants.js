@@ -18,7 +18,9 @@ export const contactInputs = [
     message: 'Lütfen telefon numaranızı eksiksiz giriniz.',
     placeholder: '+905309892929',
     required: true,
-    maxLength: 17
+    maxLength: 17,
+    minLength: 11,
+    inputmode: 'numeric'
   },
   {
     pattern: '^.{20,500}$', // still need pattern to disable & enable submit button.

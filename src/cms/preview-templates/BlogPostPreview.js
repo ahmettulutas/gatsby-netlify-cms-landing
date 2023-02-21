@@ -6,7 +6,6 @@ import { Loading } from '../../components/Loading';
 const BlogPostPreview = ({ entry, widgetFor, getAsset }) => {
   const tags = entry.getIn(['data', 'tags']),
     data = entry.getIn(['data']).toJS();
-  console.log('blog PREVİEW ', data);
   if (data)
     return (
       <BlogPostTemplate

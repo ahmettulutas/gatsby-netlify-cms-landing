@@ -5,7 +5,7 @@ import { Loading } from '../../components/Loading';
 
 const IndexPagePreview = ({ entry, getAsset }) => {
   const data = entry.getIn(['data']).toJS();
-  console.log('index PREVİEW ', data);
+
   if (data)
     return (
       <IndexPageTemplate
