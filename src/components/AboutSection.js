@@ -12,7 +12,7 @@ export const AboutSection = ({ about }) => (
         <h3 className='highlighted'>
           {about.subtitle}
         </h3>
-        <p>
+        <p className='light-text'>
           {about.description}
         </p>
       </div>

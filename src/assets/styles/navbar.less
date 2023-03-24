@@ -6,7 +6,7 @@
   transition: 0.3s ease-in;
   display: block;
   position: fixed;
-  z-index: 10;
+  z-index: 9999;
   box-shadow: 0 5px 20px -10px #000;
 
   .page-container {
@@ -15,7 +15,7 @@
   }
 
   .navbar-logo {
-    width: 150px;
+    width: 8rem;
     margin: 0.3rem 0;
     transition: margin-top 0.3s ease-in;
     color: inherit;
@@ -140,8 +140,7 @@
   }
 
   /*Stying for small screens*/
-  @media screen and (max-width: 800px) {
-    z-index: 3;
+                @media screen and (max-width: 800px) {
 
 
     .hamburger {

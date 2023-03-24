@@ -9,6 +9,7 @@ import Content, { HTMLContent } from '../components/Content';
 /* import FullWidthImage from '../components/FullWidthImage'; */
 import { getImage } from 'gatsby-plugin-image';
 import Hero from '../components/Hero';
+import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const BlogPostTemplate = ({
   content,
@@ -21,7 +22,6 @@ export const BlogPostTemplate = ({
 }) => {
   const PostContent = contentComponent || Content,
     heroImage = getImage(image) || image;
-  console.log('blog', heroImage);
   return (
     <>
       <Hero
@@ -35,13 +35,6 @@ export const BlogPostTemplate = ({
 
       <div className='page-container'>
         <section className='blog-content'>
-
-          {/*             <div className='blog-image'>
-              <PreviewCompatibleImage
-                imageInfo={{ image: featuredImage }}
-              />
-            </div> */}
-          {/* <FullWidthImage img={postImage} /> */}
           <p className='description'>{description}</p>
           <PostContent content={content} />
           {tags && tags.length
