@@ -9,7 +9,6 @@ import Content, { HTMLContent } from '../components/Content';
 /* import FullWidthImage from '../components/FullWidthImage'; */
 import { getImage } from 'gatsby-plugin-image';
 import Hero from '../components/Hero';
-import PageTransition from 'gatsby-plugin-page-transitions';
 
 export const BlogPostTemplate = ({
   content,
