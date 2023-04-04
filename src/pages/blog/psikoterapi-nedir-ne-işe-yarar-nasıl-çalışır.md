@@ -9,6 +9,8 @@ featuredpost: true
 featuredimage: /img/priscilla-du-preez-f9dfujos9eu-unsplash.jpg
 tags:
   - terapi
+  - psikolojiksağlık
+  - psikoloji
 ---
 Terapistin kullandığı yaklaşıma bağlı olarak çok çeşitli teknikler ve stratejiler kullanılabilir. Hemen hemen tüm psikoterapi türleri, terapötik bir ilişki geliştirmeyi, iletişim kurmayı ve problem yaratan düşünce veya davranışların üstesinden gelmek için çalışmayı içerir. Psikoterapi, bireysel terapi, grup terapisi ve çift terapisi dahil olmak üzere birçok şekilde olabilir. Terapide bilişsel-davranışçı terapi, psikodinamik terapi, hümanist terapi gibi birçok teknik kullanılır. 
 
