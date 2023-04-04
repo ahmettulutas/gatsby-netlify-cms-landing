@@ -20,9 +20,8 @@ const IntersectionObserverWrapper = ({
       entries.forEach(entry => {
         if (entry.isIntersecting)
           setTimeout(() => setHasIntersected(true), 200);
-
-        else
-          setHasIntersected(false);
+        /*  else
+          setHasIntersected(false); */
 
       });
     });

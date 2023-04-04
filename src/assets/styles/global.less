@@ -36,14 +36,11 @@ html {
   font-size: 16px;
 
   @media screen and (max-width: 2048px) {
-    font-size: 22px;
+    font-size: 20px;
   }
   @media screen and (max-width: 768px) {
-    font-size: 15px;
-  }
-  @media screen and (max-width: 640px) {
-    font-size: 12px;
-  }  
+    font-size: 14px;
+    }
 }
 ::-webkit-scrollbar {
   width: 0;
@@ -103,6 +100,7 @@ a:-webkit-any-link {
   margin-top: 1.5rem;
   display: flex;
   flex-wrap: wrap;
+  gap: 5px;
   justify-content: left;
   align-items: center;
 
@@ -111,10 +109,18 @@ a:-webkit-any-link {
     margin-bottom: 1.5rem;
     margin-top: 0;
   }
+  a {
+    border: 1px solid @primary;
+    font-weight: 300;
+    font-size: 0.8rem;
+    padding: 3px;
+    border-radius: 8px;
+  }
 }
 a {
   text-decoration: none;
   cursor: pointer;
+
 }
 
 .page-container {

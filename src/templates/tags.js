@@ -10,7 +10,7 @@ const TagRoute = ({ data, pageContext }) => {
     postLinks = posts.map(post => (
       <li key={post.node.fields.slug}>
         <Link to={post.node.fields.slug}>
-          <h2 className="size-2">{post.node.frontmatter.title}</h2>
+          <h2 className="size-3">{post.node.frontmatter.title}</h2>
         </Link>
       </li>
     )),

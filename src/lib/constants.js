@@ -22,16 +22,13 @@ export const contactInputs = [
     inputmode: 'numeric'
   },
   {
-    pattern: '^.{20,500}$', // still need pattern to disable & enable submit button.
     label: 'Mesajınız',
     type: 'textarea',
     key: 3,
     name: 'message',
     message: 'Mesajınız en az 15 karakter olmalıdır.',
     placeholder: 'Mesajınızı buraya yazınız.',
-    required: false,
-    minLength: 20 // you can't define a pattern for textarea, instead you can control the length of it's value.
-
+    required: false
   }
 ];
 
