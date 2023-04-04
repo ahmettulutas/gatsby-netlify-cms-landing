@@ -28,7 +28,7 @@
       }
       input {
         height: 3rem;
-        font-size: 18px;
+        font-size: 0.8rem;
         box-shadow: none !important;
         border: 1px solid #cccccc;
         background: #fff;
@@ -43,7 +43,7 @@
         padding-left: 20px;
         padding-right: 20px;
         &:focus {
-          outline: none;
+          outline: transparent;
           &::placeholder, ::-webkit-input-placeholder {
             color:transparent;
           }
@@ -51,7 +51,12 @@
 
         &:not(:placeholder-shown):invalid[focused='true'] ~ span {
           display: block;
-        }
+          color: #DC3545;
+          }
+          
+          &:not(:placeholder-shown):invalid[focused='true'] {
+            border: 1px solid #DC3545;
+}
       }
       textarea {
         padding: 20px;
@@ -69,7 +74,7 @@
     justify-content: center;
     border:none !important;
     cursor: pointer;
-    &:hover {
+    &:hover {
       background-color: darken(@primary, 10);
     }
     &:disabled {

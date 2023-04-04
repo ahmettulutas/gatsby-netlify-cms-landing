@@ -2,7 +2,7 @@
 templateKey: index-page
 title: Meltem Ulutaş
 pagedescription: Psikolog Meltem Ulutaş'ın Resmi Sayfası
-image: /img/jumbotron11.jpg
+image: /img/jumbotron11.webp
 heading: Psikolog Meltem Ulutaş
 subheading: UZMAN PSİKOLOG
 about:

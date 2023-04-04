@@ -1,7 +1,6 @@
 import React from 'react';
 import FormInput from './FormInput.js';
 import emailjs from 'emailjs-com';
-/* import { normalizeTurkishPhone } from '../utils/helpers.js'; */
 import { contactInputs } from '../lib/constants';
 import { Loading } from './Loading.js';
 
@@ -17,9 +16,7 @@ export const Form = () => {
     [loading, setLoading] = React.useState(false),
     handleChange = e => {
       const { name, value } = e.target;
-      /* if (name === 'phone_number')
-        setFormData({ ...formData, [name]: normalizeTurkishPhone(value) });
-      else */ setFormData({ ...formData, [name]: value });
+      setFormData({ ...formData, [name]: value });
     },
 
     handleSubmit = e => {

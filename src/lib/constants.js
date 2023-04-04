@@ -10,16 +10,15 @@ export const contactInputs = [
     required: true
   },
   {
-    pattern: '^\\+90\\s\\d{3}\\s\\d{3}\\s\\d{2}\\s\\d{2}$',
+    pattern: '^(?:\\+|00)90\\d{10}$|^0\\d{10}$',
     label: 'Telefon Numaranız',
     type: 'text',
     key: 2,
     name: 'phone_number',
     message: 'Lütfen telefon numaranızı eksiksiz giriniz.',
-    placeholder: '+905309892929',
+    placeholder: '05309892929',
     required: true,
-    maxLength: 17,
-    minLength: 11,
+    maxLength: 13,
     inputmode: 'numeric'
   },
   {
@@ -30,7 +29,7 @@ export const contactInputs = [
     name: 'message',
     message: 'Mesajınız en az 15 karakter olmalıdır.',
     placeholder: 'Mesajınızı buraya yazınız.',
-    required: true,
+    required: false,
     minLength: 20 // you can't define a pattern for textarea, instead you can control the length of it's value.
 
   }
