@@ -7,14 +7,7 @@
 @dark-gray: #dbdada;
 @navy-blue: rgb(46, 85, 145);
 @primary-green: #48c78e;
-@text-gray: #777;;
-
-@font-face {
-  font-family: "AngellaWhite";
-  font-style: normal;
-  font-weight: 400;
-  src: local("angella-white"), url("../fonts/angella-white.otf") format("woff");
-}
+@text-gray: #777;
 
 * {
   box-sizing: border-box;
@@ -57,10 +50,11 @@ html {
     font-size: 1em;
     font-weight: 400;
     line-height: 1.5;
+    p {
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
   }
-li  {
-  list-style-type: none !important;
-}
+li  { list-style-type: none !important;}
 a:-webkit-any-link {
   color: darken(@primary, 10);
 }
@@ -70,8 +64,6 @@ a:-webkit-any-link {
   grid-template-rows: 1fr auto;
   min-height: 100vh;
 }
-
-
 
 // Blog
 
@@ -113,7 +105,7 @@ a:-webkit-any-link {
     border: 1px solid @primary;
     font-weight: 300;
     font-size: 0.8rem;
-    padding: 3px;
+    padding: 5px;
     border-radius: 8px;
   }
 }
@@ -141,6 +133,9 @@ a {
   &.column {
     flex-direction: column;
   }
+  &.align-center {
+    align-items: center;
+  }
   &.mobile-column-direction {
     @media screen and (max-width:768px) {
       flex-direction: column;
@@ -153,6 +148,7 @@ a {
   width: 70%;
   margin: 0 auto;
 }
+
 /* Spacing */ 
 .generateCSS(@i) when (@i =< 10) {
   .py-@{i} {

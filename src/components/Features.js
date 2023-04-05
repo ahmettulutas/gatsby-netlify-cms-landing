@@ -12,7 +12,7 @@ const FeatureGrid = ({ features, heading }) => (
 
       {features.map((item, index) => (
         <section key={item.text} lang="tr" className='feature'>
-          <IntersectionObserverWrapper animationSlide={'slideUp'} translate={20} delay={800 * (index + 1)} once={false}>
+          <IntersectionObserverWrapper animationSlide={'slideUp'} translate={20} delay={300 * (index + 1)} once={false}>
             <div className='feature-image'>
               <PreviewCompatibleImage imageInfo={item} />
             </div>

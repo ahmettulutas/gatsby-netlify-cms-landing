@@ -1,12 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { kebabCase } from 'lodash';
-/* import { Helmet } from 'react-helmet'; */
 import { graphql, Link } from 'gatsby';
 import Layout from '../components/Layout';
 import Content, { HTMLContent } from '../components/Content';
-/* import PreviewCompatibleImage from '../components/PreviewCompatibleImage'; */
-/* import FullWidthImage from '../components/FullWidthImage'; */
 import { getImage } from 'gatsby-plugin-image';
 import Hero from '../components/Hero';
 

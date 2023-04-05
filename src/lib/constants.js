@@ -16,7 +16,7 @@ export const contactInputs = [
     key: 2,
     name: 'phone_number',
     message: 'Lütfen telefon numaranızı eksiksiz giriniz.',
-    placeholder: '05309892929',
+    placeholder: '05....',
     required: true,
     maxLength: 13,
     inputmode: 'numeric'

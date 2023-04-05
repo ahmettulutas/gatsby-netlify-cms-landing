@@ -53,7 +53,6 @@ IndexPageTemplate.propTypes = {
 const IndexPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark,
     heroImage = getImage(frontmatter.image) || frontmatter.image;
-  console.log(frontmatter.pagedescription);
   return (
     <Layout title={frontmatter.title} description={frontmatter.pagedescription} metaImage={heroImage.images.fallback.src}>
       <IndexPageTemplate
