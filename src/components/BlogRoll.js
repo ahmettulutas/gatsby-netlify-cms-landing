@@ -69,6 +69,7 @@ export default function BlogRoll() {
 										childImageSharp {
 											gatsbyImageData(
 												width: 800
+                        height: 500
 												quality: 100
 												layout: CONSTRAINED
 											)
