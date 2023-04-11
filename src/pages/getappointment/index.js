@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import Layout from '../../components/Layout';
 import Hero from '../../components/Hero';
 import contact from '../../../static/img/contact.jpg';

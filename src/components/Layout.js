@@ -1,9 +1,9 @@
-import * as React from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import { withPrefix } from 'gatsby';
-import { FloatingWhatsApp } from 'react-floating-whatsapp';
+/* import { FloatingWhatsApp } from 'react-floating-whatsapp'; */
 
 const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhiteBg }) => (
   <>
@@ -29,15 +29,6 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
         href={`${withPrefix('/')}img/favicon-16x16.png`}
         sizes='16x16'
       />
-      <link
-        href='https://fonts.googleapis.com/css?family=Allura&display=swap'
-        rel='stylesheet'></link>
-      <link
-        href='https://fonts.googleapis.com/css?family=Nunito&display=swap'
-        rel='stylesheet'></link>
-      <script
-        src='https://kit.fontawesome.com/02130b3d51.js'
-        crossOrigin='anonymous'></script>
       <link
         rel='mask-icon'
         href={`${withPrefix('/')}img/psychology-logo.svg`}
@@ -65,7 +56,7 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       <main>{children}</main>
       <Footer />
     </div>
-    <FloatingWhatsApp
+    {/*     <FloatingWhatsApp
       phoneNumber='+905300954085'
       accountName='Meltem Ulutaş'
       chatMessage='Merhaba, nasıl yardımcı olabilirim?'
@@ -74,7 +65,7 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       avatar={`${withPrefix('/')}img/psychology-logo.svg`}
       notification={false}
       buttonStyle={{ bottom: '1rem', right: '1rem' }}
-    />
+    /> */}
   </>
 );
 
