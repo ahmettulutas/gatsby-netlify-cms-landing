@@ -10,7 +10,7 @@ description: >-
 
   Yaşadığınız şey muhtemelen bir panik ataktı.
 featuredpost: false
-featuredimage: /img/toksi̇k-i̇li̇şki̇leri̇n.png
+featuredimage: /img/tk.png
 tags:
   - panikatak
 ---
