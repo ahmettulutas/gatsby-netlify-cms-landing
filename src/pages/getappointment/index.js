@@ -3,7 +3,6 @@ import Layout from '../../components/Layout';
 import Hero from '../../components/Hero';
 import contact from '../../../static/img/contact.jpg';
 import { Form } from '../../components/Form';
-import ContactInfo from '../../components/ContactInfo';
 import { BackgroundTitle } from '../../components/BackgroundTitle';
 
 
@@ -14,10 +13,9 @@ const GetAppointment = () => (
       <BackgroundTitle title={'Randevu'} />
       <h1 className='highlighted'>Randevu Oluşturun</h1>
       <section className='contact flex mobile-column-direction'>
-        <div className='contact-info'>
-          <ContactInfo />
+        <div style={{ maxWidth: '600px', margin: 'auto' }}>
+          <Form/>
         </div>
-        <Form/>
       </section>
     </div>
   </Layout>
