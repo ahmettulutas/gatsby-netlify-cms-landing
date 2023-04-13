@@ -1,7 +1,7 @@
 ---
 templateKey: blog-post
 title: Panik Atak Nedir? Nasıl Başa Çıkılır?
-date: 2023-04-13T19:27:15.964Z
+date: 2023-04-13T19:57:57.076Z
 description: >-
   Hiç kendinizi birdenbire korku ve endişeye kapılmış halde buldunuz mu? 
 
