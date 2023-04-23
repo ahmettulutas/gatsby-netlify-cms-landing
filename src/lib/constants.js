@@ -19,7 +19,7 @@ export const contactInputs = [
     placeholder: '05....',
     required: true,
     maxLength: 13,
-    inputmode: 'numeric'
+    inputMode: 'numeric'
   },
   {
     label: 'Mesajınız',
