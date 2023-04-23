@@ -84,54 +84,10 @@ a:-webkit-any-link {
 
 // Taglist
 
-.blog-content .taglist {
-  list-style: none;
-  margin-bottom: 0;
-  margin-left: 0;
-  margin-right: 1.5rem;
-  margin-top: 1.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  justify-content: left;
-  align-items: center;
-
-  li {
-    padding: 0 2rem 1rem 0;
-    margin-bottom: 1.5rem;
-    margin-top: 0;
-  }
-  a {
-    position: relative;
-    &:before {
-      content:"";
-      position:absolute;
-      width:0;
-      height:2px;
-      background-color:@primary;
-      left:0;
-      bottom:0;
-      right:0;
-      transition: .1s ease-in;  
-    }
-    font-weight: 300;
-    font-size: 0.8rem;
-    padding: 5px;
-    border-radius: 8px;
-    &:hover {
-      &:before {
-        width:100%;
-      }
-
-    }
-  }
-}
 a {
   text-decoration: none;
   cursor: pointer;
-
 }
-
 .page-container {
   max-width: 1320px;
   width: 90%;
@@ -199,22 +155,4 @@ a {
 
 .margin-top-0 {
   margin-top: 0 !important;
-}
-
-.menu-label {
-  font-size: 1em !important;
-  text-align: left;
-}
-
-.menu-list {
-  list-style: none !important;
-  text-align: left;
-
-  >a {
-    padding: 5rem;
-
-    &:hover {
-      color: @primary;
-    }
-  }
 }

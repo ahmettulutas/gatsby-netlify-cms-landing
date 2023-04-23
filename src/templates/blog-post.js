@@ -30,14 +30,14 @@ export const BlogPostTemplate = ({
       />
 
       <div className='page-container'>
-        <section className='blog-content'>
+        <section className='content-container'>
           <p className='description'>{description}</p>
-          <PostContent content={content} />
+          <PostContent content={content} className={'content'}/>
           {tags && tags.length
             ? (
-              <div style={{ marginTop: '4rem' }}>
+              <div className='taglist'>
                 <h4>Etiketler</h4>
-                <ul className='taglist'>
+                <ul>
                   {tags.map(tag => (
                     <Link key={`${tag}tag`} className='more-btn' to={`/tags/${kebabCase(tag)}/`}>
                       {tag}

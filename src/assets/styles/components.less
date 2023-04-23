@@ -90,15 +90,23 @@
 .blogroll-container {
   width: 100%;
   margin: 2rem auto;
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(270px, 310px));
   overflow-x: scroll;
-  grid-auto-flow: row;
-
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  overflow-x: scroll;
+  &::-webkit-scrollbar {
+      height: 5px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: @primary-green;
+  }
+  
   a {
     color: @text-gray;
   }
+
 }
 
 .blogroll-card {
