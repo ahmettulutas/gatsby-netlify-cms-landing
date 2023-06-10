@@ -10,7 +10,7 @@ export const AboutSection = ({ about }) => (
       <BackgroundTitle title={about.subtitle} />
       <IntersectionObserverWrapper animationSlide={'slideLeft'} translate={20} delay={800} once={false}>
         <div className="about-image-container">
-          <PreviewCompatibleImage imageInfo={{ image: about.image }} />
+          <PreviewCompatibleImage imageInfo={{ image: about.image }} style={{ width: '100%' }} />
         </div>
       </IntersectionObserverWrapper>
       <IntersectionObserverWrapper animationSlide={'slideRight'} translate={20} delay={800} once={false}>

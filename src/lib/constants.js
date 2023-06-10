@@ -1,3 +1,35 @@
+export const contactLinks = [
+  {
+    href: 'https://goo.gl/maps/R3MaJ5Qt1YP95osG9',
+    id: 'location',
+    icon: 'location',
+    label: 'Meşrutiyet, Rumeli Cd. No:6, 34983 Şişli/İstanbul'
+  },
+  {
+    href: 'https://www.instagram.com/psikologmeltemulutas/',
+    id: 'instagram',
+    icon: 'instagram',
+    label: 'İnstagram'
+  },
+  {
+    href: 'https://www.linkedin.com/in/meltem-uluta%C5%9F-1094ab1bb/',
+    id: 'linkedin',
+    icon: 'linkedin',
+    label: 'Linkedin'
+  },
+  {
+    href: 'https://api.whatsapp.com/send/?phone=05300954085',
+    id: 'whatsapp',
+    icon: 'whatsapp',
+    label: 'Whatsapp'
+  },
+  {
+    href: 'mailto:psikolog.meltem.ulutas@gmail.com',
+    id: 'mail',
+    icon: 'mail',
+    label: 'Mail'
+  }
+];
 export const contactInputs = [
   {
     pattern: '^[-_ a-zA-Z0-9ğüşöçİĞÜŞÖÇ]{4,100}$',
@@ -15,7 +47,7 @@ export const contactInputs = [
     type: 'text',
     key: 2,
     name: 'phone_number',
-    message: 'Lütfen telefon numaranızı eksiksiz giriniz.',
+    message: 'Lütfen 11 haneli telefon numaranızı eksiksiz giriniz.',
     placeholder: '05....',
     required: true,
     maxLength: 13,
