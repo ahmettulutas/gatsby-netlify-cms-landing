@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../../components/layout/Layout';
 import Hero from '../../components/Hero';
 import contact from '../../../static/img/contact.jpg';
 import { Form } from '../../components/Form';
@@ -12,10 +12,8 @@ const GetAppointment = () => (
     <div className='page-container'>
       {/* <BackgroundTitle title={'Randevu'} /> */}
       <h1 className='highlighted'>Randevu Oluşturun</h1>
-      <section className='contact flex mobile-column-direction'>
-        <div style={{ maxWidth: '600px', margin: 'auto' }}>
-          <Form/>
-        </div>
+      <section className='contact one-child flex mobile-column-direction'>
+        <Form/>
       </section>
     </div>
   </Layout>

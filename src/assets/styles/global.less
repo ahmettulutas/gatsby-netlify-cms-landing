@@ -6,7 +6,6 @@
 @light-gray: #f7f7f7;
 @dark-gray: #dbdada;
 @navy-blue: rgb(46, 85, 145);
-@primary-green: #48c78e;
 @text-gray: #777;
 
 * {
@@ -31,30 +30,41 @@ html {
   @media screen and (max-width: 2048px) {
     font-size: 18px;
   }
+
   @media screen and (max-width: 768px) {
     font-size: 14px;
-    }
+  }
 }
+
 ::-webkit-scrollbar {
   width: 0;
 }
 
-  html,
-  body {
-    overflow-x: hidden;
-    margin: 0px;
-    padding: 0px;
-    scroll-behavior: smooth;
-    font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-    color: #333;
-    font-size: 1em;
-    font-weight: 400;
-    line-height: 1.5;
-    p {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-    }
+html,
+body {
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  scroll-behavior: smooth;
+  font-family: BlinkMacSystemFont, -apple-system, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    'Helvetica', 'Arial', sans-serif;
+  color: #333;
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+
+  p {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell,
+      Noto Sans, sans-serif, BlinkMacSystemFont, Helvetica Neue, Arial,
+      Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   }
-li  { list-style-type: none !important;}
+}
+
+li {
+  list-style-type: none !important;
+}
+
 a:-webkit-any-link {
   color: darken(@primary, 10);
 }
@@ -88,33 +98,39 @@ a {
   text-decoration: none;
   cursor: pointer;
 }
+
 .page-container {
   max-width: 1320px;
   width: 90%;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .flex {
   display: flex;
   flex-wrap: wrap;
+
   &.space-between {
     justify-content: space-between;
   }
+
   &.center {
     justify-content: center;
   }
+
   &.flex-col {
     flex-direction: column;
   }
+
   &.align-center {
     align-items: center;
   }
+
   &.mobile-column-direction {
-    @media screen and (max-width:768px) {
+    @media screen and (max-width: 768px) {
       flex-direction: column;
     }
   }
-
 }
 
 .image-container {
@@ -122,24 +138,28 @@ a {
   margin: 0 auto;
 }
 
-/* Spacing */ 
+/* Spacing */
 .generateCSS(@i) when (@i =< 10) {
   .py-@{i} {
     padding-right: @i*1rem;
     padding-left: @i*1rem;
   }
+
   .px-@{i} {
     padding-right: @i*1rem;
     padding-left: @i*1rem;
   }
+
   .my-@{i} {
     margin-top: @i*1rem;
     margin-bottom: @i*1rem;
   }
+
   .mx-@{i} {
     margin-right: @i*1rem;
     margin-left: @i*1rem;
   }
+
   .generateCSS(@i + 1);
 }
 
@@ -155,4 +175,8 @@ a {
 
 .margin-top-0 {
   margin-top: 0 !important;
+}
+
+.h-screen {
+  height: 100vh;
 }

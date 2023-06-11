@@ -1,5 +1,5 @@
 import React from 'react';
-import Layout from '../../components/Layout';
+import Layout from '../../components/layout/Layout';
 import Hero from '../../components/Hero';
 import contact from '../../../static/img/contact.jpg';
 import { Form } from '../../components/Form';

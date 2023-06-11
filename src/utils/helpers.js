@@ -39,3 +39,4 @@ export const generateTransform = translate => {
     return Object.fromEntries(Object.entries(animations).map(([key, value]) => [key, value]));
   return animations;
 };
+export const kebapCaseConverter = str => str.split(/\s+/).join('-').toLowerCase();

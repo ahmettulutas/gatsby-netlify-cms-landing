@@ -29,7 +29,9 @@ export default function HTML(props) {
           height: '100vh',
           width: '100vw'
         }}>
-          <Loading />
+          <div style={{ width: '150px', height: '100px' }}>
+            <Loading />
+          </div>
         </div>
         <div
           style={{ display: 'none' }}

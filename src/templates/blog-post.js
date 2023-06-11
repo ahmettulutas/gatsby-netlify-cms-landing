@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { kebabCase } from 'lodash';
 import { graphql, Link } from 'gatsby';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 import Content, { HTMLContent } from '../components/Content';
 import { getImage } from 'gatsby-plugin-image';
 import Hero from '../components/Hero';
+import { kebapCaseConverter } from '../utils/helpers';
 
 export const BlogPostTemplate = ({
   content,
@@ -39,7 +39,7 @@ export const BlogPostTemplate = ({
                 <h4>Etiketler</h4>
                 <ul>
                   {tags.map(tag => (
-                    <Link key={`${tag}tag`} className='more-btn' to={`/tags/${kebabCase(tag)}/`}>
+                    <Link key={`${tag}tag`} className='more-btn' to={`/tags/${kebapCaseConverter(tag)}/`}>
                       {tag}
                     </Link>
                   ))}

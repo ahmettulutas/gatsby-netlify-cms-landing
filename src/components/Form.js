@@ -26,12 +26,12 @@ export const Form = () => {
       }
       else {
         setLoading(true);
-        emailjs.send(process.env.GATSBY_FORM_SERVICE_ID, process.env.GATSBY_FORM_TEMPLATE_ID, process.env.GATSBY_FORM_PUBLIC_KEY, formData
+        emailjs.send(process.env.GATSBY_FORM_SERVICE_ID, process.env.GATSBY_FORM_TEMPLATE_ID, formData, process.env.GATSBY_FORM_PUBLIC_KEY
         ).then(() => {
-          setLoading(false);
           window.alert('Mesajınız gönderildi.');
           setFormData(emptyState);
-        }).catch(error => window.alert(error));
+        }).catch(error => window.alert(JSON.stringify(error)));
+        setLoading(false);
       }
     };
 
@@ -40,8 +40,8 @@ export const Form = () => {
       {contactInputs.map(input => (
         <FormInput changeData={handleChange} key={input.key} {...input} value={formData[input.name]} />
       ))}
-      <input type="text" name="_gotcha" style={{ display: 'none' }} />
-      <button disabled={loading} className="submit-button" type='submit'>{loading ? <Loading type="white" size="small"/> : 'Gönder'}</button>
+      <input type='text' name="_gotcha" style={{ display: 'none' }} />
+      <button disabled={loading} className='submit-button' type='submit'>{loading ? <Loading type="white" size="small"/> : 'Gönder'}</button>
     </form>
   );
 };

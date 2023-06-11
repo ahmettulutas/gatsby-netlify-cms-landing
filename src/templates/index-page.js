@@ -3,7 +3,7 @@ import { AboutSection } from '../components/AboutSection';
 import { getImage } from 'gatsby-plugin-image';
 import BlogRoll from '../components/BlogRoll';
 import Features from '../components/Features';
-import Layout from '../components/Layout';
+import Layout from '../components/layout/Layout';
 import { graphql } from 'gatsby';
 import Hero from '../components/Hero';
 import '../assets/styles/main.less';
@@ -24,22 +24,22 @@ export const IndexPageTemplate = ({
     <>
       <Hero
         title={title}
-        background={
-          heroImage.url ? heroImage.url : heroImage.images.fallback.src || heroImage.image
-        }
+        background={heroImage.url ? heroImage.url : heroImage.images.fallback.src || heroImage.image}
         subheading={subheading}
       />
       <div className='page-container'>
         <AboutSection about={about}/>
         <Features features={intro.blurbs} heading={intro.heading}/>
         <IntersectionObserverWrapper animationSlide={'slideLeft'} translate={20} delay={800} once={false}>
-          <div style={{ maxWidth: '600px', margin: 'auto' }}>
+          <section className='contact one-child'>
             <h1 className='highlighted'>İletişim</h1>
             <Form />
-          </div>
+          </section>
         </IntersectionObserverWrapper>
-        <h1 className='highlighted m-auto'>Blog</h1>
-        <BlogRoll />
+        <section>
+          <h1 className='highlighted m-auto'>Blog</h1>
+          <BlogRoll />
+        </section>
       </div>
     </>
   );

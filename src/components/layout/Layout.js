@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import Footer from '../components/Footer';
-import Navbar from '../components/Navbar';
+import Footer from './Footer';
+import Navbar from './Navbar';
 import { withPrefix } from 'gatsby';
-/* import { FloatingWhatsApp } from 'react-floating-whatsapp'; */
+import { FloatingWhatsApp } from 'react-floating-whatsapp';
 
 const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhiteBg }) => (
   <>
@@ -56,7 +56,7 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       <main>{children}</main>
       <Footer />
     </div>
-    {/*     <FloatingWhatsApp
+    <FloatingWhatsApp
       phoneNumber='+905300954085'
       accountName='Meltem Ulutaş'
       chatMessage='Merhaba, nasıl yardımcı olabilirim?'
@@ -65,7 +65,7 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       avatar={`${withPrefix('/')}img/psychology-logo.svg`}
       notification={false}
       buttonStyle={{ bottom: '1rem', right: '1rem' }}
-    /> */}
+    />
   </>
 );
 

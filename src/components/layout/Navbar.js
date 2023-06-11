@@ -1,6 +1,6 @@
 import { Link } from 'gatsby';
 import React, { useEffect, useRef } from 'react';
-import Logo from '../img/logo.inline.svg';
+import Logo from '../../img/logo.inline.svg';
 
 const Navbar = ({ hasWhiteBg }) => {
   const

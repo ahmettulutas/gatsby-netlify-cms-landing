@@ -3,6 +3,7 @@
   text-align: justify;
   letter-spacing: 0.03rem;
   .gray-text();
+
   .blog-image {
     display: flex;
     align-items: center;
@@ -14,88 +15,86 @@
 
   .description {
     margin: 40px 0;
-      text-indent: 20px;
-    }
-    
-    .content {
-    
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      h6 {
-        margin: 1rem 0;
-        font-size: 1.1rem;
-      }
-    
-      li {
-        list-style: inside !important;
-        margin: 0 1rem;
-      }
-    
-      p:has(em) {
-        font-style: italic;
-        padding: 1rem;
-        position: relative;
-        font-family: monospace;
-    
-        &::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          margin: 1rem 0;
-          left: 0;
-          bottom: 0;
-          width: 4px;
-          background-color: @primary-green;
-        }
-      }
-    }
-    
-    .taglist {
+    text-indent: 20px;
+  }
+
+  .content {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
       margin: 1rem 0;
-    
-      ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 5px;
-        align-items: center;
-    
-        li {
-          padding: 0 1rem;
-          margin-bottom: 1rem;
+      font-size: 1.1rem;
+    }
+
+    li {
+      list-style: inside !important;
+      margin: 0 1rem;
+    }
+
+    p:has(em) {
+      font-style: italic;
+      padding: 1rem;
+      position: relative;
+      font-family: monospace;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        margin: 1rem 0;
+        left: 0;
+        bottom: 0;
+        width: 4px;
+        background-color: @primary;
+      }
+    }
+  }
+
+  .taglist {
+    margin: 1rem 0;
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      align-items: center;
+
+      li {
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+      }
+    }
+
+    a {
+      position: relative;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: @primary;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        transition: 0.1s ease-in;
+      }
+
+      font-weight: 300;
+      font-size: 0.8rem;
+      padding: 5px 0;
+      border-radius: 8px;
+
+      &:hover {
+        &:before {
+          width: 100%;
         }
       }
-    
-    
-    
-      a {
-        position: relative;
-    
-        &:before {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 2px;
-          background-color: @primary;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          transition: .1s ease-in;
-        }
-    
-        font-weight: 300;
-        font-size: 0.8rem;
-        padding: 5px 0;
-        border-radius: 8px;
-    
-        &:hover {
-          &:before {
-            width: 100%;
-          }
     }
-        }
-}
+  }
 }

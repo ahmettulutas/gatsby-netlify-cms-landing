@@ -9,7 +9,7 @@ const Hero = ({ title, background, subheading, isHalfHero }) => (
     <div className='overlay'></div>
     <div className='hero-title-section'>
       {subheading && <h2>{subheading}</h2>}
-      <h1 className={`${isHalfHero} ? "small-title" : ""`}>
+      <h1 className={`${isHalfHero ? 'small-title' : ''}`}>
         {title}
       </h1>
     </div>

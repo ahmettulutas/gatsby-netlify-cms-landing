@@ -1,8 +1,8 @@
 import * as React from 'react';
-import Instagram from '../img/instagram.inline.svg';
-import Mail from '../img/mail.inline.svg';
-import Whatsapp from '../img/whatsapp.inline.svg';
-import Linkedin from '../img/linkedin.inline.svg';
+import Instagram from '../../img/instagram.inline.svg';
+import Mail from '../../img/mail.inline.svg';
+import Whatsapp from '../../img/whatsapp.inline.svg';
+import Linkedin from '../../img/linkedin.inline.svg';
 
 const Footer = () => (
   <footer className='footer'>
