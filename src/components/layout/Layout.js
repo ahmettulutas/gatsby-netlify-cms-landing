@@ -42,10 +42,6 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
         property='og:site_name'
         content='Uzman Psikolog Meltem Ulutaş'></meta>
       <meta property="og:image" content={metaImage} />
-      {/*       <meta
-        property='og:image'
-        content={`${withPrefix('/')}${metaImage}`}
-      /> */}
       <meta property='og:description' content={description}></meta>
       <meta charset='UTF-8'></meta>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no"></meta>
