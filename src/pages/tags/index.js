@@ -16,7 +16,7 @@ const TagsPage = ({
   }
 }) => (
   <Layout>
-    <Hero title={'Blog'} background={blog} isHalfHero />
+    <Hero title={'Blog'} background={blog} />
     <section className="page-container">
       <Helmet title={`Etiketler | ${title}`} />
       <div className='my-5'>

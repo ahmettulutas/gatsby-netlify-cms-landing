@@ -22,7 +22,7 @@ const TagRoute = ({ data, pageContext }) => {
     <Layout>
       <Helmet title={`${tag} | ${title}`}/>
       <Hero
-        isHalfHero
+
         title={title}
         smallTitle
         background={blog}

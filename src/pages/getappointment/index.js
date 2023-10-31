@@ -8,7 +8,7 @@ import { Form } from '../../components/Form';
 
 const GetAppointment = () => (
   <Layout title={'Meltem Ulutaş Randevu'} description={'Meltem Ulutaş ile iletişime geçin. Psikolog randevusu oluşturun. Psikolojik destek almak için iletişime geçin.'}>
-    <Hero title={'Randevu'} background={contact} isHalfHero/>
+    <Hero title={'Randevu'} background={contact} />
     <div className='page-container'>
       {/* <BackgroundTitle title={'Randevu'} /> */}
       <h1 className='highlighted'>Randevu Oluşturun</h1>

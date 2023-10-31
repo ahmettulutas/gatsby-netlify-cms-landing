@@ -21,7 +21,6 @@ export const BlogPostTemplate = ({
   return (
     <>
       <Hero
-        isHalfHero
         title={title}
         smallTitle
         background={

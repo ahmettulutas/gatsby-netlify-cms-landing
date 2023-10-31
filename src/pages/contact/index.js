@@ -9,7 +9,7 @@ import ContactInfo from '../../components/ContactInfo';
 
 const Contact = () => (
   <Layout title={'Meltem Ulutaş İletişim'} description={'Meltem Ulutaş ile iletişime geçin. Psikolog randevusu oluşturun. Psikolojik destek almak için iletişime geçin.'}>
-    <Hero title={'İletişim'} background={contact} isHalfHero />
+    <Hero title={'İletişim'} background={contact} />
     <section className='page-container'>
       {/* <BackgroundTitle title={'İletişim'} /> */}
       <h1 className='highlighted'>İletişim Formu</h1>
