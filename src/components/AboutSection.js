@@ -14,7 +14,7 @@ export const AboutSection = ({ about }) => (
         </div>
       </IntersectionObserverWrapper>
       <IntersectionObserverWrapper animationSlide={'slideRight'} translate={20} delay={800} once={false}>
-        <p className='size-4'>{about.description}</p>
+        <p className='size-3'>{about.description}</p>
       </IntersectionObserverWrapper>
     </div>
   </section>

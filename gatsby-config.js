@@ -1,7 +1,7 @@
 /* eslint-disable */
 const {
     NODE_ENV,
-    URL: NETLIFY_SITE_URL = 'https://meltemulutas.com',
+    URL: NETLIFY_SITE_URL = 'https://psikologmeltemulutas.com',
     CONTEXT: NETLIFY_ENV = NODE_ENV
   } = process.env;
 
@@ -14,7 +14,7 @@ module.exports = {
     title: 'Psikolog Meltem Ulutaş',
     description:
 			'Uzman Psikolog Meltem Ulutaş | Blog ve İletişim Sayfası | Psikolojik Danışmanlık | Psikolojik Terapi',
-    siteUrl: 'https://meltemulutas.com/'
+    siteUrl: NETLIFY_SITE_URL
   },
   plugins: [
     'gatsby-plugin-react-helmet',

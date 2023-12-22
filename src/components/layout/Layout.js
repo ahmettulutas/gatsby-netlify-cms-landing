@@ -11,7 +11,6 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       <html lang='tr' />
       <title>{title}</title>
       <meta name='description' content={description} />
-
       <link
         rel='apple-touch-icon'
         sizes='180x180'
@@ -37,7 +36,7 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       <meta name='theme-color' content='#fff' />
       <meta property='og:type' content='website' />
       <meta property='og:title' content={title} />
-      <meta property='og:url' content='https://meltemulutas.com' />
+      <meta property='og:url' content='https://psikologmeltemulutas.com' />
       <meta
         property='og:site_name'
         content='Uzman Psikolog Meltem Ulutaş'></meta>
@@ -60,7 +59,6 @@ const Layout = ({ title, description, metaImage, titleTemplate, children, hasWhi
       statusMessage='Şu anda aktif'
       avatar={`${withPrefix('/')}img/psychology-logo.svg`}
       notification={false}
-      buttonStyle={{ bottom: '1rem', right: '1rem' }}
     />
   </>
 );

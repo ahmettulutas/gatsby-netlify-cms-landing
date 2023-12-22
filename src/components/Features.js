@@ -18,7 +18,7 @@ const FeatureGrid = ({ features, heading }) => (
             </div>
             <div>
               <h3>{item.title}</h3>
-              <p className='size-4'>{item.text}</p>
+              <p className='size-3'>{item.text}</p>
             </div>
           </IntersectionObserverWrapper>
         </section>
