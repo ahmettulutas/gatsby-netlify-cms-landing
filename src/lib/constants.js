@@ -11,12 +11,7 @@ export const contactLinks = [
     icon: 'instagram',
     label: 'İnstagram'
   },
-  {
-    href: 'https://www.linkedin.com/in/meltem-uluta%C5%9F-1094ab1bb/',
-    id: 'linkedin',
-    icon: 'linkedin',
-    label: 'Linkedin'
-  },
+
   {
     href: 'https://api.whatsapp.com/send/?phone=05300954085',
     id: 'whatsapp',
