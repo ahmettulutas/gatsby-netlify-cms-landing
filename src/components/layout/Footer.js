@@ -21,14 +21,14 @@ const Footer = () => (
             <Instagram />
           </a>
         </li>
-        <li>
+        {/* <li>
           <a
             href='https://www.linkedin.com/in/meltem-uluta%C5%9F-1094ab1bb/'
             target='_blank'
             rel='noopener noreferrer'>
             <Linkedin />
           </a>
-        </li>
+        </li> */}
         <li>
           <a
             href='https://api.whatsapp.com/send/?phone=05300954085'
